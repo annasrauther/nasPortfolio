@@ -1,0 +1,12 @@
+/* NavbarItem.module.css */
+.navbar-item {
+    color: #fff;
+    transition: 0.5s;
+    margin: 10px 0;
+    user-select: none;
+    text-decoration: none;
+}
+.navbar-item:hover,
+.active {
+    color: #facb1d;
+}

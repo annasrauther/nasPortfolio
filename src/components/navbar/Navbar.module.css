@@ -1,0 +1,72 @@
+/* Navbar.module.css */
+
+.navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon,
+.close-icon {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: #facb1e;
+    border: 1px solid;
+    z-index: 100;
+    border-radius: 100%;
+    transition: all 0.4s;
+}
+
+.close-icon svg {
+    padding: 5px;
+}
+
+.close-icon:hover {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    width: 350px;
+    padding: 15px 25px 30px;
+    background-color: #181817;
+    color: white;
+    position: fixed;
+    top: 5px;
+    right: -100%;
+    z-index: 1;
+    transition: 0.5s;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.sidebar.active {
+    right: 5px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-links__item {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem; 
+    width: 1.5rem; 
+}
+
