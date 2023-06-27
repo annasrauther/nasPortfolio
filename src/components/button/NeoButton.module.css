@@ -1,0 +1,46 @@
+.neo-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    transition: 200ms ease;
+    z-index: 2;
+    background-color: white;
+}
+
+.bg-blue {
+    border: 2px solid #1f2020;
+    background-color: #5eb0e5;
+    border-radius: 3px;
+    box-shadow: 3px 3px 0px #25282a;
+}
+
+.neo-button:hover {
+    box-shadow: 1px 1px 0px #25282a;
+    transform: translate(1px, 1px);
+}
+
+.neo-button:active {
+    box-shadow: -2px -2px 0px #25282a;
+    transform: translate(2px, 2px);
+}
+
+.neo-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #1f2020;
+    transform-origin: bottom right;
+    transition: 100ms ease-in-out;
+    mix-blend-mode: screen;
+    z-index: 1;
+    clip-path: ellipse(0px 0px at bottom center);
+}
+
+.neo-button:hover:before {
+    clip-path: ellipse(50% 100% at bottom center);
+}
+
+.neo-button:active:before {
+    background-color: #25282a;
+    mix-blend-mode: color-dodge;
+}
