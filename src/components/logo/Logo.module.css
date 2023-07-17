@@ -1,5 +1,6 @@
 .logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    left: 3vw;
+    padding-top: 0.5em;
+    z-index: 120;
 }

@@ -1,8 +1,7 @@
 import './globals.css'
-import { Montserrat } from 'next/font/google'
 import { Navbar } from '@/components'
+import { reggae } from '@/components'
 
-const mont = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Nas Rauther',
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={mont.className}>
+      <body className={`${reggae.className}`}>
         <Navbar />
         {children}
       </body>

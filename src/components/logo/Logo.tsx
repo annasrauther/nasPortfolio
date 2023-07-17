@@ -6,10 +6,10 @@ const Logo = () => {
   return (
     <Link href="/" className={style.logo}>
       <Image
-        src="/logo.jpeg"
+        src="/logo.png"
         alt="Nas Rauther Logo"
-        width={65}
-        height={65}
+        width={75}
+        height={75}
         priority={true}
       />
     </Link>

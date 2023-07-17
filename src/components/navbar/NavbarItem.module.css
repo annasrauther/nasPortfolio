@@ -1,12 +1,47 @@
 /* NavbarItem.module.css */
 .navbar-item {
+    transition: all 0.2s ease-out;
+    display: block;
     color: #fff;
-    transition: 0.5s;
-    margin: 10px 0;
-    user-select: none;
+    text-transform: uppercase;
+    font-size: clamp(1em, 12vw, 2em);
     text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 5px;
+    background-image: url(https://2020.demuxed.com/images/svg/break-line2-f1262624.svg);
+    background-repeat:no-repeat;
+    background-position: bottom;
 }
-.navbar-item:hover,
-.active {
-    color: #facb1d;
+.navbar-item.active {
+    color: var(--color-background);
+    background-image: url(https://2020.demuxed.com/images/svg/nav-underline-1bfd4df8.svg);
+    background-repeat:no-repeat;
+    background-position: bottom;
 }
+.navbar-item:hover {
+    color: var(--color-text);
+    padding: 0 0.2em;
+    background-image: none;
+}
+
+.navbar-item::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.navbar-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: top left;
+  }
+
+.navbar-item::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: var(--color-background);
+    z-index: -1;
+    transition: transform .3s ease-in-out;
+  }
+  

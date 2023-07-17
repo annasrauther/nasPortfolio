@@ -4,6 +4,8 @@ import TextEffect from './effects/text/TextEffect';
 import NeoButton from './button/NeoButton';
 import SlideWrapper from './scroll/SlideWrapper';
 import Slide from './scroll/Slide';
+import Hero from './hero/Hero';
+import { mont, reggae } from './font';
 import {
     GithubIcon,
     TwitterIcon,
@@ -24,4 +26,7 @@ export {
     NeoButton,
     SlideWrapper,
     Slide,
+    Hero,
+    mont,
+    reggae,
 };

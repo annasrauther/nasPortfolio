@@ -1,9 +1,8 @@
 /* Navbar.module.css */
 
 .navbar-wrapper {
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    position: relative;
+    height: 90px;
 }
 
 .navbar {
@@ -11,6 +10,8 @@
     flex-direction: column;
     align-items: flex-start;
     font-size: 2.25rem;
+    padding: 2em 4vw;
+    padding-left: 4vw;
     font-weight: 700;
 }
 
@@ -20,15 +21,18 @@
 
 .menu-icon,
 .close-icon {
-    position: fixed;
-    top: 15px;
-    right: 15px;
+    width: 70px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 66%;
+    display: block;
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    z-index: 120;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    background-color: #facb1e;
-    border: 1px solid;
-    z-index: 100;
-    border-radius: 100%;
-    transition: all 0.4s;
 }
 
 .close-icon svg {
@@ -40,21 +44,29 @@
 }
 
 .sidebar {
-    width: 350px;
-    padding: 15px 25px 30px;
-    background-color: #181817;
-    color: white;
-    position: fixed;
-    top: 5px;
-    right: -100%;
-    z-index: 1;
-    transition: 0.5s;
-    text-transform: uppercase;
-    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clear: both;
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    z-index: 110;
+    padding-left: 1em;
+    background-color: #000;
+    -webkit-box-shadow: 0px 10px 49px -1px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 10px 49px -1px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 10px 49px -1px rgba(0, 0, 0, 0.45);
+    display: none;
+    background-image: url(https://2020.demuxed.com/images/svg/rough-edge-top-f61d2b75.svg),url(https://2020.demuxed.com/images/svg/rough-edge-btm-fa828d93.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 110%, 110%;
 }
 
 .sidebar.active {
-    right: 5px;
+    display: block;
+    transition: all 0.3s ease-in-out;
 }
 
 .social-links {
@@ -66,7 +78,6 @@
 
 .social-links__item {
     margin-left: 0.75rem;
-    margin-right: 0.75rem; 
-    width: 1.5rem; 
+    margin-right: 0.75rem;
+    width: 1.5rem;
 }
-

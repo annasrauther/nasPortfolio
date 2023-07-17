@@ -5,13 +5,19 @@
     transition: 200ms ease;
     z-index: 2;
     background-color: white;
+    text-decoration: none;
 }
 
-.bg-blue {
+.block {
+    display: block;
+}
+
+.bg {
     border: 2px solid #1f2020;
-    background-color: #5eb0e5;
+    background-color: var(--color-background);
     border-radius: 3px;
     box-shadow: 3px 3px 0px #25282a;
+    color: var(--color-text)
 }
 
 .neo-button:hover {

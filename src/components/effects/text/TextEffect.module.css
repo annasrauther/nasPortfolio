@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
     @media (min-width: 640px) {
         padding-top: 0;
         padding-bottom: 0;
@@ -23,6 +23,7 @@
     font-weight: 700;
     text-transform: uppercase;
     width: 100%;
+    color: black;
 }
 
 .random-color-word {
