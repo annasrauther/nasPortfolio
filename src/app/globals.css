@@ -35,7 +35,7 @@ body:before {
   width: 100vmax;
   height: 100vmax;
   background: rgba(0, 0, 0, 0.05);
-  animation: background 90s linear infinite;
+  animation: backgroundSpin 90s linear infinite;
 }
 
 body:after {
@@ -78,7 +78,7 @@ body:before {
   }
 }
 
-@keyframes background {
+@keyframes backgroundSpin {
   0% {
     transform: rotate(0deg);
   }

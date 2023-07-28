@@ -10,7 +10,7 @@ import styles from './Navbar.module.css';
 import {
   personalActions,
   navigation,
-} from '@/lib/store'
+} from '@/lib/data'
 
 /**
  * Navbar component that displays the navigation bar.

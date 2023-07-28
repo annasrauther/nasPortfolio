@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Portfolio.module.css';
-import { PortfolioWorkItem } from '@/lib/store';
+import { PortfolioWorkItem } from '@/lib/data';
 import TechnologyFilter from './TechnologyFilter';
 import PortfolioList from './PortfolioList';
 

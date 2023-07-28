@@ -7,10 +7,53 @@ const anton = Anton({
   subsets: ['latin'],
   weight: '400',
 });
+const title = 'Al Annas Rauther';
+const description = 'Front End Developer';
+const url = "https://annasrauther.com";
 
 export const metadata = {
-  title: 'Al Annas Rauther',
-  description: 'Front End Developer',
+  title: title,
+  description,
+  openGraph: {
+    title: title,
+    description,
+    url,
+    siteName: 'Al Annas Rauther - Front End Developer for the Modern Web',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  category: 'technology',
+
 }
 
 /**

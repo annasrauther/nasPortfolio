@@ -1,104 +1,11 @@
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaBootstrap,
-  FaSass,
-  FaLess,
-  FaVuejs,
-  FaReact,
-  FaWordpress,
-  FaElementor,
-  FaDocker,
-  FaGitlab,
-  FaSalesforce,
-  FaHubspot,
-  FaSlack,
-  FaSkype,
-  FaConfluence,
-  FaChrome,
-  FaFirefox,
-  FaSafari,
-  FaFigma,
-} from 'react-icons/fa'
-import {
-  BiLogoTailwindCss,
-  BiLogoJquery,
-  BiLogoPostgresql,
-  BiLogoMicrosoftTeams,
-} from 'react-icons/bi'
-import {
-  SiStylus,
-  SiMaterialdesign,
-  SiVuetify,
-  SiRedux,
-  SiLodash,
-  SiMomenteo,
-  SiAxios,
-  SiWoocommerce,
-  SiExpress,
-  SiMysql,
-  SiApachesolr,
-  SiSequelize,
-  SiRedis,
-  SiGooglecloud,
-  SiVagrant,
-  SiSublimetext,
-  SiJira,
-  SiBrave,
-  SiPostman,
-  SiFilezilla
-} from 'react-icons/si'
-import {
-  DiMaterializecss
-} from 'react-icons/di'
-import {
-  RiAngularjsFill,
-} from 'react-icons/ri'
-import {
-  GiLightningHelix,
-} from 'react-icons/gi'
-import {
-  AiFillShop,
-  AiOutlineAreaChart,
-} from 'react-icons/ai'
-import {
-  TbBrandNextjs,
-  TbBrandVscode,
-} from 'react-icons/tb'
-import {
-  BsDatabaseFillGear,
-  BsGit,
-  BsGithub,
-} from 'react-icons/bs'
-import {
-  DiRackspace,
-  DiJenkins,
-  DiBitbucket,
-} from 'react-icons/di'
-import {
-  CiAvocado
-} from 'react-icons/ci'
+  Technology,
+  TechStack,
+  ExperienceItem,
+  PortfolioWorkItem,
+} from '@/lib/interfaces'
 
-import {
-  SiTypescript,
-  SiGithub,
-  SiNodedotjs,
-  SiMongodb,
-  SiTailwindcss,
-  SiVuedotjs,
-  SiAngularjs,
-  SiFramer,
-} from 'react-icons/si';
-
-import {  SiAuth0, SiJenkins, SiNextdotjs, SiPostgresql, SiReact } from 'react-icons/si'
-import { BsDatabase } from 'react-icons/bs'
-
-import { GiBeanstalk } from 'react-icons/gi';
-import { IconType } from 'react-icons'
-
-
-
+import * as Icons from '@/lib/icons'
 export const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -141,494 +48,470 @@ export const aboutBioImages = [
 export const heroStacks = [
   {
     label: 'React',
-    icon: 'SiReact',
   }
 ]
 
-export interface Technology {
-  title: string;
-  icon: React.ElementType;
-  color: string;
-  type: string;
-  description: string;
-}
-
 export const technologies: Technology[] = [
   {
+    "title": "React",
+    "icon": Icons.FaReact,
+    "color": "#61DAFB",
+    "type": "Front End",
+    "description": "JavaScript library for UI."
+  },
+  {
     "title": "HTML",
-    "icon": FaHtml5,
+    "icon": Icons.FaHtml5,
     "color": "#E44D26",
     "type": "Front End",
     "description": "Web markup language for pages."
   },
   {
     "title": "CSS",
-    "icon": FaCss3,
+    "icon": Icons.FaCss3,
     "color": "#2965F1",
     "type": "Front End",
     "description": "Stylesheet language for web design."
   },
   {
     "title": "JavaScript",
-    "icon": FaJs,
+    "icon": Icons.FaJs,
     "color": "#F7DF1E",
     "type": "Front End",
     "description": "Programming language for web pages."
   },
   {
     "title": "Tailwind",
-    "icon": BiLogoTailwindCss,
+    "icon": Icons.BiLogoTailwindCss,
     "color": "#38B2AC",
     "type": "Front End",
     "description": "Utility-first CSS framework."
   },
   {
     "title": "Bootstrap",
-    "icon": FaBootstrap,
+    "icon": Icons.FaBootstrap,
     "color": "#7952B3",
     "type": "Front End",
     "description": "Popular responsive CSS framework."
   },
   {
     "title": "SASS",
-    "icon": FaSass,
+    "icon": Icons.FaSass,
     "color": "#CC6699",
     "type": "Front End",
     "description": "CSS preprocessor with nesting."
   },
   {
     "title": "LESS",
-    "icon": FaLess,
+    "icon": Icons.FaLess,
     "color": "#1D365D",
     "type": "Front End",
     "description": "Leaner CSS preprocessor."
   },
   {
     "title": "Stylus",
-    "icon": SiStylus,
+    "icon": Icons.SiStylus,
     "color": "#333333",
     "type": "Front End",
     "description": "Expressive CSS preprocessor."
   },
   {
     "title": "jQuery",
-    "icon": BiLogoJquery,
+    "icon": Icons.BiLogoJquery,
     "color": "#0769AD",
     "type": "Front End",
     "description": "Feature-rich JavaScript library."
   },
   {
     "title": "AngularJS (1x)",
-    "icon": RiAngularjsFill,
+    "icon": Icons.RiAngularjsFill,
     "color": "#DD1B16",
     "type": "Front End",
     "description": "Powerful JavaScript framework."
   },
   {
     "title": "Angular Material",
-    "icon": DiMaterializecss,
+    "icon": Icons.DiMaterializecss,
     "color": "#DD1B16",
     "type": "Front End",
     "description": "UI component library for Angular."
   },
   {
     "title": "Material UI",
-    "icon": SiMaterialdesign,
+    "icon": Icons.SiMaterialdesign,
     "color": "#0081CB",
     "type": "Front End",
     "description": "React component library."
   },
   {
     "title": "VueJS",
-    "icon": FaVuejs,
+    "icon": Icons.FaVuejs,
     "color": "#4FC08D",
     "type": "Front End",
     "description": "Progressive JavaScript framework."
   },
   {
     "title": "Vuetify",
-    "icon": SiVuetify,
+    "icon": Icons.SiVuetify,
     "color": "#1867C0",
     "type": "Front End",
     "description": "Material Design component framework for Vue."
   },
-  {
-    "title": "React",
-    "icon": FaReact,
-    "color": "#61DAFB",
-    "type": "Front End",
-    "description": "JavaScript library for UI."
-  },
+  
   {
     "title": "Redux",
-    "icon": SiRedux,
+    "icon": Icons.SiRedux,
     "color": "#764ABC",
     "type": "Front End",
     "description": "State management for JS apps."
   },
   {
     "title": "Lodash",
-    "icon": SiLodash,
+    "icon": Icons.SiLodash,
     "color": "#0769AD",
     "type": "Front End",
     "description": "JavaScript utility library."
   },
   {
     "title": "Moment",
-    "icon": SiMomenteo,
+    "icon": Icons.SiMomenteo,
     "color": "#000",
     "type": "Front End",
     "description": "JavaScript date library."
   },
   {
     "title": "Axios",
-    "icon": SiAxios,
+    "icon": Icons.SiAxios,
     "color": "#000",
     "type": "Front End",
     "description": "Promise-based HTTP client."
   },
   {
     "title": "WordPress",
-    "icon": FaWordpress,
+    "icon": Icons.FaWordpress,
     "color": "#21759B",
     "type": "CMS",
     "description": "Popular content management system."
   },
   {
     "title": "WooCommerce",
-    "icon": SiWoocommerce,
+    "icon": Icons.SiWoocommerce,
     "color": "#764ABC",
     "type": "CMS",
     "description": "E-commerce plugin for WordPress."
   },
   {
     "title": "Elementor",
-    "icon": FaElementor,
+    "icon": Icons.FaElementor,
     "color": "#29B6F6",
     "type": "CMS",
     "description": "WordPress website builder plugin."
   },
   {
     "title": "LightSpeed E-Commerce",
-    "icon": GiLightningHelix,
+    "icon": Icons.GiLightningHelix,
     "color": "#f84c52",
     "type": "CMS",
     "description": "E-commerce platform."
   },
   {
     "title": "Dukaan",
-    "icon": AiFillShop,
+    "icon": Icons.AiFillShop,
     "color": "#000",
     "type": "CMS",
     "description": "Online store builder."
   },
   {
     "title": "NextJS",
-    "icon": TbBrandNextjs,
+    "icon": Icons.TbBrandNextjs,
     "color": "#000000",
     "type": "Backend/FullStack",
     "description": "React framework for server-rendered apps."
   },
   {
     "title": "ExpressJS",
-    "icon": SiExpress,
+    "icon": Icons.SiExpress,
     "color": "#000000",
     "type": "Backend/FullStack",
     "description": "Web application framework for Node.js."
   },
   {
     "title": "Riak KV",
-    "icon": BsDatabaseFillGear,
+    "icon": Icons.BsDatabase,
     "color": "#7A8F99",
     "type": "Database, Search",
     "description": "Distributed NoSQL database."
   },
   {
     "title": "mySQL",
-    "icon": SiMysql,
+    "icon": Icons.SiMysql,
     "color": "#4479A1",
     "type": "Database, Search",
     "description": "Relational database management system."
   },
   {
     "title": "PostgresQL",
-    "icon": BiLogoPostgresql,
+    "icon": Icons.BiLogoPostgresql,
     "color": "#336791",
     "type": "Database, Search",
     "description": "Open-source relational database."
   },
   {
     "title": "Apache Solr",
-    "icon": SiApachesolr,
+    "icon": Icons.SiApachesolr,
     "color": "#D9411E",
     "type": "Database, Search",
     "description": "Search platform built on Apache Lucene."
   },
   {
     "title": "Sequelize",
-    "icon": SiSequelize,
+    "icon": Icons.SiSequelize,
     "color": "#1B3F56",
     "type": "Database, Search",
     "description": "Promise-based ORM for Node.js."
   },
   {
     "title": "Redis",
-    "icon": SiRedis,
+    "icon": Icons.SiRedis,
     "color": "#D82C20",
     "type": "Database, Search",
     "description": "In-memory data structure store."
   },
   {
     "title": "Rackspace",
-    "icon": DiRackspace,
+    "icon": Icons.DiRackspace,
     "color": "#002E5D",
     "type": "Hosting",
     "description": "Cloud computing services."
   },
   {
     "title": "GCP",
-    "icon": SiGooglecloud,
+    "icon": Icons.SiGooglecloud,
     "color": "#4285F4",
     "type": "Hosting",
     "description": "Google Cloud Platform."
   },
   {
     "title": "Jenkins",
-    "icon": DiJenkins,
+    "icon": Icons.DiJenkins,
     "color": "#D33837",
     "type": "CI/CD",
     "description": "Open-source automation server."
   },
   {
     "title": "Docker",
-    "icon": FaDocker,
+    "icon": Icons.FaDocker,
     "color": "#2496ED",
     "type": "CI/CD",
     "description": "Containerization platform."
   },
   {
     "title": "Vagrant",
-    "icon": SiVagrant,
+    "icon": Icons.SiVagrant,
     "color": "#1563FF",
     "type": "CI/CD",
     "description": "Development environment automation."
   },
   {
     "title": "Git",
-    "icon": BsGit,
+    "icon": Icons.BsGit,
     "color": "#f34f29",
     "type": "Version Control",
     "description": "Version control system."
   },
   {
     "title": "Github",
-    "icon": BsGithub,
+    "icon": Icons.BsGithub,
     "color": "#4078c0",
     "type": "Version Control",
     "description": "Web-based hosting service for Git."
   },
   {
     "title": "Gitlab",
-    "icon": FaGitlab,
+    "icon": Icons.FaGitlab,
     "color": "#fca326",
     "type": "Version Control",
     "description": "Git repository management tool."
   },
   {
     "title": "Bitbucket",
-    "icon": DiBitbucket,
+    "icon": Icons.DiBitbucket,
     "color": "#253858",
     "type": "Version Control",
     "description": "Git code management solution."
   },
   {
     "title": "SalesForce",
-    "icon": FaSalesforce,
+    "icon": Icons.FaSalesforce,
     "color": "#0093db",
     "type": "CRM",
     "description": "Customer relationship management platform."
   },
   {
     "title": "HubSpot",
-    "icon": FaHubspot,
+    "icon": Icons.FaHubspot,
     "color": "#f47859",
     "type": "CRM",
     "description": "Marketing and sales platform."
   },
   {
     "title": "OutReach",
-    "icon": AiOutlineAreaChart,
+    "icon": Icons.AiOutlineAreaChart,
     "color": "#5952ff",
     "type": "CRM",
     "description": "Sales engagement platform."
   },
   {
     "title": "Slack",
-    "icon": FaSlack,
+    "icon": Icons.FaSlack,
     "color": "#36c5f0",
     "type": "Tools",
     "description": "Team communication platform."
   },
   {
     "title": "Skype",
-    "icon": FaSkype,
+    "icon": Icons.FaSkype,
     "color": "#00AFF0",
     "type": "Tools",
     "description": "Video and voice call application."
   },
   {
     "title": "Microsoft Teams",
-    "icon": BiLogoMicrosoftTeams,
+    "icon": Icons.BiLogoMicrosoftTeams,
     "color": "#6264A7",
     "type": "Tools",
     "description": "Collaboration platform."
   },
   {
     "title": "VS Code",
-    "icon": TbBrandVscode,
+    "icon": Icons.TbBrandVscode,
     "color": "#007ACC",
     "type": "Tools",
     "description": "Code editor developed by Microsoft."
   },
   {
     "title": "Sublime Text",
-    "icon": SiSublimetext,
+    "icon": Icons.SiSublimetext,
     "color": "#4c4c4c",
     "type": "Tools",
     "description": "Text editor for code, markup, and prose."
   },
   {
     "title": "JIRA",
-    "icon": SiJira,
+    "icon": Icons.SiJira,
     "color": "#0052CC",
     "type": "Tools",
     "description": "Issue tracking and project management."
   },
   {
     "title": "Confluence",
-    "icon": FaConfluence,
+    "icon": Icons.FaConfluence,
     "color": "#999999",
     "type": "Tools",
     "description": "Team collaboration software."
   },
   {
     "title": "Brave",
-    "icon": SiBrave,
+    "icon": Icons.SiBrave,
     "color": "#6a0b1a",
     "type": "Tools",
     "description": "Privacy-focused web browser."
   },
   {
     "title": "Chrome",
-    "icon": FaChrome,
+    "icon": Icons.FaChrome,
     "color": "#1a73e8",
     "type": "Tools",
     "description": "Web browser developed by Google."
   },
   {
     "title": "Firefox",
-    "icon": FaFirefox,
+    "icon": Icons.FaFirefox,
     "color": "#E66000",
     "type": "Tools",
     "description": "Open-source web browser."
   },
   {
     "title": "Safari",
-    "icon": FaSafari,
+    "icon": Icons.FaSafari,
     "color": "#006CFF",
     "type": "Tools",
     "description": "Web browser developed by Apple."
   },
   {
     "title": "Figma",
-    "icon": FaFigma,
+    "icon": Icons.FaFigma,
     "color": "#b4c4f4",
     "type": "Tools",
     "description": "Collaborative interface design tool."
   },
   {
     "title": "Avocode",
-    "icon": CiAvocado,
+    "icon": Icons.CiAvocado,
     "color": "#568203",
     "type": "Tools",
     "description": "Design collaboration platform."
   },
   {
     "title": "Postman",
-    "icon": SiPostman,
+    "icon": Icons.SiPostman,
     "color": "#ef5b25",
     "type": "Tools",
     "description": "API development environment."
   },
   {
     "title": "FileZilla",
-    "icon": SiFilezilla,
+    "icon": Icons.SiFilezilla,
     "color": "#BF0000",
     "type": "Tools",
     "description": "FTP client for file transfers."
   }
 ];
 
-export interface TechStack {
-  name: string;
-  icon: any;
-  color: string;
-}
-
 export const techStack: TechStack[] = [
   {
-    name: 'React',
-    icon: FaReact,
-    color: '#61DBFB',
-  },
-  {
     name: 'Nextjs',
-    icon: TbBrandNextjs,
+    icon: Icons.TbBrandNextjs,
     color: '#000000',
   },
   {
+    name: 'React',
+    icon: Icons.FaReact,
+    color: '#61DBFB',
+  },
+  {
     name: 'Typescript',
-    icon: SiTypescript,
+    icon: Icons.SiTypescript,
     color: '#007ACC',
   },
   {
-    name: 'Github',
-    icon: SiGithub,
-    color: '#181717',
-  },
-  {
     name: 'NodeJS',
-    icon: SiNodedotjs,
+    icon: Icons.SiNodedotjs,
     color: '#339933',
   },
   {
     name: 'ExpressJs',
-    icon: SiExpress,
+    icon: Icons.SiExpress,
     color: '#000000',
   },
   {
-    name: 'MongoDB',
-    icon: SiMongodb,
-    color: '#47A248',
-  },
-  {
     name: 'TailwindCSS',
-    icon: SiTailwindcss,
+    icon: Icons.SiTailwindcss,
     color: '#38B2AC',
   },
   {
-    name: 'Framer Motion',
-    icon: SiFramer,
-    color: '#0055FF',
-  },
-  {
     name: 'VueJS',
-    icon: SiVuedotjs,
+    icon: Icons.SiVuedotjs,
     color: '#4FC08D',
   },
   {
     name: 'AngularJS',
-    icon: SiAngularjs,
+    icon: Icons.SiAngularjs,
+    color: '#DD0031',
+  },
+  {
+    name: 'WordPress',
+    icon: Icons.FaWordpressSimple,
     color: '#DD0031',
   },
 ];
@@ -638,19 +521,6 @@ export const aboutContent = [
   '',
   '',
 ];
-
-
-export interface ExperienceItem {
-  title: string;
-  company: {
-    name: string;
-    logo: string;
-    url: string;
-  };
-  location?: string;
-  duration: string;
-  description: string[];
-}
 
 export const workExperience: ExperienceItem[] = [
   {
@@ -763,22 +633,6 @@ export const workExperience: ExperienceItem[] = [
 
 ];
 
-export interface PortfolioItemTechnology {
-  name: string;
-  icon: IconType;
-}
-
-export interface PortfolioWorkItem {
-  title: string;
-  id: string;
-  client: string;
-  screenshot: string;
-  logo: string;
-  url: string;
-  description: string[];
-  technologies: PortfolioItemTechnology[];
-}
-
 export const workPortfolio: PortfolioWorkItem[] = [
   {
     title: 'Avatarixt',
@@ -794,15 +648,15 @@ export const workPortfolio: PortfolioWorkItem[] = [
     technologies: [
       {
         name: 'React',
-        icon: SiReact,
+        icon: Icons.SiReact,
       },
       {
         name: 'NextJS',
-        icon: SiNextdotjs,
+        icon: Icons.SiNextdotjs,
       },
       {
         name: 'TypeScript',
-        icon: SiTypescript,
+        icon: Icons.SiTypescript,
       },
     ]
   },
@@ -822,31 +676,31 @@ export const workPortfolio: PortfolioWorkItem[] = [
     technologies: [
       {
         name: 'VueJS',
-        icon: SiVuedotjs,
+        icon: Icons.SiVuedotjs,
       },
       {
         name: 'Vuetify',
-        icon: SiVuetify,
+        icon: Icons.SiVuetify,
       },
       {
         name: 'ExpressJS',
-        icon: SiExpress,
+        icon: Icons.SiExpress,
       },
       {
         name: 'Auth0',
-        icon: SiAuth0,
+        icon: Icons.SiAuth0,
       },
       {
         name: 'PostgreSQL',
-        icon: SiPostgresql,
+        icon: Icons.SiPostgresql,
       },
       {
         name: 'Seqeulize',
-        icon: SiSequelize,
+        icon: Icons.SiSequelize,
       },
       {
         name: 'Google Cloud Platform',
-        icon: SiGooglecloud,
+        icon: Icons.SiGooglecloud,
       },
     ]
   },
@@ -866,47 +720,47 @@ export const workPortfolio: PortfolioWorkItem[] = [
     technologies: [
       {
         name: 'AngularJS',
-        icon: SiAngularjs,
+        icon: Icons.SiAngularjs,
       },
       {
         name: 'Stylus',
-        icon: SiStylus,
+        icon: Icons.SiStylus,
       },
       {
         name: 'Materialize UI',
-        icon: SiMaterialdesign,
+        icon: Icons.SiMaterialdesign,
       },
       {
         name: 'ExpressJS',
-        icon: SiExpress,
+        icon: Icons.SiExpress,
       },
       {
         name: 'Auth0',
-        icon: SiAuth0,
+        icon: Icons.SiAuth0,
       },
       {
         name: 'Riak KV',
-        icon: BsDatabase,
+        icon: Icons.BsDatabase,
       },
       {
         name: 'Redis',
-        icon: SiRedis,
+        icon: Icons.SiRedis,
       },
       {
         name: 'Apache Solr',
-        icon: SiApachesolr,
+        icon: Icons.SiApachesolr,
       },
       {
         name: 'Beanstalk',
-        icon: GiBeanstalk,
+        icon: Icons.GiBeanstalk,
       },
       {
         name: 'Google Cloud Platform',
-        icon: SiGooglecloud,
+        icon: Icons.SiGooglecloud,
       },
       {
         name: 'Jenkins',
-        icon: SiJenkins,
+        icon: Icons.SiJenkins,
       },
     ]
   },

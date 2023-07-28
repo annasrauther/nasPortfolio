@@ -1,5 +1,5 @@
 import styles from './Portfolio.module.css';
-import { PortfolioWorkItem } from '@/lib/store';
+import { PortfolioWorkItem } from '@/lib/data';
 import PortfolioItem from './PortfolioItem';
 
 /**

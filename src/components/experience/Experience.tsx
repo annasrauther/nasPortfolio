@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ExperienceItem } from '@/lib/store';
+import { ExperienceItem } from '@/lib/data';
 import styles from './Experience.module.css';
 
 interface ExperienceProps {

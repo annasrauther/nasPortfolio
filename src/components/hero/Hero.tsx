@@ -2,7 +2,7 @@
 import Button from "@/components/button/Button";
 import TechSlider from "@/components/hero/TechSlider";
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { techStack } from "@/lib/store";
+import { techStack } from "@/lib/data";
 import styles from './Hero.module.css';
 
 /**

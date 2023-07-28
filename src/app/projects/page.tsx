@@ -4,7 +4,7 @@ import Portfolio from '@/components/portfolio/Portfolio';
 import {
   workPortfolio,
   workTechnologiesList,
-} from '@/lib/store'
+} from '@/lib/data'
 
 /**
  * Projects Component displays a list of Portfolio items.
