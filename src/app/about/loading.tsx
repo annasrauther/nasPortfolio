@@ -10,7 +10,7 @@ import Loader from "@/components/effects/Loader"
 
 const Loading: React.FC = () => {
   return (
-    <Loader duration={100} />
+    <Loader />
   );
 };
 
