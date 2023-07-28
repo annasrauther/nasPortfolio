@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.1s;
+  border-radius: 99px;
+  box-shadow: -8px 8px var(--bg-box-shadow);
+  padding: 5px;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.button:hover {
+  transform: translateY(3px);
+  box-shadow: -5px 5px black;
+}
+
+.button:active {
+  transform: translateY(5px);
+  box-shadow: -3px 3px black;
+}
+
+.info {
+  border: 1px solid var(--text-btn-info);
+  background-color: var(--bg-btn-info);
+  color: var(--text-btn-info);
+}
+
+.primary {
+  border: 1px solid var(--text-btn-primary);
+  background-color: var(--bg-btn-primary);
+  color: var(--text-btn-primary);
+  text-shadow: -1px 1px var(--bg-box-shadow);
+}
