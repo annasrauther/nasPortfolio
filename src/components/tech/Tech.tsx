@@ -1,5 +1,5 @@
 import styles from "./Tech.module.css";
-import { Technology } from '@/lib/data'
+import { Technology } from '@/lib/interfaces'
 
 interface TechProps {
   technologies: Technology[];
