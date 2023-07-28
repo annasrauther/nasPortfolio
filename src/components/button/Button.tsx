@@ -1,7 +1,7 @@
 "use client";
 import { IconType } from 'react-icons';
 import Link from 'next/link';
-import styles from './button.module.css';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   label: string;
