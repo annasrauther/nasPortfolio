@@ -1,0 +1,12 @@
+.imageSlider {
+  position: "relative";
+  background-position: "center";
+  background-size: "cover";
+  width: clamp(200px, 100%, 400px);
+  min-height: 300px;
+  overflow: "hidden";
+
+  @media screen and (min-width: 768px) {
+    width: clamp(200px, 400px, 500px);
+  }
+}

@@ -1,0 +1,49 @@
+.heroContainer {
+  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  user-select: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.heroHeading {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.2;
+  text-shadow: -1px 1px var(--bg-box-shadow);
+
+  @media screen and (min-width: 768px) {
+    font-size: 6rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 9rem;
+  }
+
+}
+
+.heroHeadingGray {
+  color: var(--text-gray);
+}
+
+.heroButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 1.5rem;
+  }
+}
