@@ -35,14 +35,12 @@ export const personalActions = [
 ];
 
 export const aboutBioImages = [
-  '/about/bio-1.png',
-  '/about/bio-2.png',
-  '/about/bio-3.png',
-  '/about/bio-4.png',
-  '/about/bio-5.png',
-  '/about/bio-6.png',
-  '/about/bio-7.png',
-  '/about/bio-8.png',
+  '/about/final-bio1.jpeg',
+  '/about/final-bio2.jpeg',
+  '/about/final-bio3.jpeg',
+  '/about/final-bio4.jpeg', 
+  '/about/final-bio6.jpeg',
+  '/about/final-bio7.jpeg',
 ];
 
 export const heroStacks = [
@@ -292,6 +290,13 @@ export const technologies: Technology[] = [
     "description": "Google Cloud Platform."
   },
   {
+    "title": "Vercel",
+    "icon": Icons.SiVercel,
+    "color": "black",
+    "type": "Hosting",
+    "description": "Vercel Cloud Services."
+  },
+  {
     "title": "Jenkins",
     "icon": Icons.DiJenkins,
     "color": "#D33837",
@@ -392,7 +397,7 @@ export const technologies: Technology[] = [
   {
     "title": "Sublime Text",
     "icon": Icons.SiSublimetext,
-    "color": "#4c4c4c",
+    "color": "#ef5b25",
     "type": "Tools",
     "description": "Text editor for code, markup, and prose."
   },

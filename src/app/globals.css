@@ -16,11 +16,18 @@
   --bg-box-shadow: #000;
   --text-btn-info: #586ba9;
   --hr-color: rgb(59 130 246 / 0.3);
+  --font-heading-size-sm: 4em;
+  --font-heading-size-md: 7em;
+  --font-title-size-sm: 3em;
+  --font-title-size-md: 5em;
+  --font-paragraph-size-sm: 1em;
+  --font-paragraph-size-md: 1.2em;
+  --font-paragraph-weight: 100;
 }
 
 body {
   background: var(--bg-color);
-  animation: theme 21s linear infinite;
+  animation: theme 10s linear infinite;
 }
 
 body:after,

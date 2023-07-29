@@ -56,7 +56,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           ))}
         </div>
         <div style={{ display: 'inherit' }}>
-          <Button label="View Project" href={url} target icon={BsFillArrowRightCircleFill} />
+          <Button label="Visit" href={url} target icon={BsFillArrowRightCircleFill} />
         </div>
       </div>
     </div>
