@@ -24,8 +24,8 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
             <a href={item.company.url} target='_blank' rel='noopener noreferrer'>
               <Image
                 alt={item.company.name}
-                width={60}
-                height={60}
+                width={90}
+                height={90}
                 src={item.company.logo}
               />
             </a>

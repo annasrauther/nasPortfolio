@@ -1,10 +1,55 @@
-.tech_list {
+.tech_container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px 25px;
+  gap: 1.5em 2em;
+  padding-top: 2em;
+}
+
+.tech_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2em 1em;
+  background-image: radial-gradient(var(--text-info) 1px, transparent 1px);
+  background-position: 50% 50%;
+  background-size: 1em 1em;
+  border-radius: 5px;
+}
+
+.tech_title {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-info);
+  background: white;
+  box-shadow: -4px 4px var(--bg-box-shadow);
+  border: 1px solid var(--text-info);
+
+  @media screen and (min-width: 768px) {
+    font-size: 3em;
+  }
+}
+
+.tech_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
   margin-top: 15px;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media screen and (min-width: 520px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .tech {
@@ -13,28 +58,38 @@
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
+  padding: 10px;
+  background: white;
+  box-shadow: -4px 4px var(--text-info);
+  border: 1px solid var(--hr-color);
+  border-radius: 4px;
 }
 
 .tech_item {
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--hr-color);
 }
 
 .tech_icon {
-  width: 25px;
-  height: 25px;
+  /* width: 25px;
+  height: 25px; */
+}
+
+.tech_description {
+  font-size: 0.9em;
 }
 
 .tech_label {
-  color: var(--paragraph-color);
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 0.9em;
+  color: var(--text-info);
+  font-size: 1.2em;
 
   @media screen and (min-width: 768px) {
-    font-size: 1em;
+    font-size: 1.4em;
   }
 }

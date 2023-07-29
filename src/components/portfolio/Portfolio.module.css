@@ -123,6 +123,7 @@
 .portfolio_item {
   display: grid;
   grid-template-columns: auto;
+  align-items: flex-start;
   border-top: 1px solid var(--hr-color);
   padding-top: 1em;
 
@@ -152,4 +153,12 @@
     font-size: 1em;
     text-align: left;
   }
+}
+
+.totalProjects {
+  font-size: 2em;
+  color: var(--text-btn-info);
+  text-align: center;
+  border-top: 1px solid var(--hr-color);
+  border-bottom: 1px solid var(--hr-color);
 }

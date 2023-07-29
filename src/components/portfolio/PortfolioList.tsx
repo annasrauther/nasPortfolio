@@ -27,7 +27,7 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ filteredProjects }) => {
 
   return (
     <>
-      <div>Total: {filteredProjects.length}</div>
+      <div className={styles.totalProjects}>Total: {filteredProjects.length}</div>
       <div className={styles.portfolio_items_container}>
         {renderPortfolioItems()}
       </div>

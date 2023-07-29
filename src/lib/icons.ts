@@ -48,7 +48,8 @@ export {
   SiJira,
   SiBrave,
   SiPostman,
-  SiFilezilla
+  SiFilezilla,
+  SiVercel,
 } from 'react-icons/si'
 export {
   DiMaterializecss
