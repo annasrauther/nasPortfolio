@@ -36,13 +36,12 @@ export const personalActions = [
   'Playing with Pets',
 ];
 
-export const aboutBioImages = [
-  '/about/final-bio1.jpeg',
-  '/about/final-bio2.jpeg',
-  '/about/final-bio3.jpeg',
-  '/about/final-bio4.jpeg', 
-  '/about/final-bio6.jpeg',
-  '/about/final-bio7.jpeg',
+export const heroImages = [
+  '/about/bio_1.svg',
+  '/about/bio_2.svg',
+  '/about/bio_3.svg',
+  '/about/bio_4.svg', 
+  '/about/bio_6.svg',
 ];
 
 export const heroStacks = [

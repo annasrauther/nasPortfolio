@@ -2,7 +2,7 @@ import Tech from '@/components/tech/Tech';
 import Experience from '@/components/experience/Experience';
 import ImageSlider from '@/components/slider/ImageSlider';
 import styles from './About.module.css';
-import { aboutBioImages, technologies, workExperience } from '@/lib/data'
+import { technologies, workExperience } from '@/lib/data'
 
 /**
  * About component to display information about the developer.
@@ -26,9 +26,9 @@ const About: React.FC = () => {
           </p>
         </div>
         <div className={styles.section_column}>
-          <ImageSlider
+          {/* <ImageSlider
             images={aboutBioImages}
-          />
+          /> */}
         </div>
       </div>
       <div className={styles.section}>
