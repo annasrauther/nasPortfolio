@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from './ImageSlider.module.css';
+import Image from "next/image";
 
 interface ImageSliderProps {
   images: string[];
 }
 
-const timer = 3000;
+const timer = 4000;
 
 /**
  * ImageSlider component that displays a slider of images with fade-in/fade-out transitions.
@@ -36,36 +36,28 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   }, [images]);
 
   return (
-    <div
-      className={styles.imageSlider}
-      style={{
-        width: "clamp(200px, 100%, 500px)",
-        minHeight: "300px",
-        overflow: "hidden",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
-      }}
-    >
+    <>
       {images.map((imageUrl, index) => (
         <div
           key={index}
           style={{
             width: "100%",
             height: "100%",
-            opacity: index === currentIndex && isVisible ? 1 : 0,
-            backgroundImage: `url(${imageUrl})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            transition: "opacity 0.5s ease-in-out",
-            position: "absolute",
-            top: 0,
-            left: 0,
+            display: index === currentIndex && isVisible ? 'block' : 'none',
           }}
-        />
+        >
+          <Image
+            width={400}
+            height={400}
+            src={imageUrl}
+            alt="Hero Image"
+            style={{
+              margin: 'auto'
+            }}
+          />
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 

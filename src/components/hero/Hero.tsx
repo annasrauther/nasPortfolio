@@ -2,8 +2,9 @@
 import Button from "@/components/button/Button";
 import TechSlider from "@/components/hero/TechSlider";
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { techStack } from "@/lib/data";
+import { heroImages, techStack } from "@/lib/data";
 import styles from './Hero.module.css';
+import ImageSlider from "../slider/ImageSlider";
 
 /**
  * Hero Component
@@ -18,17 +19,20 @@ const Hero: React.FC = () => {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.wrapper}>
-        <h1 className={styles.heroHeading}>
-          <span className={styles.heroHeadingGray}>Front End</span> <span>Developer</span>
-        </h1>
+        <h1 className={styles.heroHeading}>Front End Developer</h1>
         <TechSlider techList={techStack} />
         <div className={styles.heroButtonContainer}>
           <Button
-            label="About Me"
+            label="Find out more"
             href="/about"
             icon={BsFillArrowRightCircleFill}
           />
         </div>
+      </div>
+      <div className={styles.imageWrapper}>
+        <ImageSlider
+          images={heroImages}
+        />
       </div>
     </div>
   );

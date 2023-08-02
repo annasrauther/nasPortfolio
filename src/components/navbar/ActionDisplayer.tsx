@@ -6,7 +6,7 @@ interface ActionDisplayerProps {
   actions: string[];
 }
 
-const timer = 4000;
+const timer = 3000;
 
 /**
  * ActionDisplayer component that displays random actions in a text animation.

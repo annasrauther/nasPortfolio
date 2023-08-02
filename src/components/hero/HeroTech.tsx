@@ -30,7 +30,7 @@ const HeroTech: React.FC<HeroTechProps> = ({ tech }) => {
         className={styles.techName}
       >
         {tech.name}
-        {tech.icon({ size: '1.8rem' })}
+        {tech.icon({ size: '2em' })}
       </span>
     </div>
   );
