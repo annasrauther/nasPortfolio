@@ -27,9 +27,8 @@
 
 .experience_item ul {
   list-style: inside;
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 0.9em;
+  font-weight: 300;
+  font-size: var(--font-paragraph-size-sm);
   text-align: left;
 }
 

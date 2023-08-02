@@ -25,9 +25,10 @@
   background: white;
   box-shadow: -4px 4px var(--bg-box-shadow);
   border: 1px solid var(--text-info);
+  font-weight: 900;
 
   @media screen and (min-width: 768px) {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
@@ -60,7 +61,7 @@
   gap: 10px;
   padding: 10px;
   background: white;
-  box-shadow: -4px 4px var(--text-info);
+  box-shadow: -4px 4px var(--bg-box-shadow);
   border: 1px solid var(--hr-color);
   border-radius: 4px;
 }
