@@ -1,48 +1,29 @@
 /* Menu.module.css */
+
 .menu {
   display: flex;
-  position: fixed;
-  top: 10px;
-  right: 5px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  z-index: 99;
-  border: 1px solid var(--bg-box-shadow);
-  box-shadow: -8px 8px var(--bg-box-shadow);
-  background-color: var(--bg-btn-info);
-  overflow: hidden;
-}
-
-.sub-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  width: 100%;
   gap: 1em;
+  padding: 0 0 8px 8px;
+  overflow-y: scroll;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+
+  @media screen and (min-width: 1024px) {
+    width: auto;
+  }
 }
 
-.active .link,
-.link:hover,
-.link:active {
-  text-shadow: -2px 2px var(--bg-box-shadow);
-  transform: translateY(5px);
-  transform: translateX(-5px);
+.menu::-webkit-scrollbar {
+  display: none;
 }
 
-.link {
-  display: block;
-  position: relative;
-  transition: all 0.3s;
-  padding: 0px 35px 0 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-shadow: -5px 5px var(--bg-box-shadow);
-  color: var(--text-btn-info);
-  font-size: 3em;
-  font-weight: 900;
+.menu a {
+  font-size: 0.9em;
 
-  @media screen and (min-width: 768px) {
-    font-size: 4em;
+  @media screen and (min-width: 1200px) {
+    font-size: 1em;
   }
 }

@@ -9,6 +9,7 @@ interface ButtonProps {
   icon?: IconType;
   href: string;
   target?: boolean;
+  active?: boolean;
 }
 
 /**
@@ -20,12 +21,12 @@ interface ButtonProps {
  * @returns {JSX.Element} The Button component JSX element.
  */
 
-const Button: React.FC<ButtonProps> = ({ label, info, href, icon: Icon, target }) => {
+const Button: React.FC<ButtonProps> = ({ label, info, href, icon: Icon, target, active }) => {
   return (
     <Link
       href={href}
       passHref
-      className={`${styles.button} ${info ? styles.info : styles.primary}`}
+      className={`${styles.button} ${info ? styles.info : styles.primary} ${active ? styles.active : ''}`}
       target={target ? '_blank' : '_self'}
     >
       {label}

@@ -1,11 +1,7 @@
-"use client";
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import ActionDisplayer from "./ActionDisplayer";
 import Logo from "./Logo";
 import BrandName from "./BrandName";
-import NavButtons from "./NavButtons";
 import styles from './Navbar.module.css';
 import {
   personalActions,
@@ -17,20 +13,6 @@ import {
  * @returns {JSX.Element} The JSX element representing the Navbar.
  */
 const Navbar: React.FC = () => {
-  const pathname = usePathname();
-  const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
-
-  /**
-   * Close the dropdown when the pathname changes.
-   */
-  useEffect(() => {
-    setDropdownOpen(false);
-  }, [pathname]);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
   return (
     <header>
       <div className={styles.header}>
@@ -43,14 +25,13 @@ const Navbar: React.FC = () => {
             priority={true}
             logoLink="/"
           />
-          <BrandName brandName="Al Annas Rauther" brandLink="/" />
-          <ActionDisplayer actions={personalActions} />
+          <div className={styles.actionDisplayerContainer}>
+            <BrandName brandName="Al Annas Rauther" brandLink="/" />
+            <ActionDisplayer actions={personalActions} />
+          </div>
         </div>
-
-        <NavButtons isDropdownOpen={isDropdownOpen} onToggleDropdown={toggleDropdown} />
+        <Menu navigationLinks={navigation} />
       </div>
-
-      {isDropdownOpen && <Menu navigationLinks={navigation} />}
     </header>
   );
 };

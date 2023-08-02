@@ -9,6 +9,7 @@
   padding-left: 1rem;
   text-transform: uppercase;
   font-size: 1.2em;
+  font-weight: 900;
   gap: 10px;
 
   @media screen and (min-width: 768px) {
@@ -17,12 +18,13 @@
 }
 
 .button:hover {
-  transform: translateY(3px);
+  transform: translate(-3px, 3px);
   box-shadow: -5px 5px black;
 }
 
-.button:active {
-  transform: translateY(5px);
+.button:active,
+.active {
+  transform: translate(-5px, 5px);
   box-shadow: -3px 3px black;
 }
 

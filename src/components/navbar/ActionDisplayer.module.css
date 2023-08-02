@@ -1,12 +1,5 @@
 .action-displayer {
-  display: none;
-  text-shadow: -1px 1px var(--bg-box-shadow);
   text-transform: uppercase;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-left: 0.5rem;
-  }
 }
 
 .text-animation {
@@ -15,6 +8,6 @@
   font-size: 1rem;
 
   @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
