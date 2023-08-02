@@ -5,7 +5,6 @@
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-btn-info);
   gap: 1em;
 
   @media screen and (min-width: 768px) {
@@ -14,14 +13,14 @@
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: var(--font-heading-size-sm);
+  font-weight: var(--font-heading-weight);
   text-transform: uppercase;
   color: var(--text-btn-info);
-  font-weight: 700;
   border-bottom: 1px solid var(--hr-color);
   text-shadow: -1px 1px var(--bg-box-shadow);
 
   @media screen and (min-width: 768px) {
-    font-size: 6rem;
+    font-size: var(--font-heading-size-md);
   }
 }

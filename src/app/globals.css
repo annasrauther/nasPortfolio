@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
+  /* Colors */
   --cursor-default-background: #000;
   --cursor-text-background: #f6f4ef;
-  --text-primary: #f6f4ef;
+  --text-primary: #586ba9;
   --text-info: #586ba9;
-  --bg-color: #586ba9;
   --bg-btn-primary: #586ba9;
   --text-btn-primary: #f6f4ef;
   --text-highlight: #000;
@@ -16,87 +16,48 @@
   --bg-box-shadow: #000;
   --text-btn-info: #586ba9;
   --hr-color: rgb(59 130 246 / 0.3);
+  /* Font Size */
   --font-heading-size-sm: 4em;
-  --font-heading-size-md: 7em;
+  --font-heading-size-md: 6em;
   --font-title-size-sm: 3em;
-  --font-title-size-md: 5em;
-  --font-paragraph-size-sm: 1em;
-  --font-paragraph-size-md: 1.2em;
-  --font-paragraph-weight: 100;
+  --font-title-size-md: 4em;
+  --font-paragraph-size-sm: 0.9em;
+  --font-paragraph-size-md: 1em;
+  /* Font Weight */
+  --font-heading-weight: 900;
+  --font-title-weight: 700;
+  --font-paragraph-weight: 300;
 }
 
 body {
-  background: var(--bg-color);
-  animation: theme 10s linear infinite;
+  background: transparent;
 }
 
-body:after,
-body:before {
+body::after {
+  background-image: radial-gradient(at 40% 40%, rgb(30, 144, 255) 0px, transparent 50%), radial-gradient(at 90% 10%, rgb(255, 105, 180) 0px, transparent 50%), radial-gradient(at 50% 95%, rgb(0, 255, 255) 0px, transparent 50%), radial-gradient(at 20% 30%, rgb(50, 205, 50) 0px, transparent 50%), radial-gradient(at 90% 90%, rgb(255, 255, 0) 0px, transparent 50%), radial-gradient(at 33% 50%, rgb(255, 69, 0) 0px, transparent 50%), radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
+  position: fixed;
   content: "";
-  display: block;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(100%);
+  top: 0px;
+  opacity: 0.1;
+  transform: translateZ(0px);
+}
+
+body::before {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  color: rgba(113, 113, 113, 0.07);
   position: fixed;
   z-index: -1;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  width: 100vmax;
-  height: 100vmax;
-  background: rgba(0, 0, 0, 0.05);
-  animation: backgroundSpin 90s linear infinite;
-}
-
-body:after {
-  left: 15vw;
-}
-
-body:before {
-  right: 15vw;
-  animation-delay: -30s;
-  animation-direction: reverse;
-}
-
-@keyframes theme {
-  0% {
-    background: #586ba9;
-  }
-
-  16% {
-    background: #5b59ba;
-  }
-
-  33% {
-    background: #514ea7;
-  }
-
-  50% {
-    background: #474594;
-  }
-
-  66% {
-    background: #3d3a81;
-  }
-
-  83% {
-    background: #33326e;
-  }
-
-  100% {
-    background: #5b59ba;
-  }
-}
-
-@keyframes backgroundSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  background: linear-gradient(rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 94px 90px, linear-gradient(to right, rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 94px 90px;
+  transition: all 0.5s linear 0s;
 }
 
 p {
   color: var(--paragraph-color);
-  font-family: sans-serif;
   font-weight: 300;
 }

@@ -1,11 +1,20 @@
 import './globals.css'
 
-import { Anton } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 
-const anton = Anton({
+const anton = Montserrat({
   subsets: ['latin'],
-  weight: '400',
+  weight: [
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '900',
+  ],
 });
 const title = 'Al Annas Rauther';
 const description = 'Front End Developer';
