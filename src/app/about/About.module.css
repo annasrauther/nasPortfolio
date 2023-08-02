@@ -5,7 +5,6 @@
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-btn-info);
   gap: 1em;
 
   @media screen and (min-width: 768px) {
@@ -13,28 +12,29 @@
   }
 }
 
-
 .heading {
-  font-size: 5rem;
+  font-size: var(--font-heading-size-sm);
+  font-weight: var(--font-heading-weight);
   text-transform: uppercase;
   color: var(--text-btn-info);
   border-bottom: 1px solid var(--hr-color);
   text-shadow: -1px 1px var(--bg-box-shadow);
 
   @media screen and (min-width: 768px) {
-    font-size: 7rem;
+    font-size: var(--font-heading-size-md);
   }
 }
 
 .subheading {
-  font-size: 3rem;
+  font-size: var(--font-title-size-sm);
+  font-weight: var(--font-title-weight);
   text-transform: uppercase;
   color: var(--text-btn-info);
   border-bottom: 1px solid var(--hr-color);
   text-shadow: -1px 1px var(--bg-box-shadow);
 
   @media screen and (min-width: 768px) {
-    font-size: 5rem;
+    font-size: var(--font-title-size-md);
   }
 }
 
@@ -43,8 +43,8 @@
   grid-template-rows: auto;
   gap: 1em;
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 2fr 1fr;
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: 1fr 2fr;
     gap: 5em;
   }
 }
@@ -55,11 +55,16 @@
   gap: 0.5em;
 }
 
+.bio_image {
+  margin: 0 auto;
+}
+
 .paragraph {
   text-align: justify;
-  font-size: 0.9em;
+  font-size: var(--font-paragraph-size-sm);
+  font-weight: var(--font-paragraph-weight);
 
   @media screen and (min-width: 768px) {
-    font-size: 1em;
+    font-size: var(--font-paragraph-size-md);
   }
 }

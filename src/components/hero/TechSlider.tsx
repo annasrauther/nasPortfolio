@@ -12,7 +12,7 @@ interface TechSliderProps {
   techList: TechItem[];
 }
 
-const timer = 3000;
+const timer = 4000;
 
 /**
  * TechSlider Component

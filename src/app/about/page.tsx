@@ -1,8 +1,8 @@
 import Tech from '@/components/tech/Tech';
+import Image from 'next/image';
 import Experience from '@/components/experience/Experience';
-import ImageSlider from '@/components/slider/ImageSlider';
 import styles from './About.module.css';
-import { aboutBioImages, technologies, workExperience } from '@/lib/data'
+import { technologies, workExperience } from '@/lib/data'
 
 /**
  * About component to display information about the developer.
@@ -15,6 +15,15 @@ const About: React.FC = () => {
       <h1 className={styles.heading}>About</h1>
       <div className={styles.section_row}>
         <div className={styles.section_column}>
+          <Image
+            className={styles.bio_image}
+            src="/about/main_1.svg"
+            alt="About Image"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className={styles.section_column}>
           <p className={styles.paragraph}>
             Welcome to my digital realm! With over 8 years of experience in web development, I&apos;m a full-stack expert with a front-end focus. Crafting seamless websites and web apps for large data projects is my passion, and my track record speaks for itself. In 2015, I landed a Jr Front End Developer role at Wisdmlabs, just two months after my self-taught journey began. Located in Mumbai, I draw inspiration from strategic chess battles, enlightening TedED and Fireship videos, and the occasional weightlifting session.
           </p>
@@ -24,11 +33,6 @@ const About: React.FC = () => {
           <p className={styles.paragraph}>
             Hop on board this exhilarating web development journey, where your visions become reality through my technical prowess that speaks volumes. Together, we&apos;ll craft something truly extraordinary!
           </p>
-        </div>
-        <div className={styles.section_column}>
-          <ImageSlider
-            images={aboutBioImages}
-          />
         </div>
       </div>
       <div className={styles.section}>

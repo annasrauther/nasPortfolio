@@ -1,20 +1,17 @@
 .heroTech {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-shadow: -1px 1px var(--bg-box-shadow);
+  align-items: center;
+  justify-content: center;
   line-height: 1.2;
   color: var(--text-primary);
   font-size: 1.2rem;
   font-weight: 300;
   gap: 1em;
 
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    font-size: 1.8rem;
-    gap: 0;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.3em;
+    align-items: flex-start;
   }
 }
 
@@ -25,10 +22,6 @@
   justify-content: center;
   text-transform: uppercase;
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 700;
   gap: 5px;
-
-  @media screen and (min-width: 768px) {
-    margin: 0 10px;
-  }
 }

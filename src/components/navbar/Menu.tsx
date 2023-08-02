@@ -1,5 +1,7 @@
-import Link from 'next/link';
+"use client";
 import { usePathname } from 'next/navigation';
+import Button from '@/components/button/Button';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 import styles from './Menu.module.css';
 
@@ -21,17 +23,19 @@ const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
   const pathname = usePathname();
 
   return (
-    <div className={styles.menu}>
-      <ul className={styles['sub-menu']}>
-        {navigationLinks.map((link) => (
-          <li key={link.name} className={pathname === link.href ? styles.active : ''}>
-            <Link href={link.href} className={styles.link}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={styles.menu}>
+      {navigationLinks.map((link) => (
+        <li key={link.name} className={pathname === link.href ? styles.active : ''}>
+          <Button
+            active={pathname === link.href}
+            info={pathname !== link.href}
+            label={link.name}
+            href={link.href}
+            icon={BsFillArrowRightCircleFill}
+          />
+        </li>
+      ))}
+    </ul>
   );
 };
 

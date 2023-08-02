@@ -1,11 +1,13 @@
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 5px 2%;
-  gap: 1em;
+  gap: 0.5em;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
     cursor: default;
     padding: 5px 20px;
   }
@@ -13,11 +15,12 @@
 
 .brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 1em;
+  width: 100%;
 
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
+  @media screen and (min-width: 1024px) {
+    width: auto;
   }
 }
 
@@ -28,32 +31,14 @@
 }
 
 .brand-link {
-  display: none;
-  text-shadow: -1px 1px var(--bg-box-shadow);
+  text-shadow: -0.5px 0.5px var(--bg-box-shadow);
+  z-index: 50;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.3em;
 
   @media screen and (min-width: 768px) {
-    display: block;
-    z-index: 50;
-    margin-left: 1rem;
-    text-transform: uppercase;
-    color: var(--text-primary);
     font-size: 1.8rem;
-    font-weight: 600;
   }
-}
-
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.dropdown-icon {
-  z-index: 1000;
-  border: 1px solid var(--text-btn-info);
-  border-radius: 9999px;
-  box-shadow: -8px 8px var(--bg-box-shadow);
-  background-color: var(--bg-btn-info);
-  padding: 0.5rem;
-  color: var(--text-btn-info);
 }
