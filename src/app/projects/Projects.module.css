@@ -1,0 +1,26 @@
+/* projects.module.css */
+
+.container {
+  padding: 0 5% 5%;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @media screen and (min-width: 768px) {
+    gap: 2em;
+  }
+}
+
+.heading {
+  font-size: var(--font-heading-size-sm);
+  font-weight: var(--font-heading-weight);
+  text-transform: uppercase;
+  color: var(--text-btn-info);
+  border-bottom: 1px solid var(--hr-color);
+  text-shadow: -1px 1px var(--bg-box-shadow);
+
+  @media screen and (min-width: 768px) {
+    font-size: var(--font-heading-size-md);
+  }
+}

@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 2%;
+  gap: 0.5em;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    cursor: default;
+    padding: 5px 20px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+
+  @media screen and (min-width: 1024px) {
+    width: auto;
+  }
+}
+
+.logo {
+  z-index: 99999;
+  width: 75px;
+  height: 75px;
+}
+
+.brand-link {
+  text-shadow: -0.5px 0.5px var(--bg-box-shadow);
+  z-index: 50;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.3em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+}

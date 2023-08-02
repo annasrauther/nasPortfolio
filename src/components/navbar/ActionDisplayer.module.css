@@ -1,0 +1,13 @@
+.action-displayer {
+  text-transform: uppercase;
+}
+
+.text-animation {
+  transform: translateY(20px);
+  color: var(--text-primary);
+  font-size: 0.9em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1em;
+  }
+}
