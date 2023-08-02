@@ -22,6 +22,7 @@ const url = "https://annasrauther.com";
 
 export const metadata = {
   title: title,
+  metadataBase: new URL('https://annasrauther.com'),
   description,
   openGraph: {
     title: title,
