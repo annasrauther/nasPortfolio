@@ -1,13 +1,11 @@
 "use client";
-import { usePathname } from 'next/navigation';
-import Button from '@/components/button/Button';
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-
-import styles from './Menu.module.css';
 import Link from 'next/link';
+import styles from './Menu.module.css';
+import { usePathname } from 'next/navigation';
 
 interface MenuItem {
   name: string;
+  label: string;
   href: string;
 }
 
@@ -21,18 +19,17 @@ interface MenuProps {
  * @returns {JSX.Element} The JSX element representing the Menu.
  */
 const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
+  const pathname = usePathname();
   return (
-    <ul className={styles.menu}>
+    <nav className={styles.menu}>
       {navigationLinks.map((link) => (
-        <li key={link.name} className={styles.menuItem}>
-          <Link href={link.href}>
-            {link.name}
-          </Link>
-        </li>
+        <Link className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`} href={link.href} key={link.name}>
+          <span className={styles['menu__item-name']}>{link.name}</span>
+          <span className={styles['menu__item-label']}>{link.label}</span>
+        </Link>
       ))}
-    </ul>
+    </nav>
   );
 };
 
 export default Menu;
-
