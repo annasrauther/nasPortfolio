@@ -33,7 +33,7 @@ const Tech: React.FC<TechProps> = ({ technologies }) => {
             {groupedTechnologies[type].map((tech, techIndex) => (
               <div className={styles.tech} key={techIndex}>
                 <div className={styles.tech_item}>
-                  <span className={`${styles.tech_label} ${poppins.className}`}>{tech.title}</span>
+                  <span className={styles.tech_label}>{tech.title}</span>
                   <tech.icon size={"2.5em"} color={tech.color} className={styles.tech_icon} />
                 </div>
                 <p className={styles.tech_description}>{tech.description}</p>
