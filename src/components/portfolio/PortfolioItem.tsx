@@ -2,6 +2,7 @@ import styles from './Portfolio.module.css';
 import Image from 'next/image';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Button from '../button/Button';
+import { poppins } from '@/lib/fonts';
 
 /**
  * Represents a technology used in the portfolio item.
@@ -40,7 +41,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <Image src={screenshot} alt={title} width={500} height={500} />
       </div>
       <div className={styles.portfolio_item_content}>
-        <h3 className={styles.portfolio_item_content_label}>{title}</h3>
+        <h3 className={`${styles.portfolio_item_content_label} ${poppins.className}`}>{title}</h3>
         <ul>
           {description.map((desc, index) => (
             <li className={styles.portfolio_item_content_desc} key={index}>

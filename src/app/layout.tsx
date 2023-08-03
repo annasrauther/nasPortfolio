@@ -1,22 +1,7 @@
 import './globals.css'
-
-import { Poppins } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
+import { roboto_mono } from '@/lib/fonts';
 
-const anton = Poppins({
-  subsets: ['latin'],
-  weight: [
-    '100',
-    '200',
-    '300',
-    '400',
-    '500',
-    '600',
-    '700',
-    '800',
-    '900',
-  ],
-});
 const title = 'Al Annas Rauther';
 const description = 'Front End Developer';
 const url = "https://annasrauther.com";
@@ -89,7 +74,7 @@ interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={anton.className}>
+      <body className={roboto_mono.className}>
         <Navbar />
         <main>{children}</main>
       </body>

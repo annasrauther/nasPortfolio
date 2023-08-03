@@ -1,7 +1,8 @@
 import TechSlider from "@/components/hero/TechSlider";
 import { techStack } from "@/lib/data";
-import styles from './Hero.module.css';
+import { poppins } from '@/lib/fonts';
 import { FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import styles from './Hero.module.css';
 
 /**
  * Hero Component
@@ -16,7 +17,7 @@ const Hero: React.FC = () => {
     <div className={styles.heroContainer}>
       <div className={styles.imageWrapper}></div>
       <div className={styles.wrapper}>
-        <h1 className={styles.heroHeading}>Front End Developer</h1>
+        <h1 className={`${styles.heroHeading}  ${poppins.className}`}>Front End Developer</h1>
         <TechSlider techList={techStack} />
       </div>
       <div className={styles.socialIcons}>

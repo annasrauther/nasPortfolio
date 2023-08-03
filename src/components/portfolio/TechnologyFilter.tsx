@@ -1,4 +1,5 @@
 import styles from './Portfolio.module.css';
+import { poppins } from '@/lib/fonts';
 
 /**
  * Represents the props for the TechnologyFilter component.
@@ -29,7 +30,7 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
 
   return (
     <div className={styles.filter_buttons}>
-      <div className={styles.technologies}>
+      <div className={`${styles.technologies} ${poppins.className}`}>
         <span
           className={`${styles.technology} ${!selectedTechnology ? styles.active : ''}`}
           onClick={() => handleClick(null)}

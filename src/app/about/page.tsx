@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './About.module.css';
+import { poppins } from '@/lib/fonts';
 
 /**
  * About component to display information about the developer.
@@ -8,8 +9,8 @@ import styles from './About.module.css';
  */
 const About: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>About</h1>
+    <div className="page-container">
+      <h1 className={`page-heading ${poppins.className}`}>About</h1>
       <div className={styles.section_row}>
         <div className={styles.section_column}>
           <Image
@@ -34,14 +35,13 @@ const About: React.FC = () => {
       </div>
       <div className={styles.section}>
         <div className="w-full">
-          <h2 className={styles.subheading}>My Belief</h2>
+          <h2 className={`page-subheading ${poppins.className}`}>My Belief</h2>
         </div>
       </div>
       <div className={styles.section}>
         <div className="w-full">
-          <h2 className={styles.subheading}>More Content</h2>
+          <h2 className={`page-subheading ${poppins.className}`}>More Content</h2>
         </div>
-        {/* <Experience experienceItems={workExperience} /> */}
       </div>
     </div>
   );

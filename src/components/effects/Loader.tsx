@@ -8,14 +8,6 @@ import Image from 'next/image';
 const Loader: React.FC = () => {
   return (
     <div className={styles.loading_wrapper}>
-      <h1 className={styles.loading_text}>Loading...</h1>
-      <Image
-        className={styles.logo}
-        src="/logo.png"
-        width={75}
-        height={75}
-        alt="Logo"
-      />
       <Image
         src="/loader.svg"
         width={100}

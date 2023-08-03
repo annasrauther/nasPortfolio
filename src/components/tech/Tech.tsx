@@ -1,5 +1,6 @@
 import styles from "./Tech.module.css";
 import { Technology } from "@/lib/interfaces";
+import { poppins } from "@/lib/fonts";
 
 interface TechProps {
   technologies: Technology[];
@@ -27,12 +28,12 @@ const Tech: React.FC<TechProps> = ({ technologies }) => {
     <div className={styles.tech_container}>
       {Object.keys(groupedTechnologies).map((type, index) => (
         <div key={index} className={styles.tech_wrapper}>
-          <h4 className={styles.tech_title}>{type}</h4>
+          <h4 className={`${styles.tech_title} ${poppins.className}`}>{type}</h4>
           <div className={styles.tech_list}>
             {groupedTechnologies[type].map((tech, techIndex) => (
               <div className={styles.tech} key={techIndex}>
                 <div className={styles.tech_item}>
-                  <span className={styles.tech_label}>{tech.title}</span>
+                  <span className={`${styles.tech_label} ${poppins.className}`}>{tech.title}</span>
                   <tech.icon size={"2.5em"} color={tech.color} className={styles.tech_icon} />
                 </div>
                 <p className={styles.tech_description}>{tech.description}</p>

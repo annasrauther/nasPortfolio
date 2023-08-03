@@ -17,6 +17,7 @@
 
 .experience_item h4 {
   font-size: 2em;
+  font-weight: 300;
 }
 
 .experience_item h5 {
@@ -27,7 +28,6 @@
 
 .experience_item ul {
   list-style: inside;
-  font-weight: 300;
   font-size: var(--font-paragraph-size-sm);
   text-align: left;
 }
@@ -40,7 +40,6 @@
   display: block;
   font-size: 0.785rem;
   color: var(--text-btn-info);
-  font-family: sans-serif;
 }
 
 .experience_item::after {
