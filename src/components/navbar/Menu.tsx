@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import styles from './Menu.module.css';
 import { usePathname } from 'next/navigation';
+import { poppins } from '@/lib/fonts';
 
 interface MenuItem {
   name: string;
@@ -24,7 +25,7 @@ const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
     <nav className={styles.menu}>
       {navigationLinks.map((link) => (
         <Link className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`} href={link.href} key={link.name}>
-          <span className={styles['menu__item-name']}>{link.name}</span>
+          <span className={`${styles['menu__item-name']} ${poppins.className}`}>{link.name}</span>
           <span className={styles['menu__item-label']}>{link.label}</span>
         </Link>
       ))}

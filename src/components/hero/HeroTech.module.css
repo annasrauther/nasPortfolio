@@ -11,8 +11,7 @@
 
 .hero_sub_title {
   color: var(--text-primary);
-  font-weight: 200;
-  font-size: clamp(1em, 2vw, 2em);
+  font-size: clamp(1em, 1.5vw, 2em);
 }
 
 .techName {

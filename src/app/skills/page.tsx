@@ -1,5 +1,5 @@
-import styles from './Skills.module.css';
 import Tech from '@/components/tech/Tech';
+import { poppins } from '@/lib/fonts';
 import { technologies } from '@/lib/data'
 
 /**
@@ -8,8 +8,8 @@ import { technologies } from '@/lib/data'
  */
 const Projects: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Skills</h1>
+    <div className="page-container">
+      <h1 className={`page-heading ${poppins.className}`}>Skills</h1>
       <p>List of Technologies (Used at least once)</p>
       <Tech technologies={technologies} />
     </div>

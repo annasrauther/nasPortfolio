@@ -18,6 +18,10 @@
   }
 }
 
+.logoLink {
+  display: flex;
+}
+
 .logo {
   z-index: 99999;
   width: 75px;

@@ -1,6 +1,7 @@
 "use client";
-import styles from './Projects.module.css';
+// import styles from './Projects.module.css';
 import Portfolio from '@/components/portfolio/Portfolio';
+import { poppins } from '@/lib/fonts';
 import {
   workPortfolio,
   workTechnologiesList,
@@ -12,8 +13,8 @@ import {
  */
 const Projects: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Projects</h1>
+    <div className="page-container">
+      <h1 className={`page-heading ${poppins.className}`}>Projects</h1>
       <Portfolio portfolioItems={workPortfolio} technologiesList={workTechnologiesList} />
     </div>
   );

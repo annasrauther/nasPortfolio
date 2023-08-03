@@ -18,14 +18,7 @@ const Navbar: React.FC = () => {
       <div className={styles.header}>
         <Menu navigationLinks={navigation} />
         <div className={styles.brand}>
-          <Logo
-            src="/logo.png"
-            alt="Nas Rauther Logo"
-            width={75}
-            height={75}
-            priority={true}
-            logoLink="/"
-          />
+          <Logo logoLink="/" />
           <div className={styles.actionDisplayerContainer}>
             <BrandName brandName="Al Annas Rauther" brandLink="/" />
             <ActionDisplayer actions={personalActions} />
