@@ -1,5 +1,4 @@
 /* About.module.css */
-
 .section_row {
   display: grid;
   grid-template-rows: auto;
@@ -14,7 +13,58 @@
 .section_column {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 2em;
+}
+
+.belief-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 1px solid var(--hr-color);
+  padding-top: 2em;
+  gap: 3em;
+}
+
+.belief-wrapper:first-of-type {
+  border-top: none;
+}
+
+@media screen and (min-width: 768px) {
+  .belief-wrapper:nth-child(odd) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .belief-wrapper:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.belief-image {
+  margin: 0 auto;
+}
+
+.belief-section {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  gap: 1em;
+
+  @media screen and (min-width: 768px) {
+    order: initial;
+  }
+}
+
+.belief-list {
+  list-style: inside;
+  color: var(--text-primary);
+  font-size: var(--font-paragraph-size-sm);
+}
+
+.page-subtitle {
+  color: var(--text-primary);
+  font-size: clamp(1.5em, 4vw, 8em);
+  font-weight: 700;
 }
 
 .bio_image {
@@ -23,6 +73,7 @@
 
 .paragraph {
   text-align: justify;
+  color: var(--text-primary);
   font-size: var(--font-paragraph-size-sm);
 
   @media screen and (min-width: 768px) {

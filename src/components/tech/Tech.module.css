@@ -22,9 +22,9 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--text-info);
-  background: white;
-  box-shadow: -4px 4px var(--bg-box-shadow);
-  border: 1px solid var(--text-info);
+  background: rgb(255 255 255 / 60%);
+  border-top: 1px solid var(--hr-color);
+  border-bottom: 1px solid var(--hr-color);
   font-weight: 900;
 
   @media screen and (min-width: 768px) {
@@ -60,8 +60,7 @@
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  background: white;
-  box-shadow: -4px 4px var(--bg-box-shadow);
+  background: rgb(255 255 255 / 80%);
   border: 1px solid var(--hr-color);
   border-radius: 4px;
 }
@@ -83,12 +82,14 @@
 }
 
 .tech_description {
-  font-size: 0.9em;
+  font-size: 0.8em;
+  color: var(--text-info);
 }
 
 .tech_label {
   color: var(--text-info);
   font-size: 1.2em;
+  font-weight: 700;
 
   @media screen and (min-width: 768px) {
     font-size: 1.4em;

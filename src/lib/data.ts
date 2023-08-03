@@ -226,14 +226,14 @@ export const technologies: Technology[] = [
     "title": "NextJS",
     "icon": Icons.TbBrandNextjs,
     "color": "#000000",
-    "type": "Backend/FullStack",
+    "type": "Backend / FullStack",
     "description": "React framework for server-rendered apps."
   },
   {
     "title": "ExpressJS",
     "icon": Icons.SiExpress,
     "color": "#000000",
-    "type": "Backend/FullStack",
+    "type": "Backend / FullStack",
     "description": "Web application framework for Node.js."
   },
   {

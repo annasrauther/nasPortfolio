@@ -15,8 +15,8 @@ import {
 const Navbar: React.FC = () => {
   return (
     <header>
+      <Menu navigationLinks={navigation} />
       <div className={styles.header}>
-        <Menu navigationLinks={navigation} />
         <div className={styles.brand}>
           <Logo logoLink="/" />
           <div className={styles.actionDisplayerContainer}>
