@@ -1,6 +1,5 @@
-"use client";
-import { useEffect, useState } from 'react';
 import HeroTech from '@/components/hero/HeroTech';
+import styles from './HeroTech.module.css';
 
 interface TechItem {
   name: string;
@@ -12,8 +11,6 @@ interface TechSliderProps {
   techList: TechItem[];
 }
 
-const timer = 4000;
-
 /**
  * TechSlider Component
  *
@@ -23,20 +20,20 @@ const timer = 4000;
  * @returns {JSX.Element} The TechSlider component JSX element.
  */
 const TechSlider: React.FC<TechSliderProps> = ({ techList }) => {
-  const [currentTechIndex, setCurrentTechIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTechIndex((prevIndex) => (prevIndex + 1) % techList.length);
-    }, timer);
-
-    return () => clearInterval(interval);
-  }, [techList]);
-
-  const currentTech = techList[currentTechIndex];
-
   return (
-    <HeroTech tech={currentTech} />
+    <>
+      <h3 className={styles.hero_sub_title}>Experience in building the web and working with technologies like</h3>
+      <div className={styles.heroTech}>
+        {
+          techList.map((tech, index) => {
+            return (
+              <HeroTech key={index} tech={tech} />
+            )
+          }
+          )
+        }
+      </div>
+    </>
   );
 };
 

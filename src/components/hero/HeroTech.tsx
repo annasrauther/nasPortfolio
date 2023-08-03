@@ -1,4 +1,3 @@
-"use client";
 import styles from './HeroTech.module.css';
 
 interface TechItem {
@@ -22,17 +21,14 @@ interface HeroTechProps {
 const HeroTech: React.FC<HeroTechProps> = ({ tech }) => {
   const key = tech.name;
   return (
-    <div className={styles.heroTech}>
-      Experience in building the web and working with technologies like
-      <span
-        key={key}
-        style={{ '--tech-color': tech.color } as React.CSSProperties}
-        className={styles.techName}
-      >
-        {tech.name}
-        {tech.icon({ size: '2em' })}
-      </span>
-    </div>
+    <span
+      key={key}
+      style={{ '--tech-color': tech.color } as React.CSSProperties}
+      className={styles.techName}
+    >
+      {/* {tech.name} */}
+      {tech.icon({ size: '2em' })}
+    </span>
   );
 };
 
