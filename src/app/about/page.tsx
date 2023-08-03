@@ -1,8 +1,5 @@
-import Tech from '@/components/tech/Tech';
 import Image from 'next/image';
-import Experience from '@/components/experience/Experience';
 import styles from './About.module.css';
-import { technologies, workExperience } from '@/lib/data'
 
 /**
  * About component to display information about the developer.
@@ -37,15 +34,14 @@ const About: React.FC = () => {
       </div>
       <div className={styles.section}>
         <div className="w-full">
-          <h2 className={styles.subheading}>Used Technologies</h2>
+          <h2 className={styles.subheading}>My Belief</h2>
         </div>
-        <Tech technologies={technologies} />
       </div>
       <div className={styles.section}>
         <div className="w-full">
-          <h2 className={styles.subheading}>Work Experience</h2>
+          <h2 className={styles.subheading}>More Content</h2>
         </div>
-        <Experience experienceItems={workExperience} />
+        {/* <Experience experienceItems={workExperience} /> */}
       </div>
     </div>
   );

@@ -42,7 +42,7 @@
   }
 }
 
-.technology.active {
+.filter_buttons .technology.active {
   background: var(--bg-btn-primary);
   letter-spacing: 1px;
   color: var(--text-btn-primary);
@@ -89,7 +89,7 @@
   cursor: pointer;
   padding: 5px 10px;
   font-size: 1em;
-
+  background: white;
   text-shadow: -0.3px 0.3px var(--bg-box-shadow);
 
   @media screen and (min-width: 768px) {

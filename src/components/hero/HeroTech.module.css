@@ -1,13 +1,18 @@
 .heroTech {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   line-height: 1.2;
+  gap: 0.5em 1em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.hero_sub_title {
   color: var(--text-primary);
-  font-size: 1.2rem;
-  font-weight: 300;
-  gap: 1em;
+  font-weight: 200;
+  font-size: clamp(1em, 2vw, 2em);
 }
 
 .techName {
@@ -18,12 +23,6 @@
   text-transform: uppercase;
   color: var(--text-primary);
   font-weight: 700;
+  text-shadow: 0.2px 0.2px var(--bg-box-shadow);
   gap: 5px;
-}
-
-@media screen and (min-width: 1024px) {
-  .heroTech {
-    align-items: flex-start;
-    font-size: 1.3em;
-  }
 }

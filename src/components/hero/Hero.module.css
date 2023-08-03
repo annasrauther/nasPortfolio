@@ -1,53 +1,84 @@
 .heroContainer {
   display: grid;
-  gap: 3em;
+  align-items: flex-start;
   padding: 2em 5%;
+  height: calc(100vh - 250px);
+  gap: 0.5em;
   user-select: none;
+}
 
-  @media screen and (min-width: 1024px) {
-    height: calc(100vh - 90px);
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2em;
+.imageWrapper {
+  position: fixed;
+  top: 0;
+  right: -50px;
+  bottom: 0;
+  left: -50px;
+  z-index: -1;
+  background-image: url('/about/ar_left_head.svg'), url('/about/ar_right_head.svg');
+  background-position: left center, right center;
+  background-repeat: no-repeat;
+  background-size: 15%, 15%;
+  animation: levitate 20s ease-in-out infinite alternate;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: rotate(1deg);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(-10px, 0);
   }
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-
-  @media screen and (min-width: 1024px) {
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-  }
+  gap: 0.5em;
 }
 
-.imageWrapper {
-  position: relative;
+.socialIcons {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.socialIcons ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 .heroHeading {
-  font-size: 3rem;
-  font-weight: 900;
+  margin-top: 0.5em;
   text-transform: uppercase;
-  color: var(--text-primary);
-  line-height: 1.2;
   text-shadow: -1px 1px var(--bg-box-shadow);
-
-  @media screen and (min-width: 1024px) {
-    font-size: 5em;
-  }
+  line-height: 1.2;
+  color: var(--text-primary);
+  font-size: clamp(2em, 5vw, 10em);
+  font-weight: 900;
 }
 
 .heroButtonContainer {
   display: flex;
   flex-direction: row;
-  gap: 1em;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
 }

@@ -16,6 +16,7 @@ const Navbar: React.FC = () => {
   return (
     <header>
       <div className={styles.header}>
+        <Menu navigationLinks={navigation} />
         <div className={styles.brand}>
           <Logo
             src="/logo.png"
@@ -30,7 +31,6 @@ const Navbar: React.FC = () => {
             <ActionDisplayer actions={personalActions} />
           </div>
         </div>
-        <Menu navigationLinks={navigation} />
       </div>
     </header>
   );

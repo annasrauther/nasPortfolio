@@ -8,10 +8,12 @@ import {
 
 import * as Icons from '@/lib/icons'
 export const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'home', href: '/', label: 'Welcome' },
+  { name: 'about', href: '/about', label: 'Who I am' },
+  { name: 'skills', href: '/skills', label: 'What I do' },
+  { name: 'experience', href: '/experience', label: 'Where I work' },
+  { name: 'projects', href: '/projects', label: 'See my work' },
+  { name: 'contact', href: '/contact', label: 'Get in Touch' },
 ];
 
 export const personalActions = [

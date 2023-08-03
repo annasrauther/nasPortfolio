@@ -1,9 +1,9 @@
 import './globals.css'
 
-import { Montserrat } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 
-const anton = Montserrat({
+const anton = Poppins({
   subsets: ['latin'],
   weight: [
     '100',
@@ -13,6 +13,7 @@ const anton = Montserrat({
     '500',
     '600',
     '700',
+    '800',
     '900',
   ],
 });
