@@ -18,18 +18,19 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
       {experienceItems.map((item, index) => (
         <div key={index} className={styles.experience_item} duration-span={item.duration}>
           <div className={styles.experience_wrapper}>
-            <div>
-              <h4 className={poppins.className}>{item.title}</h4>
-              <h5><a href={item.company.url} target='_blank' rel='noopener noreferrer'>{item.company.name}</a></h5>
-            </div>
             <a href={item.company.url} target='_blank' rel='noopener noreferrer'>
               <Image
+                className={styles.experience_logo}
                 alt={item.company.name}
                 width={90}
                 height={90}
                 src={item.company.logo}
               />
             </a>
+            <div>
+              <h4 className={poppins.className}>{item.title}</h4>
+              <h5><a className="highlight" href={item.company.url} target='_blank' rel='noopener noreferrer'>{item.company.name}</a></h5>
+            </div>
           </div>
           <ul>
             {item.description.map((desc, index) => (

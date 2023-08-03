@@ -10,12 +10,12 @@
   --text-info: #586ba9;
   --bg-btn-primary: #586ba9;
   --text-btn-primary: #f6f4ef;
-  --text-highlight: #000;
+  --text-highlight: #2983ea;
   --bg-btn-info: #f6f4ef;
   --paragraph-color: #33326e;
   --bg-box-shadow: #000;
   --text-btn-info: #586ba9;
-  --hr-color: rgb(59 130 246 / 0.3);
+  --hr-color: rgba(0, 0, 0, 0.1);
   /* Font Size */
   --font-heading-size-sm: 4em;
   --font-heading-size-md: 6em;
@@ -34,40 +34,60 @@ body {
 }
 
 body::after {
-  background-image: radial-gradient(at 40% 40%, rgb(30, 144, 255) 0px, transparent 50%), radial-gradient(at 90% 10%, rgb(255, 105, 180) 0px, transparent 50%), radial-gradient(at 50% 95%, rgb(0, 255, 255) 0px, transparent 50%), radial-gradient(at 20% 30%, rgb(50, 205, 50) 0px, transparent 50%), radial-gradient(at 90% 90%, rgb(255, 255, 0) 0px, transparent 50%), radial-gradient(at 33% 50%, rgb(255, 69, 0) 0px, transparent 50%), radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
   position: fixed;
-  content: "";
+  top: 0px;
+  transform: translateZ(0px);
+  opacity: 0.1;
   z-index: -1;
+  background-image: radial-gradient(at 40% 40%, rgb(30, 144, 255) 0px, transparent 50%), radial-gradient(at 90% 10%, rgb(255, 105, 180) 0px, transparent 50%), radial-gradient(at 50% 95%, rgb(0, 255, 255) 0px, transparent 50%), radial-gradient(at 20% 30%, rgb(50, 205, 50) 0px, transparent 50%), radial-gradient(at 90% 90%, rgb(255, 255, 0) 0px, transparent 50%), radial-gradient(at 33% 50%, rgb(255, 69, 0) 0px, transparent 50%), radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
   width: 100%;
   height: 100%;
+  content: "";
   filter: blur(100px) saturate(100%);
-  top: 0px;
-  opacity: 0.1;
-  transform: translateZ(0px);
 }
 
 body::before {
-  content: "";
-  height: 100vh;
-  width: 100vw;
-  color: rgba(113, 113, 113, 0.07);
   position: fixed;
+  transition: all 0.5s linear 0s;
   z-index: -1;
   background: linear-gradient(rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 94px 90px, linear-gradient(to right, rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 94px 90px;
-  transition: all 0.5s linear 0s;
+  width: 100vw;
+  height: 100vh;
+  color: rgba(113, 113, 113, 0.07);
+  content: "";
 }
 
 p {
   color: var(--paragraph-color);
 }
 
-/* Pages Style */
+.highlight {
+  position: relative;
+  font-weight: bold;
+}
 
+.highlight::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(1, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  opacity: 0.3;
+  z-index: -1;
+  background-color: var(--text-highlight);
+  width: 100%;
+  height: 50%;
+  content: "";
+}
+
+/* Pages Style */
 .page-container {
-  padding: 0 5% 5%;
-  line-height: 1.5;
   display: flex;
   flex-direction: column;
+  padding: 0 5% 5%;
+  line-height: 1.5;
   gap: 1em;
 
   @media screen and (min-width: 768px) {
@@ -76,13 +96,15 @@ p {
 }
 
 .page-heading {
-  font-size: var(--font-heading-size-sm);
-  font-weight: var(--font-heading-weight);
-  text-transform: uppercase;
-  color: var(--text-btn-info);
+  border-top: 1px solid var(--hr-color);
   border-bottom: 1px solid var(--hr-color);
-  text-shadow: -1px 1px var(--bg-box-shadow);
+  background: rgb(255 255 255 / 30%);
   text-align: center;
+  text-transform: uppercase;
+  text-shadow: -1px 1px var(--bg-box-shadow);
+  color: var(--text-btn-info);
+  font-size: clamp(2em, 5vw, 10em);
+  font-weight: var(--font-heading-weight);
 
   @media screen and (min-width: 768px) {
     font-size: var(--font-heading-size-md);
@@ -90,12 +112,15 @@ p {
 }
 
 .page-subheading {
-  font-size: var(--font-title-size-sm);
-  font-weight: var(--font-title-weight);
-  text-transform: uppercase;
-  color: var(--text-btn-info);
+  border-top: 1px solid var(--hr-color);
   border-bottom: 1px solid var(--hr-color);
+  background: rgb(255 255 255 / 30%);
+  text-align: center;
+  text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
+  color: var(--text-btn-info);
+  font-size: clamp(1.5em, 4vw, 8em);
+  font-weight: var(--font-title-weight);
 
   @media screen and (min-width: 768px) {
     font-size: var(--font-title-size-md);
