@@ -1,7 +1,7 @@
 import TechSlider from "@/components/hero/TechSlider";
 import { techStack } from "@/lib/data";
 import styles from './Hero.module.css';
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 
 /**
  * Hero Component
@@ -25,21 +25,21 @@ const Hero: React.FC = () => {
             <a href="
               https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
               " target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={'2em'} color={'#586ba9'} />
+              <FaLinkedin size={'2em'} color={'#0967c2'} />
             </a>
           </li>
           <li>
             <a href="
               https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
               " target="_blank" rel="noopener noreferrer">
-              <FaGithub size={'2em'} color={'#586ba9'} />
+              <FaGithub size={'2em'} color={'black'} />
             </a>
           </li>
           <li>
             <a href="
               https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
               " target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp size={'2em'} color={'#586ba9'} />
+              <FaWhatsappSquare size={'2em'} color={'#25d466'} />
             </a>
           </li>
         </ul>

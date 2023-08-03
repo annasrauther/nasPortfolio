@@ -66,7 +66,7 @@
 }
 
 .heroHeading {
-  margin-top: 1em;
+  margin-top: 0.5em;
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
   line-height: 1.2;

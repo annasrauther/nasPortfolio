@@ -99,29 +99,29 @@
 
 /* Hover */
 .menu__item:hover,
-.active,
+.menu__item.active,
 .menu__item:focus {
   color: #2983ea;
 }
 
 
 .menu__item:hover .menu__item-name::before,
-.active .menu__item-name::before,
+.menu__item.active .menu__item-name::before,
 .menu__item:focus .menu__item-name::before,
 .menu__item:hover .menu__item-label::before,
-.active .menu__item-label::before,
+.menu__item.active .menu__item-label::before,
 .menu__item:focus .menu__item-label::before {
   transform: scale3d(1, 1, 1);
 }
 
 .menu__item:hover .menu__item-label,
-.active .menu__item-label,
+.menu__item.active .menu__item-label,
 .menu__item:focus .menu__item-label {
   transform: translate3d(0, 0, 0);
 }
 
 .menu__item:hover .menu__item-label::before,
-.active .menu__item-label::before,
+.menu__item.active .menu__item-label::before,
 .menu__item:focus .menu__item-label::before {
   transition-timing-function: ease;
   transform-origin: 0% 50%;
