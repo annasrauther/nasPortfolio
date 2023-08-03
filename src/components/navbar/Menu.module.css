@@ -1,29 +1,23 @@
 /* Menu.module.css */
-
 .menu {
   display: flex;
-  width: 100%;
-  gap: 1em;
-  padding: 0 0 8px 8px;
-  overflow-y: scroll;
-  /* IE and Edge */
-  -ms-overflow-style: none;
-  /* Firefox */
-  scrollbar-width: none;
-
-  @media screen and (min-width: 1024px) {
-    width: auto;
-  }
+  justify-content: space-around;
+  padding: 5px 10px;
+  gap: 4em;
+  color: var(--text-primary);
+  list-style: decimal-leading-zero;
 }
 
-.menu::-webkit-scrollbar {
-  display: none;
+.menu li::marker {
+  font-size: 0.8em;
+  color: black;
+  font-weight: 200;
 }
 
 .menu a {
-  font-size: 0.9em;
+  font-size: 1em;
 
   @media screen and (min-width: 1200px) {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }

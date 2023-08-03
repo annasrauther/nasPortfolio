@@ -1,10 +1,7 @@
-"use client";
-import Button from "@/components/button/Button";
 import TechSlider from "@/components/hero/TechSlider";
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { heroImages, techStack } from "@/lib/data";
+import { techStack } from "@/lib/data";
 import styles from './Hero.module.css';
-import ImageSlider from "../slider/ImageSlider";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 /**
  * Hero Component
@@ -14,25 +11,38 @@ import ImageSlider from "../slider/ImageSlider";
  *
  * @returns {JSX.Element} The Hero component JSX element.
  */
-
 const Hero: React.FC = () => {
   return (
     <div className={styles.heroContainer}>
+      <div className={styles.imageWrapper}></div>
       <div className={styles.wrapper}>
         <h1 className={styles.heroHeading}>Front End Developer</h1>
         <TechSlider techList={techStack} />
-        <div className={styles.heroButtonContainer}>
-          <Button
-            label="Find out more"
-            href="/about"
-            icon={BsFillArrowRightCircleFill}
-          />
-        </div>
       </div>
-      <div className={styles.imageWrapper}>
-        <ImageSlider
-          images={heroImages}
-        />
+      <div className={styles.socialIcons}>
+        <ul>
+          <li>
+            <a href="
+              https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
+              " target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={'2em'} color={'#586ba9'} />
+            </a>
+          </li>
+          <li>
+            <a href="
+              https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
+              " target="_blank" rel="noopener noreferrer">
+              <FaGithub size={'2em'} color={'#586ba9'} />
+            </a>
+          </li>
+          <li>
+            <a href="
+              https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/
+              " target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp size={'2em'} color={'#586ba9'} />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
