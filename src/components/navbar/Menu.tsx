@@ -22,14 +22,19 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
   const pathname = usePathname();
   return (
-    <nav className={styles.menu}>
-      {navigationLinks.map((link) => (
-        <Link className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`} href={link.href} key={link.name}>
-          <span className={`${styles['menu__item-name']} ${poppins.className}`}>{link.name}</span>
-          <span className={styles['menu__item-label']}>{link.label}</span>
-        </Link>
-      ))}
-    </nav>
+    <>
+      <nav className={styles.menu}>
+        {navigationLinks.map((link, index) => (
+          <Link className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`} href={link.href} key={link.name}>
+            <span style={{
+              fontSize: '10px'
+            }}>{'.0' + (index + 1)}</span>
+            <span className={`${styles['menu__item-name']} ${poppins.className}`}>{link.name}</span>
+            <span className={styles['menu__item-label']}>{link.label}</span>
+          </Link>
+        ))}
+      </nav>
+    </>
   );
 };
 
