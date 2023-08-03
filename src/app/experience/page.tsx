@@ -1,5 +1,5 @@
-import styles from './Experience.module.css';
 import Experience from '@/components/experience/Experience';
+import { poppins } from '@/lib/fonts';
 import {
   workExperience,
 } from '@/lib/data'
@@ -10,8 +10,8 @@ import {
  */
 const Projects: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Work Experience</h1>
+    <div className="page-container">
+      <h1 className={`page-heading ${poppins.className}`}>Work Experience</h1>
       <Experience experienceItems={workExperience} />
     </div>
   );

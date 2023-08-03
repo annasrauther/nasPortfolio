@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import { poppins } from '@/lib/fonts';
 
 interface BrandNameProps {
   brandName: string;
@@ -13,7 +14,7 @@ interface BrandNameProps {
  */
 const BrandName: React.FC<BrandNameProps> = ({ brandName, brandLink }) => {
   return (
-    <Link href={brandLink} className={styles['brand-link']}>
+    <Link href={brandLink} className={`${styles['brand-link']} ${poppins.className}`}>
       {brandName}
     </Link>
   );

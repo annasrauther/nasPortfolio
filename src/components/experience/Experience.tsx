@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ExperienceItem } from '@/lib/interfaces';
 import styles from './Experience.module.css';
+import { poppins } from '@/lib/fonts';
 
 interface ExperienceProps {
   experienceItems: ExperienceItem[];
@@ -18,7 +19,7 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
         <div key={index} className={styles.experience_item} duration-span={item.duration}>
           <div className={styles.experience_wrapper}>
             <div>
-              <h4>{item.title}</h4>
+              <h4 className={poppins.className}>{item.title}</h4>
               <h5><a href={item.company.url} target='_blank' rel='noopener noreferrer'>{item.company.name}</a></h5>
             </div>
             <a href={item.company.url} target='_blank' rel='noopener noreferrer'>
