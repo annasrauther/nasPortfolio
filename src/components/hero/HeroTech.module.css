@@ -1,4 +1,4 @@
-.heroTech {
+.hero__tech {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,12 +9,12 @@
   margin-top: 1em;
 }
 
-.hero_sub_title {
+.hero__subtitle {
   color: var(--text-primary);
   font-size: clamp(1em, 1.5vw, 2em);
 }
 
-.techName {
+.hero__tech-item {
   display: flex;
   flex-direction: row;
   align-items: center;

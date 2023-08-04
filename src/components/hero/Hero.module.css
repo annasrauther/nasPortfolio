@@ -15,7 +15,7 @@
   gap: 0.5em;
 }
 
-.imageWrapper {
+.hero-image__wrapper {
   position: fixed;
   top: 20vw;
   right: -5vw;
