@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
         <div className={styles.section_column}>
           <p className={styles.paragraph}>{`As an accomplished front-end developer experienced in full-stack applications, I embrace a versatile approach to web development. My focus lies in crafting visually appealing and user-friendly interfaces, ensuring seamless user experiences.`}</p>
           <p className={styles.paragraph}>{`I'm not a backend expert, but I work comfortably with server-side functionalities, contributing to successful full-stack applications. My passion for innovation drives me to deliver cutting-edge solutions, elevating web experiences.`}</p>
-          <p className={styles.paragraph}>{`Explore the list of technologies I've mastered below to witness the depth of my skills.`}</p>
+          <p className={styles.paragraph}>{`Explore the list of technologies I've used below to witness the scope of my skills.`}</p>
         </div>
       </div>
       <Tech technologies={technologies} />

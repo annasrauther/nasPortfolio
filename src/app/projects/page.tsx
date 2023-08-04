@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       <h1 className={`page-heading ${poppins.className}`}>Projects</h1>
       <div className={styles.section_row}>
         <Image
-          src="/about/main_1.svg"
+          src="/about/about_4.svg"
           alt="Portfolio"
           width={500}
           height={500}
