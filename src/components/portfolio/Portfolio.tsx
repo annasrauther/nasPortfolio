@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Portfolio.module.css';
-import { PortfolioWorkItem } from '@/lib/interfaces';
+import { PortfolioItem } from '@/interfaces/portfolio';
 import TechnologyFilter from './TechnologyFilter';
 import PortfolioList from './PortfolioList';
 
@@ -8,7 +8,7 @@ import PortfolioList from './PortfolioList';
  * Represents the props for the Portfolio component.
  */
 interface PortfolioProps {
-  portfolioItems: PortfolioWorkItem[];
+  portfolioItems: PortfolioItem[];
   technologiesList: string[];
 }
 
@@ -32,10 +32,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList 
    * Filters the portfolio items based on the selected technology.
    * @returns {PortfolioWorkItem[]} The filtered portfolio items.
    */
-  const getFilteredProjects = (): PortfolioWorkItem[] => {
+  const getFilteredProjects = (): PortfolioItem[] => {
     return selectedTechnology
       ? portfolioItems.filter((item) =>
-        item.technologies.some((tech) => tech.name === selectedTechnology)
+        item.payload.skills.some((tech) => tech.title === selectedTechnology)
       )
       : portfolioItems;
   };

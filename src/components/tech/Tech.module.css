@@ -76,11 +76,6 @@
   border-bottom: 1px solid var(--hr-color);
 }
 
-.tech_icon {
-  /* width: 25px;
-  height: 25px; */
-}
-
 .tech_description {
   font-size: 0.8em;
   color: var(--text-info);

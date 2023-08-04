@@ -21,21 +21,6 @@ export interface TechStack {
 }
 
 /**
- * Interface representing an ExperienceItem.
- */
-export interface ExperienceItem {
-  title: string;
-  company: {
-    name: string;
-    logo: string;
-    url: string;
-  };
-  location?: string;
-  duration: string;
-  description: string[];
-}
-
-/**
  * Interface representing a PortfolioItemTechnology.
  */
 export interface PortfolioItemTechnology {

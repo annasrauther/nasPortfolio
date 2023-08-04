@@ -1,12 +1,12 @@
 import styles from './Portfolio.module.css';
-import { PortfolioWorkItem } from '@/lib/interfaces';
+import { PortfolioItem as PortfolioItemProps } from '@/interfaces/portfolio';
 import PortfolioItem from './PortfolioItem';
 
 /**
  * Represents the props for the PortfolioList component.
  */
 interface PortfolioListProps {
-  filteredProjects: PortfolioWorkItem[];
+  filteredProjects: PortfolioItemProps[];
 }
 
 /**
