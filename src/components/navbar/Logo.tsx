@@ -4,7 +4,11 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 
-
+/**
+ * Represents the props for the Logo component.
+ * @interface LogoProps
+ * @property {string} logoLink - The URL or path to navigate when the logo is clicked.
+ */
 interface LogoProps {
   logoLink: string;
 }
@@ -17,14 +21,10 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ logoLink }) => {
   const pathname = usePathname();
   return (
-    <Link href={logoLink} className={styles.logoLink}>
-      {
-        pathname !== '/' ? <Image src={'/logo_left.svg'} alt={'Nas Rauther Left Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null
-      }
+    <Link href={logoLink} className={styles.logo__wrapper}>
+      {pathname !== '/' ? <Image src={'/logo_left.svg'} alt={'Nas Rauther Left Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
       <Image src={'/logo_center.webp'} alt={'Nas Rauther Main Logo'} width={75} height={75} priority={true} className={styles.logo} />
-      {
-        pathname !== '/' ? <Image src={'/logo_right.svg'} alt={'Nas Rauther Right Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null
-      }
+      {pathname !== '/' ? <Image src={'/logo_right.svg'} alt={'Nas Rauther Right Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
     </Link>
   );
 };
