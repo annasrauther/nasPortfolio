@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       <h1 className={`page-heading ${poppins.className}`}>Skills</h1>
       <div className={styles.section_row}>
         <Image
-          src="/about/bio_2.svg"
+          src={'/skills_banner.svg'}
           alt="Skills"
           width={500}
           height={500}

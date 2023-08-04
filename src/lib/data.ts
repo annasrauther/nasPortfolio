@@ -557,7 +557,7 @@ export const workExperience: ExperienceItem[] = [
   {
     title: 'Developer - Wordpress & Lightspeed E-Commerce',
     company: {
-      name: 'Philippe Oorts (MarketingPartner.be)',
+      name: 'Philippe Oorts',
       logo: '/experience/philippeoorts.png',
       url: 'https://www.marketingpartner.be/',
     },
