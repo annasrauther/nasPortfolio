@@ -105,10 +105,6 @@ p {
   color: var(--text-btn-info);
   font-size: clamp(2em, 5vw, 10em);
   font-weight: var(--font-heading-weight);
-
-  @media screen and (min-width: 768px) {
-    font-size: var(--font-heading-size-md);
-  }
 }
 
 .page-subheading {
@@ -121,8 +117,4 @@ p {
   color: var(--text-btn-info);
   font-size: clamp(1.5em, 4vw, 8em);
   font-weight: var(--font-title-weight);
-
-  @media screen and (min-width: 768px) {
-    font-size: var(--font-title-size-md);
-  }
 }
