@@ -103,7 +103,7 @@ p {
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
   color: var(--text-btn-info);
-  font-size: clamp(2em, 5vw, 10em);
+  font-size: clamp(2em, 5vw, 4em);
   font-weight: var(--font-heading-weight);
 }
 
@@ -115,6 +115,6 @@ p {
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
   color: var(--text-btn-info);
-  font-size: clamp(1.5em, 4vw, 8em);
+  font-size: clamp(1.5em, 3vw, 3em);
   font-weight: var(--font-title-weight);
 }
