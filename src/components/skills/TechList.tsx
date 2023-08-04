@@ -3,20 +3,22 @@ import { Skill } from "@/interfaces/skill";
 import styles from "./Tech.module.css";
 
 /**
- * Props for the TechList component.
+ * Represents the props for the TechList component.
+ * @interface TechListProps
+ * @property {Skill[]} technologies - Array of technologies to be displayed in the list.
  */
 interface TechListProps {
-  /**
-   * Array of technologies to be displayed in the list.
-   */
   technologies: Skill[];
 }
 
 /**
- * TechList Component displays a list of technologies with their icons and descriptions.
+ * TechList Component
  *
+ * This component displays a list of technologies with their icons and descriptions.
+ *
+ * @component
  * @param {TechListProps} props - The component props containing the technologies array.
- * @returns {JSX.Element} The rendered TechList component.
+ * @returns {JSX.Element} The TechList component JSX element.
  */
 const TechList: React.FC<TechListProps> = ({ technologies }) => {
   return (

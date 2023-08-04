@@ -4,24 +4,24 @@ import { poppins } from "@/lib/fonts";
 import styles from "./Tech.module.css";
 
 /**
- * Props for the TechGroup component.
+ * Represents the props for the TechGroup component.
+ * @interface TechGroupProps
+ * @property {string} type - The type of technologies in this group.
+ * @property {Skill[]} technologies - Array of technologies to be displayed in this group.
  */
 interface TechGroupProps {
-  /**
-   * The type of technologies in this group.
-   */
   type: string;
-  /**
-   * Array of technologies to be displayed in this group.
-   */
   technologies: Skill[];
 }
 
 /**
- * TechGroup Component displays a group of technologies with a common type.
+ * TechGroup Component
  *
+ * This component displays a group of technologies with a common type.
+ *
+ * @component
  * @param {TechGroupProps} props - The component props containing the type and technologies array.
- * @returns {JSX.Element} The rendered TechGroup component.
+ * @returns {JSX.Element} The TechGroup component JSX element.
  */
 const TechGroup: React.FC<TechGroupProps> = ({ type, technologies }) => {
   return (

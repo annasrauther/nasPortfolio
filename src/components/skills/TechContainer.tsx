@@ -3,20 +3,22 @@ import { Skill } from "@/interfaces/skill";
 import styles from "./Tech.module.css";
 
 /**
- * Props for the TechContainer component.
+ * Represents the props for the TechContainer component.
+ * @interface TechContainerProps
+ * @property {Skill[]} technologies - Array of technologies to be displayed.
  */
 interface TechContainerProps {
-  /**
-   * Array of technologies to be displayed.
-   */
   technologies: Skill[];
 }
 
 /**
- * TechContainer Component displays a list of technologies grouped by their respective types.
+ * TechContainer Component
  *
+ * This component displays a list of technologies grouped by their respective types.
+ *
+ * @component
  * @param {TechContainerProps} props - The component props containing the technologies array.
- * @returns {JSX.Element} The rendered TechContainer component.
+ * @returns {JSX.Element} The TechContainer component JSX element.
  */
 const TechContainer: React.FC<TechContainerProps> = ({ technologies }) => {
   // Group technologies by their type
