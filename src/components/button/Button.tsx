@@ -5,6 +5,12 @@ import styles from './Button.module.css';
 /**
  * Represents the props for the Button component.
  * @interface ButtonProps
+ * @property {string} label - The label text for the button.
+ * @property {boolean} [info] - If true, the button will have an "info" style.
+ * @property {IconType} [icon] - The icon component to be displayed in the button.
+ * @property {string} href - The URL the button should navigate to when clicked.
+ * @property {boolean} [target] - If true, the link will open in a new tab.
+ * @property {boolean} [active] - If true, the button will have an "active" style.
  */
 interface ButtonProps {
   label: string;
@@ -16,7 +22,11 @@ interface ButtonProps {
 }
 
 /**
- * Represents a customizable button that can display an icon and link to a specified URL.
+ * Button Component
+ *
+ * This component represents a customizable button that can display an icon and link to a specified URL.
+ *
+ * @component
  * @param {ButtonProps} props - The component props.
  * @returns {JSX.Element} The Button component JSX element.
  */

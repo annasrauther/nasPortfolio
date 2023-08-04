@@ -6,18 +6,16 @@ import styles from './Experience.module.css';
 /**
  * Represents the props for the Experience component.
  * @interface ExperienceProps
+ * @property {ExperienceItem[]} experienceItems - An array of `ExperienceItem` objects representing the list of work experiences with details.
  */
 interface ExperienceProps {
-  /**
-   * An array of `ExperienceItem` objects representing the list of work experiences with details.
-   * @property {ExperienceItem[]} experienceItems - The array of experience items.
-   */
   experienceItems: ExperienceItem[];
 }
 
 /**
- * Represents the Experience component that displays a list of work experiences with details.
+ * Experience Component displays a list of work experiences with details.
  *
+ * @component
  * @param {ExperienceProps} props - The component props containing the experienceItems array.
  * @returns {JSX.Element} The rendered Experience component.
  */
