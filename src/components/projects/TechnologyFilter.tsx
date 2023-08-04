@@ -3,6 +3,10 @@ import { poppins } from '@/lib/fonts';
 
 /**
  * Represents the props for the TechnologyFilter component.
+ * @interface TechnologyFilterProps
+ * @property {string[]} technologiesList - The list of technologies to display.
+ * @property {string | null} selectedTechnology - The currently selected technology.
+ * @property {Function} onTechnologyFilter - The function to handle the technology filter.
  */
 interface TechnologyFilterProps {
   technologiesList: string[];
@@ -10,10 +14,12 @@ interface TechnologyFilterProps {
   onTechnologyFilter: (_technology: string | null) => void;
 }
 
+
 /**
  * Represents the TechnologyFilter component that displays the technology filter buttons.
+ * @component
  * @param {TechnologyFilterProps} props - The props for the TechnologyFilter component.
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} The TechnologyFilter component JSX element.
  */
 const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
   technologiesList,
@@ -23,8 +29,9 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
   /**
    * Handles the click event on a technology filter button.
    * @param {string} technology - The selected technology.
+   * @returns {void}
    */
-  const handleClick = (technology: string | null) => {
+  const handleClick = (technology: string | null): void => {
     onTechnologyFilter(technology);
   };
 
@@ -32,14 +39,16 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
     <div className={styles.portfolio__filter}>
       <div className={`${styles.portfolio__technology} ${poppins.className}`}>
         <span
-          className={`${styles['portfolio__technology-item']} ${!selectedTechnology ? styles.active : ''}`}
+          className={`${styles['portfolio__technology-item']} ${!selectedTechnology ? styles.active : ''
+            }`}
           onClick={() => handleClick(null)}
         >
           Featured
         </span>
         {technologiesList.map((tech, index) => (
           <span
-            className={`${styles['portfolio__technology-item']} ${selectedTechnology === tech ? styles.active : ''}`}
+            className={`${styles['portfolio__technology-item']} ${selectedTechnology === tech ? styles.active : ''
+              }`}
             key={index}
             onClick={() => handleClick(tech)}
           >

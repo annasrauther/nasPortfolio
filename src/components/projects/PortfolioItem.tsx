@@ -6,9 +6,23 @@ import { poppins } from '@/lib/fonts';
 import { PortfolioItem as PortfolioItemProps } from '@/interfaces/portfolio';
 
 /**
+ * Represents the props for the PortfolioItem component.
+ * @interface PortfolioItemProps
+ * @property {object} title - The title object containing the rendered title.
+ * @property {object} payload - The payload data of the portfolio item.
+ * @property {string} payload.screenshot_url - The URL of the portfolio item screenshot.
+ * @property {string} payload.url - The URL of the portfolio item.
+ * @property {string} payload.description - The description of the portfolio item.
+ * @property {object[]} payload.skills - An array of technology skills used in the portfolio item.
+ * @property {string} payload.skills[].title - The title of the technology skill.
+ * @property {string} payload.skills[].skill_image - The URL of the technology skill image.
+ */
+
+/**
  * Represents the PortfolioItem component that displays a single portfolio item.
+ * @component
  * @param {PortfolioItemProps} props - The props for the PortfolioItem component.
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} The PortfolioItem component JSX element.
  */
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
   title,

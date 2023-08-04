@@ -5,7 +5,10 @@ import PortfolioList from './PortfolioList';
 import styles from './Portfolio.module.css';
 
 /**
- * Represents the props for the Portfolio component.
+ * Represents the props for the PortfolioContainer component.
+ * @interface PortfolioProps
+ * @property {PortfolioItem[]} portfolioItems - The array of portfolio items.
+ * @property {string[]} technologiesList - The list of technologies to filter.
  */
 interface PortfolioProps {
   portfolioItems: PortfolioItem[];
@@ -14,9 +17,11 @@ interface PortfolioProps {
 
 /**
  * Represents the PortfolioContainer component that displays a list of portfolio items & filters.
+ * @component
  * @param {PortfolioProps} props - The props for the PortfolioContainer component.
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} The PortfolioContainer component JSX element.
  */
+
 const PortfolioContainer: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList }) => {
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null);
 
