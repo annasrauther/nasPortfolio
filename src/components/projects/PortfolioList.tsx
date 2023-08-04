@@ -27,7 +27,7 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ filteredProjects }) => {
 
   return (
     <>
-      <div className={styles.portfolio_items_container}>
+      <div className={styles.portfolio__list}>
         {renderPortfolioItems()}
       </div>
     </>

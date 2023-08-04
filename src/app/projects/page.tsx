@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import Portfolio from '@/components/portfolio/Portfolio';
+import PortfolioContainer from '@/components/projects/PortfolioContainer';
 import { poppins } from '@/lib/fonts';
 import {
   workTechnologiesList,
@@ -30,7 +30,7 @@ const Projects: React.FC = async () => {
           <p className={styles.paragraph}>{`Browse through my portfolio to witness the diverse range of projects I've contributed to, each reflecting my passion for making a positive impact through thoughtful and innovative solutions.`}</p>
         </div>
       </div>
-      <Portfolio portfolioItems={portfolioItems} technologiesList={workTechnologiesList} />
+      <PortfolioContainer portfolioItems={portfolioItems} technologiesList={workTechnologiesList} />
     </div>
   );
 }

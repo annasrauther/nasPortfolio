@@ -1,4 +1,4 @@
-import Loader from "@/components/effects/Loader"
+import Loader from "@/components/loading/Loader"
 
 /**
  * Loading Page

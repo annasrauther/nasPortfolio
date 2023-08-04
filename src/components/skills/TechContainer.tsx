@@ -30,7 +30,7 @@ const TechContainer: React.FC<TechContainerProps> = ({ technologies }) => {
   });
 
   return (
-    <div className={styles.tech_container}>
+    <div className={styles.tech__container}>
       {Object.keys(groupedTechnologies).map((type, index) => (
         <TechGroup key={index} type={type} technologies={groupedTechnologies[type]} />
       ))}

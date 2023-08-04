@@ -1,4 +1,5 @@
-.portfolio_list {
+/* Container Styles */
+.portfolio__container {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -8,7 +9,7 @@
   }
 }
 
-.portfolio_items_container {
+.portfolio__list {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -18,20 +19,34 @@
   }
 }
 
-.portfolio_item_image {
-  border-radius: 4px;
-  margin: 0 auto;
-  overflow: hidden;
+.portfolio-item {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: flex-start;
+  border-top: 1px solid var(--hr-color);
+  padding-top: 1em;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 2fr 3fr;
+    padding-bottom: 0;
+    gap: 2em;
+    border-top: 0;
+  }
+
 }
 
-.technologies {
+.portfolio-item:first-of-type {
+  border-top: 0;
+}
+
+/* Technology Styles */
+.portfolio__technology {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: rgb(255 255 255 / 50%);
-
   transition: all 0.3s;
   padding: 10px 3px;
   width: 100%;
@@ -46,28 +61,25 @@
   }
 }
 
-.filter_buttons .technology.active {
-  background: var(--bg-btn-primary);
-  letter-spacing: 1px;
-  color: var(--text-btn-primary);
-}
-
-.technology {
+.portfolio__technology-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: var(--text-btn-info);
   gap: 0 5px;
   font-size: 0.9em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.3em;
+  }
 }
 
-.filter_buttons .technologies {
+.portfolio__filter .portfolio__technology {
   flex-wrap: nowrap;
   border: 0;
   padding: 5px 10px;
   overflow: scroll;
   justify-content: flex-start;
-
 
   @media screen and (min-width: 768px) {
     flex-wrap: wrap;
@@ -77,20 +89,13 @@
   }
 }
 
-.filter_buttons .technologies {
-  scrollbar-width: none;
+.portfolio__filter .portfolio__technology.active {
+  background: var(--bg-btn-primary);
+  letter-spacing: 1px;
+  color: var(--text-btn-primary);
 }
 
-/* Hide the scrollbar thumb */
-.filter_buttons .technologies::-webkit-scrollbar {
-  width: 0;
-}
-
-.filter_buttons .technologies::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-
-.filter_buttons .technology {
+.portfolio__filter .portfolio__technology-item {
   border: 1px solid var(--hr-color);
   border-radius: 999px;
   box-shadow: -4px 4px var(--bg-box-shadow);
@@ -105,7 +110,8 @@
   }
 }
 
-.portfolio_item_content {
+/* Content Styles */
+.portfolio-item__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +124,7 @@
   }
 }
 
-.portfolio_item_content ul {
+.portfolio-item__content ul {
   background: rgb(255 255 255 / 90%);
   padding: 1em 2em;
   border-radius: 5px;
@@ -129,7 +135,7 @@
   }
 }
 
-.portfolio_item_content_label {
+.portfolio-item__label {
   color: var(--text-btn-info);
   font-size: 3em;
   font-weight: 600;
@@ -140,26 +146,8 @@
   }
 }
 
-.portfolio_item {
-  display: grid;
-  grid-template-columns: auto;
-  align-items: flex-start;
-  border-top: 1px solid var(--hr-color);
-  padding-top: 1em;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 2fr 3fr;
-    padding-bottom: 0;
-    gap: 2em;
-    border-top: 0;
-  }
-}
-
-.portfolio_item:first-of-type {
-  border-top: 0;
-}
-
-.portfolio_item_content_desc li {
+/* Description Styles */
+.portfolio-item__desc li {
   line-height: 1.6;
   text-align: justify;
   list-style: inside;

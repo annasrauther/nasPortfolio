@@ -15,10 +15,10 @@ import styles from './Hero.module.css';
  */
 const Hero: React.FC = () => {
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.hero__container}>
       <HeroImage />
-      <div className={styles.wrapper}>
-        <h1 className={`${styles.heroHeading}  ${poppins.className}`}>Front End Developer</h1>
+      <div className={styles.hero__wrapper}>
+        <h1 className={`${styles.hero__heading}  ${poppins.className}`}>Front End Developer</h1>
         <TechSlider techList={techStack} />
       </div>
       <SocialIcons />

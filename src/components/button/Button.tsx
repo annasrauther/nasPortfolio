@@ -1,8 +1,11 @@
-"use client";
 import { IconType } from 'react-icons';
 import Link from 'next/link';
 import styles from './Button.module.css';
 
+/**
+ * Represents the props for the Button component.
+ * @interface ButtonProps
+ */
 interface ButtonProps {
   label: string;
   info?: boolean;
@@ -13,14 +16,10 @@ interface ButtonProps {
 }
 
 /**
- * Button Component
- *
- * This component represents a customizable button that can display an icon and link to a specified URL.
- *
+ * Represents a customizable button that can display an icon and link to a specified URL.
  * @param {ButtonProps} props - The component props.
  * @returns {JSX.Element} The Button component JSX element.
  */
-
 const Button: React.FC<ButtonProps> = ({ label, info, href, icon: Icon, target, active }) => {
   return (
     <Link

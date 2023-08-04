@@ -29,17 +29,17 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
   };
 
   return (
-    <div className={styles.filter_buttons}>
-      <div className={`${styles.technologies} ${poppins.className}`}>
+    <div className={styles.portfolio__filter}>
+      <div className={`${styles.portfolio__technology} ${poppins.className}`}>
         <span
-          className={`${styles.technology} ${!selectedTechnology ? styles.active : ''}`}
+          className={`${styles['portfolio__technology-item']} ${!selectedTechnology ? styles.active : ''}`}
           onClick={() => handleClick(null)}
         >
           Featured
         </span>
         {technologiesList.map((tech, index) => (
           <span
-            className={`${styles.technology} ${selectedTechnology === tech ? styles.active : ''}`}
+            className={`${styles['portfolio__technology-item']} ${selectedTechnology === tech ? styles.active : ''}`}
             key={index}
             onClick={() => handleClick(tech)}
           >

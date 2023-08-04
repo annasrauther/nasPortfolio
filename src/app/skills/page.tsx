@@ -1,4 +1,4 @@
-import TechContainer from '@/components/tech/TechContainer';
+import TechContainer from '@/components/skills/TechContainer';
 import { poppins } from '@/lib/fonts';
 import Image from 'next/image';
 import { getSkillArchive } from '@/services/skills';

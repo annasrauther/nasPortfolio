@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from './Portfolio.module.css';
 import { PortfolioItem } from '@/interfaces/portfolio';
 import TechnologyFilter from './TechnologyFilter';
 import PortfolioList from './PortfolioList';
+import styles from './Portfolio.module.css';
 
 /**
  * Represents the props for the Portfolio component.
@@ -13,11 +13,11 @@ interface PortfolioProps {
 }
 
 /**
- * Represents the Portfolio component that displays a list of portfolio items.
- * @param {PortfolioProps} props - The props for the Portfolio component.
+ * Represents the PortfolioContainer component that displays a list of portfolio items & filters.
+ * @param {PortfolioProps} props - The props for the PortfolioContainer component.
  * @returns {JSX.Element} JSX.Element
  */
-const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList }) => {
+const PortfolioContainer: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList }) => {
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null);
 
   /**
@@ -44,7 +44,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList 
   const filteredProjects = getFilteredProjects();
 
   return (
-    <div className={styles.portfolio_list}>
+    <div className={styles.portfolio__container}>
       <TechnologyFilter
         technologiesList={technologiesList}
         selectedTechnology={selectedTechnology}
@@ -55,4 +55,4 @@ const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems, technologiesList 
   );
 };
 
-export default Portfolio;
+export default PortfolioContainer;

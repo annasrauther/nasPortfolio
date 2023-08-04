@@ -25,8 +25,8 @@ interface TechGroupProps {
  */
 const TechGroup: React.FC<TechGroupProps> = ({ type, technologies }) => {
   return (
-    <div className={styles.tech_wrapper}>
-      <h4 className={`${styles.tech_title} ${poppins.className}`}>{type}</h4>
+    <div className={styles.tech__wrapper}>
+      <h4 className={`${styles.tech__title} ${poppins.className}`}>{type}</h4>
       <TechList technologies={technologies} />
     </div>
   );

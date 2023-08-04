@@ -15,16 +15,16 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   payload,
 }) => {
   return (
-    <div className={styles.portfolio_item}>
-      <div className={styles.portfolio_item_image}>
+    <div className={styles['portfolio-item']}>
+      <div className={styles['portfolio-item__image']}>
         <Image src={payload.screenshot_url} alt={title.rendered} width={500} height={500} />
       </div>
-      <div className={styles.portfolio_item_content}>
-        <h3 className={`${styles.portfolio_item_content_label} ${poppins.className}`}>{title.rendered}</h3>
-        <div className={styles.portfolio_item_content_desc} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
-        <div className={styles.technologies}>
+      <div className={styles['portfolio-item__content']}>
+        <h3 className={`${styles['portfolio-item__label']} ${poppins.className}`}>{title.rendered}</h3>
+        <div className={styles['portfolio-item__desc']} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
+        <div className={styles.portfolio__technology}>
           {payload.skills.map((tech, index) => (
-            <span className={styles.technology} key={index}>
+            <span className={styles['portfolio__technology-item']} key={index}>
               {tech.title} <Image src={tech.skill_image} alt={tech.title} width={20} height={20} />
             </span>
           ))}
