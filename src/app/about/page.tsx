@@ -57,7 +57,7 @@ const About: React.FC = () => {
 
         <div className={styles['belief-wrapper']}>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_2.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/bio_1.svg" alt="About Image" width={300} height={300} />
           </div>
           <div className={styles['belief-section']}>
             <h3 className={styles['page-subtitle']}>Lifestyle & Goals</h3>
@@ -111,7 +111,7 @@ const About: React.FC = () => {
             </ul>
           </div>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_1.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about_1.svg" alt="About Image" width={300} height={300} />
           </div>
         </div>
       </div>
