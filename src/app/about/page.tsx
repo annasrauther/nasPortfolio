@@ -15,8 +15,8 @@ const About: React.FC = () => {
         <div className={styles.section_column}>
           <Image
             className={styles.bio_image}
-            src="/about/main_1.svg"
-            alt="About Image"
+            src="/about/about_main_heading.svg"
+            alt={'About Banner'}
             width={500}
             height={500}
           />
@@ -37,8 +37,6 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className={styles.section_column}>
-        <h2 className={`page-subheading ${poppins.className}`}>My Belief</h2>
-
         <div className={styles['belief-wrapper']}>
           <div className={styles['belief-section']}>
             <h3 className={styles['page-subtitle']}>Health & Fitness</h3>
@@ -51,13 +49,13 @@ const About: React.FC = () => {
             </ul>
           </div>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_6.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about_health.svg" alt={'Health & Fitness'} width={500} height={500} />
           </div>
         </div>
 
         <div className={styles['belief-wrapper']}>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_1.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about_lifestyle.svg" alt={'Lifestyle & Goals'} width={500} height={500} />
           </div>
           <div className={styles['belief-section']}>
             <h3 className={styles['page-subtitle']}>Lifestyle & Goals</h3>
@@ -81,12 +79,12 @@ const About: React.FC = () => {
             </ul>
           </div>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_5.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about_money.svg" alt={'Money & Finances'} width={500} height={500} />
           </div>
         </div>
         <div className={styles['belief-wrapper']}>
           <div>
-            <Image className={styles['belief-image']} src="/about/bio_3.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about_education.svg" alt={'Education & Learning'} width={500} height={500} />
           </div>
           <div className={styles['belief-section']}>
             <h3 className={styles['page-subtitle']}>Education & Learning</h3>
@@ -111,7 +109,7 @@ const About: React.FC = () => {
             </ul>
           </div>
           <div>
-            <Image className={styles['belief-image']} src="/about/about_1.svg" alt="About Image" width={300} height={300} />
+            <Image className={styles['belief-image']} src="/about/about-family.svg" alt={'Family & Relationships'} width={500} height={500} />
           </div>
         </div>
       </div>

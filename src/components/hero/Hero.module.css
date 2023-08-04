@@ -1,46 +1,18 @@
 .heroContainer {
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   padding: 2em 5%;
-  height: calc(100vh - 250px);
-  min-height: 450px;
+  min-height: 400px;
   user-select: none;
 }
 
-.imageWrapper {
+.hero-image {
   position: fixed;
-  top: 10vh;
-  right: -2vw;
-  bottom: -3vh;
-  left: -1vw;
-  z-index: -1;
-  background-image: url('/about/ar_left_head.svg'), url('/about/ar_right_head.svg');
-  background-position: left top, right bottom;
-  background-repeat: no-repeat;
-  background-size: 15vw, 15vw;
-  animation: levitate 20s ease-in-out infinite alternate;
-}
-
-@keyframes levitate {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  25% {
-    transform: rotate(1deg);
-  }
-
-  50% {
-    transform: translate(10px, 0);
-  }
-
-  75% {
-    transform: rotate(-1deg);
-  }
-
-  100% {
-    transform: translate(-10px, 0);
-  }
+  max-width: 50vw;
+  transition: transform 0.2s ease;
+  left: -20%;
+  bottom: -15%;
+  transform-origin: bottom left;
 }
 
 .wrapper {
@@ -53,10 +25,9 @@
 }
 
 .socialIcons {
-  /* position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%; */
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
 }
 
 .socialIcons ul {
@@ -66,7 +37,6 @@
 }
 
 .heroHeading {
-  margin-top: 0.5em;
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
   line-height: 1.2;

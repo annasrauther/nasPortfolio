@@ -1,3 +1,6 @@
+"use client";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 import TechSlider from "@/components/hero/TechSlider";
 import { techStack } from "@/lib/data";
 import { poppins } from '@/lib/fonts';
@@ -13,9 +16,57 @@ import styles from './Hero.module.css';
  * @returns {JSX.Element} The Hero component JSX element.
  */
 const Hero: React.FC = () => {
+  const leftImageRef = useRef<HTMLImageElement>(null);
+  const rightImageRef = useRef<HTMLImageElement>(null);
+
+  const animateRotation = () => {
+    const mouseY = lastMouseY;
+    const maxRotation = 15; // Adjust this value to control the maximum rotation angle.
+
+    const leftImage = leftImageRef.current;
+    if (leftImage) {
+      const imageRect = leftImage.getBoundingClientRect();
+      const leftRotateY = ((mouseY - imageRect.top) / imageRect.height - 0.5) * maxRotation;
+      leftImage.style.transform = `rotate(${leftRotateY}deg)`;
+    }
+
+    const rightImage = rightImageRef.current;
+    if (rightImage) {
+      const imageRect = rightImage.getBoundingClientRect();
+      const rightRotateY = ((mouseY - imageRect.top) / imageRect.height - 0.5) * maxRotation;
+      rightImage.style.transform = `rotate(${-rightRotateY}deg)`; // Reverse the rotation for the right image
+    }
+
+    requestAnimationFrame(animateRotation);
+  };
+
+  let lastMouseY = 0;
+  const handleMouseMove = (e: MouseEvent) => {
+    lastMouseY = e.clientY;
+  };
+
+  useEffect(() => {
+    requestAnimationFrame(animateRotation);
+    document.body.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.body.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+
   return (
     <div className={styles.heroContainer}>
-      <div className={styles.imageWrapper}></div>
+      <div className={styles.imageWrapper}>
+        <Image
+          ref={leftImageRef}
+          src={'/homepage_head.svg'}
+          alt={'Hero Image'}
+          width={500}
+          height={500}
+          className={styles['hero-image']}
+        />
+      </div>
       <div className={styles.wrapper}>
         <h1 className={`${styles.heroHeading}  ${poppins.className}`}>Front End Developer</h1>
         <TechSlider techList={techStack} />
