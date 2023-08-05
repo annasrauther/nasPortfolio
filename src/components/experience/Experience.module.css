@@ -57,12 +57,12 @@
   }
 }
 
-.experience__header h4 {
+.experience__title {
   font-size: clamp(1.2em, 2vw, 2em);
   font-weight: 700;
 }
 
-.experience__header h5 {
+.experience__company {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: clamp(1.2em, 2vw, 1.5em);
