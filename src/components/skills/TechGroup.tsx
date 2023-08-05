@@ -25,10 +25,10 @@ interface TechGroupProps {
  */
 const TechGroup: React.FC<TechGroupProps> = ({ type, technologies }) => {
   return (
-    <div className={styles.tech__wrapper}>
-      <h4 className={`${styles.tech__title} ${poppins.className}`}>{type}</h4>
+    <section aria-labelledby={`${type}-heading`} className={styles.tech__wrapper}>
+      <h3 id={`${type}-heading`} className={`${styles.tech__title} ${poppins.className}`}>{type}</h3>
       <TechList technologies={technologies} />
-    </div>
+    </section>
   );
 };
 

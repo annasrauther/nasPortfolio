@@ -46,7 +46,7 @@
   }
 }
 
-.socialIcons {
+.social__container {
   position: fixed;
   bottom: 1vh;
   right: 1vw;
@@ -57,7 +57,7 @@
   }
 }
 
-.socialIcons ul {
+.social__container ul {
   display: flex;
   justify-content: center;
   gap: 1em;

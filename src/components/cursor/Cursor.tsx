@@ -69,6 +69,7 @@ const Cursor: React.FC = () => {
   return (
     <motion.div
       className="cursor"
+      role="presentation"
       style={{
         // Apply the spring animations to the cursor's translateX and translateY properties
         translateX: cursorXSpring,

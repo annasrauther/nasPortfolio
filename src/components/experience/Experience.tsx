@@ -23,12 +23,17 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
   return (
     <>
       {experienceItems.map((item, index) => (
-        <div key={index} className={styles.experience} data-duration={item.payload.duration}>
+        <article
+          key={index}
+          className={styles.experience}
+          data-duration={item.payload.duration}
+          aria-label={`Work Experience ${index + 1}`}
+        >
           <div className={styles.experience__wrapper}>
             <a href={item.payload.company_url} target='_blank' rel='noopener noreferrer'>
               <Image
                 className={styles.experience__logo}
-                alt={item.payload.company_name}
+                alt={item.payload.company_name + ' logo'}
                 width={90}
                 height={90}
                 src={item.payload.company_logo}
@@ -36,11 +41,23 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
             </a>
             <div className={styles.experience__header}>
               <h4 className={poppins.className} dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-              <h5><a className="highlight" href={item.payload.company_url} target='_blank' rel='noopener noreferrer'>{item.payload.company_name}</a></h5>
+              <h5>
+                <a
+                  className="highlight"
+                  href={item.payload.company_url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={`Company Name: ${item.payload.company_name}`}
+                >{item.payload.company_name}</a>
+              </h5>
             </div>
           </div>
-          <div className={styles.experience__content} dangerouslySetInnerHTML={{ __html: item.payload.description }}></div>
-        </div>
+          <div
+            className={styles.experience__content}
+            dangerouslySetInnerHTML={{ __html: item.payload.description }}
+            aria-label={`Experience Description: ${index + 1}`}
+          />
+        </article>
       ))}
     </>
   );

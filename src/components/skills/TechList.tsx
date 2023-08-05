@@ -22,17 +22,23 @@ interface TechListProps {
  */
 const TechList: React.FC<TechListProps> = ({ technologies }) => {
   return (
-    <div className={styles.tech__list}>
+    <ul className={styles.tech__list} role="list" aria-label="Technologies Used">
       {technologies.map((tech, techIndex) => (
-        <div className={styles['tech-item']} key={techIndex}>
+        <li className={styles['tech-item']} key={techIndex} role="listitem">
           <div className={styles['tech-item__container']}>
-            <span className={styles['tech-item__label']} dangerouslySetInnerHTML={{ __html: tech.title.rendered }} />
-            <Image src={tech.payload.skill_image} alt={tech.title.rendered} width={50} height={50} />
+            <strong id={`tech-title-${techIndex}`} className={styles['tech-item__label']} dangerouslySetInnerHTML={{ __html: tech.title.rendered }} />
+            <Image
+              src={tech.payload.skill_image}
+              alt={tech.title.rendered}
+              width={40}
+              height={40}
+              aria-label={tech.title.rendered}
+            />
           </div>
-          <p className={styles['tech-item__description']}>{tech.payload.description}</p>
-        </div>
+          <p aria-labelledby={`tech-title-${techIndex}`} className={styles['tech-item__description']}>{tech.payload.description}</p>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

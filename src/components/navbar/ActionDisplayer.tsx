@@ -48,7 +48,12 @@ const ActionDisplayer: React.FC<ActionDisplayerProps> = ({ actions }) => {
   }, [index, actions]);
 
   return (
-    <div className={styles['action-displayer']}>
+    <div
+      role="status"
+      aria-live="polite"
+      aria-label="Random Action Displayer"
+      className={styles['action-displayer']}
+    >
       <span key={randomAction} className={styles['action-displayer__text']}>
         is {randomAction}
       </span>

@@ -36,12 +36,14 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
   };
 
   return (
-    <div className={styles.portfolio__filter}>
+    <div className={styles.portfolio__filter} role="navigation" aria-label="Technology Filter">
       <div className={`${styles.portfolio__technology} ${poppins.className}`}>
         <span
           className={`${styles['portfolio__technology-item']} ${!selectedTechnology ? styles.active : ''
             }`}
           onClick={() => handleClick(null)}
+          role="button"
+          tabIndex={0}
         >
           Featured
         </span>
@@ -51,6 +53,8 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
               }`}
             key={index}
             onClick={() => handleClick(tech)}
+            role="button"
+            tabIndex={0}
           >
             {tech}
           </span>
