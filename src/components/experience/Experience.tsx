@@ -35,7 +35,7 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
               />
             </a>
             <div className={styles.experience__header}>
-              <h4 className={poppins.className}>{item.title.rendered}</h4>
+              <h4 className={poppins.className} dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
               <h5><a className="highlight" href={item.payload.company_url} target='_blank' rel='noopener noreferrer'>{item.payload.company_name}</a></h5>
             </div>
           </div>

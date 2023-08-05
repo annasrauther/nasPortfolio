@@ -34,7 +34,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <Image src={payload.screenshot_url} alt={title.rendered} width={500} height={500} />
       </div>
       <div className={styles['portfolio-item__content']}>
-        <h3 className={`${styles['portfolio-item__label']} ${poppins.className}`}>{title.rendered}</h3>
+        <h3 className={`${styles['portfolio-item__label']} ${poppins.className}`} dangerouslySetInnerHTML={{ __html: title.rendered }} />
         <div className={styles['portfolio-item__desc']} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
         <div className={styles.portfolio__technology}>
           {payload.skills.map((tech, index) => (

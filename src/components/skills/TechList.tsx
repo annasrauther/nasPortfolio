@@ -26,7 +26,7 @@ const TechList: React.FC<TechListProps> = ({ technologies }) => {
       {technologies.map((tech, techIndex) => (
         <div className={styles['tech-item']} key={techIndex}>
           <div className={styles['tech-item__container']}>
-            <span className={styles['tech-item__label']}>{tech.title.rendered}</span>
+            <span className={styles['tech-item__label']} dangerouslySetInnerHTML={{ __html: tech.title.rendered }} />
             <Image src={tech.payload.skill_image} alt={tech.title.rendered} width={50} height={50} />
           </div>
           <p className={styles['tech-item__description']}>{tech.payload.description}</p>
