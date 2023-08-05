@@ -1,18 +1,19 @@
 "use client";
 import Image from 'next/image';
-import Portfolio from '@/components/portfolio/Portfolio';
+import PortfolioContainer from '@/components/projects/PortfolioContainer';
 import { poppins } from '@/lib/fonts';
 import {
-  workPortfolio,
   workTechnologiesList,
 } from '@/lib/data'
 import styles from './Projects.module.css';
+import { getPortfolioArchive } from '@/services/portfolio';
 
 /**
  * Projects Component displays a list of Portfolio items.
  * @returns {JSX.Element} The rendered Projects component.
  */
-const Projects: React.FC = () => {
+const Projects: React.FC = async () => {
+  const portfolioItems = await getPortfolioArchive()
   return (
     <div className="page-container">
       <h1 className={`page-heading ${poppins.className}`}>Projects</h1>
@@ -29,7 +30,7 @@ const Projects: React.FC = () => {
           <p className={styles.paragraph}>{`Browse through my portfolio to witness the diverse range of projects I've contributed to, each reflecting my passion for making a positive impact through thoughtful and innovative solutions.`}</p>
         </div>
       </div>
-      <Portfolio portfolioItems={workPortfolio} technologiesList={workTechnologiesList} />
+      <PortfolioContainer portfolioItems={portfolioItems} technologiesList={workTechnologiesList} />
     </div>
   );
 }

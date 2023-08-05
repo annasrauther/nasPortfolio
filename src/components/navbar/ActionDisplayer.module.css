@@ -3,8 +3,7 @@
   text-align: center;
 }
 
-.text-animation {
-  transform: translateY(20px);
+.action-displayer__text {
   color: var(--text-primary);
   font-size: 0.9em;
 

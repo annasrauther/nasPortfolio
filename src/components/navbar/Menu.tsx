@@ -3,12 +3,24 @@ import Link from 'next/link';
 import styles from './Menu.module.css';
 import { usePathname } from 'next/navigation';
 
+/**
+ * Represents the shape of a single navigation menu item.
+ * @interface MenuItem
+ * @property {string} name - The name of the menu item.
+ * @property {string} label - The label or description of the menu item.
+ * @property {string} href - The URL or path to navigate when the menu item is clicked.
+ */
 interface MenuItem {
   name: string;
   label: string;
   href: string;
 }
 
+/**
+ * Represents the props for the Menu component.
+ * @interface MenuProps
+ * @property {MenuItem[]} navigationLinks - An array of `MenuItem` objects representing the navigation menu items.
+ */
 interface MenuProps {
   navigationLinks: MenuItem[];
 }
@@ -24,7 +36,11 @@ const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
     <>
       <nav className={styles.menu}>
         {navigationLinks.map((link, index) => (
-          <Link className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`} href={link.href} key={link.name}>
+          <Link
+            className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`}
+            href={link.href}
+            key={link.name}
+          >
             <span style={{
               fontSize: '10px'
             }}>{'.0' + (index + 1)}</span>
