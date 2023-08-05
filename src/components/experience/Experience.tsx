@@ -40,8 +40,8 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
               />
             </a>
             <div className={styles.experience__header}>
-              <h4 className={poppins.className} dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-              <h5>
+              <h2 className={`${poppins.className} ${styles.experience__title}`} dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+              <h3 className={styles.experience__company}>
                 <a
                   className="highlight"
                   href={item.payload.company_url}
@@ -49,7 +49,7 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
                   rel='noopener noreferrer'
                   aria-label={`Company Name: ${item.payload.company_name}`}
                 >{item.payload.company_name}</a>
-              </h5>
+              </h3>
             </div>
           </div>
           <div

@@ -4,7 +4,7 @@ import Cursor from '@/components/cursor/Cursor';
 import { roboto_mono } from '@/lib/fonts';
 
 const title = 'Al Annas Rauther';
-const description = 'Front End Developer';
+const description = 'Front End Developer for the Modern Web';
 const url = "https://annasrauther.com";
 
 export const metadata = {
@@ -15,12 +15,12 @@ export const metadata = {
     title: title,
     description,
     url,
-    siteName: 'Al Annas Rauther - Front End Developer for the Modern Web',
+    siteName: title + ' - ' + description,
     images: [
       {
         url: '/logo_center.svg',
-        width: 800,
-        height: 600,
+        width: 150,
+        height: 150,
       },
     ],
     locale: 'en_US',
@@ -47,10 +47,9 @@ export const metadata = {
   viewport: {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
+    maximumScale: 5,
   },
   category: 'technology',
-
 }
 
 /**
