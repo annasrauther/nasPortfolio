@@ -33,10 +33,13 @@ interface HeroTechProps {
  */
 const HeroTech: React.FC<HeroTechProps> = ({ tech }) => {
   const key = tech.name;
+  const iconDescription: string = `${tech.name} icon`;
+
   return (
     <span
       key={key}
       className={styles['hero__tech-item']}
+      aria-label={iconDescription}
     >
       {tech.icon({ size: '2em' })}
     </span>

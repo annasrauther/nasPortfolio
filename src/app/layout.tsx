@@ -1,5 +1,6 @@
 import './globals.css'
 import Navbar from '@/components/navbar/Navbar';
+import Cursor from '@/components/cursor/Cursor';
 import { roboto_mono } from '@/lib/fonts';
 
 const title = 'Al Annas Rauther';
@@ -77,6 +78,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <body className={roboto_mono.className}>
         <Navbar />
         <main>{children}</main>
+        <Cursor />
       </body>
     </html>
   );

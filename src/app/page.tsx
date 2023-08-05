@@ -5,6 +5,7 @@ import Hero from '@/components/hero/Hero';
  *
  * This is the home page of the application, which displays the Hero component.
  *
+ * @component
  * @returns {JSX.Element} The Home page JSX element.
  */
 

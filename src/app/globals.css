@@ -57,6 +57,17 @@ body::before {
   content: "";
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: red;
+  width: 8px;
+  height: 8px;
+}
+
 p {
   color: var(--paragraph-color);
 }
@@ -99,6 +110,7 @@ p {
   border-top: 1px solid var(--hr-color);
   border-bottom: 1px solid var(--hr-color);
   background: rgb(255 255 255 / 30%);
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
@@ -111,6 +123,7 @@ p {
   border-top: 1px solid var(--hr-color);
   border-bottom: 1px solid var(--hr-color);
   background: rgb(255 255 255 / 30%);
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);

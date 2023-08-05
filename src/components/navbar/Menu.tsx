@@ -34,12 +34,13 @@ const Menu: React.FC<MenuProps> = ({ navigationLinks }) => {
   const pathname = usePathname();
   return (
     <>
-      <nav className={styles.menu}>
+      <nav className={styles.menu} role="navigation" aria-label="Main Navigation">
         {navigationLinks.map((link, index) => (
           <Link
             className={`${styles['menu__item']} ${pathname === link.href ? styles['active'] : ''}`}
             href={link.href}
             key={link.name}
+            aria-label={`${link.name}, ${link.label}`}
           >
             <span style={{
               fontSize: '10px'

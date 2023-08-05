@@ -50,7 +50,7 @@ const PortfolioContainer: React.FC<PortfolioProps> = ({ portfolioItems, technolo
   const filteredProjects = getFilteredProjects();
 
   return (
-    <div className={styles.portfolio__container}>
+    <div className={styles.portfolio__container} role="main" aria-label="Portfolio">
       <TechnologyFilter
         technologiesList={technologiesList}
         selectedTechnology={selectedTechnology}

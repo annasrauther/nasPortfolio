@@ -32,11 +32,12 @@ const TechContainer: React.FC<TechContainerProps> = ({ technologies }) => {
   });
 
   return (
-    <div className={styles.tech__container}>
+    <section aria-labelledby="tech-container-heading" className={styles.tech__container}>
+      <h2 id="tech-container-heading" className={'page-subheading'}>Technologies</h2>
       {Object.keys(groupedTechnologies).map((type, index) => (
         <TechGroup key={index} type={type} technologies={groupedTechnologies[type]} />
       ))}
-    </div>
+    </section>
   );
 };
 

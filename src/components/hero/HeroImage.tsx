@@ -58,11 +58,12 @@ const HeroImage: React.FC = () => {
 
   return (
     <>
-      <div className={styles['hero-image__wrapper']}></div>
+      <div className={styles['hero-image__wrapper']} aria-hidden="true"></div>
       <Image
         ref={heroImageRef}
         src={'/homepage_head.svg'}
-        alt={'Hero Image'}
+        alt={'Front End Developer - Hero Image'}
+        aria-label="Front End Developer - Hero Image"
         width={500}
         height={500}
         className={styles['hero-image']}

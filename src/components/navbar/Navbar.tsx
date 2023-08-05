@@ -18,7 +18,7 @@ import {
  */
 const Navbar: React.FC = () => {
   return (
-    <header>
+    <header role="banner">
       <Menu navigationLinks={navigation} />
       <div className={styles.header}>
         <div className={styles.brand}>

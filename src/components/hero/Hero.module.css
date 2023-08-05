@@ -39,14 +39,14 @@
     display: block;
     position: fixed;
     max-width: 50vw;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
     left: -20%;
     bottom: -15%;
     transform-origin: bottom left;
   }
 }
 
-.socialIcons {
+.social__container {
   position: fixed;
   bottom: 1vh;
   right: 1vw;
@@ -57,7 +57,7 @@
   }
 }
 
-.socialIcons ul {
+.social__container ul {
   display: flex;
   justify-content: center;
   gap: 1em;
