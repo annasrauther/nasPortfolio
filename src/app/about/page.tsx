@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import styles from './About.module.css';
 import { poppins } from '@/lib/fonts';
+import styles from './About.module.css';
 
 /**
  * About component to display information about the developer.

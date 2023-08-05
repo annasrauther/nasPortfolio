@@ -9,8 +9,12 @@ import {
 } from '@/lib/data'
 
 /**
- * Navbar component that displays the navigation bar.
- * @returns {JSX.Element} The JSX element representing the Navbar.
+ * Navbar Component
+ *
+ * This component displays the navigation bar with a menu, logo, brand name, and action displayer.
+ *
+ * @component
+ * @returns {JSX.Element} The Navbar component JSX element.
  */
 const Navbar: React.FC = () => {
   return (

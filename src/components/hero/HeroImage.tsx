@@ -3,10 +3,22 @@ import { useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import styles from './Hero.module.css';
 
+/**
+ * HeroImage Component
+ *
+ * This component represents the hero image section of the hero.
+ * It handles the rotation animation of the hero image on mouse movement.
+ *
+ * @component
+ * @returns {JSX.Element} The HeroImage component JSX element.
+ */
 const HeroImage: React.FC = () => {
   const heroImageRef = useRef<HTMLImageElement>(null);
   const lastMouseYRef = useRef<number>(0); // Store mutable value in a useRef
 
+  /**
+   * Animate the rotation of the hero image based on mouse movement.
+   */
   const animateRotation = useCallback(() => {
     const heroImage = heroImageRef.current;
     if (!heroImage) return;
@@ -21,6 +33,10 @@ const HeroImage: React.FC = () => {
     requestAnimationFrame(animateRotation);
   }, []); // No need to include lastMouseYRef.current in the dependency array
 
+  /**
+   * Handle mouse movement to update the Y position.
+   * @param {MouseEvent} e - The mouse event.
+   */
   const handleMouseMove = useCallback((e: MouseEvent) => {
     lastMouseYRef.current = e.clientY; // Update the mutable value in the useRef
   }, []); // Empty dependency array, memoizing the function
@@ -42,7 +58,7 @@ const HeroImage: React.FC = () => {
 
   return (
     <>
-      <div className={styles.imageWrapper}></div>
+      <div className={styles['hero-image__wrapper']}></div>
       <Image
         ref={heroImageRef}
         src={'/homepage_head.svg'}

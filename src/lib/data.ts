@@ -1,7 +1,6 @@
 import {
   Technology,
   TechStack,
-  ExperienceItem,
   PortfolioWorkItem,
 } from '@/lib/interfaces'
 
@@ -37,20 +36,6 @@ export const personalActions = [
   'Reading Tech Blogs',
   'Playing with Pets',
 ];
-
-export const heroImages = [
-  '/about/bio_1.svg',
-  '/about/bio_2.svg',
-  '/about/bio_3.svg',
-  '/about/bio_4.svg', 
-  '/about/bio_6.svg',
-];
-
-export const heroStacks = [
-  {
-    label: 'React',
-  }
-]
 
 export const technologies: Technology[] = [
   {
@@ -522,123 +507,6 @@ export const techStack: TechStack[] = [
     icon: Icons.FaWordpressSimple,
     color: '#DD0031',
   },
-];
-
-export const aboutContent = [
-  '',
-  '',
-  '',
-];
-
-export const workExperience: ExperienceItem[] = [
-  {
-    title: 'FullStack Developer (JavaScript)',
-    company: {
-      name: 'Nexsales Corporation',
-      logo: '/experience/nexsales.jpeg',
-      url: 'https://www.nexsales.com/',
-    },
-    duration: 'Apr 2017 - Jan 2023',
-    description: [
-      'Proficient in seamless integration, UI component development, and API implementation for dynamic web applications.Strong focus on performance optimization and user experience.',
-      'By adopting best practices and maintaining clean code, I ensure the scalability and maintainability of projects while promoting a smooth development process.',
-      'Integration of data storage solutions.My expertise allows me to efficiently connect various data storage systems and databases, ensuring data is managed effectively and accessed when needed.',
-      'Work on Proof of Concepts(POCs) and seamlessly integrating them into the product.Through this process, I explore and validate innovative solutions before implementing them into the final product, ensuring its continuous improvement and better user experience.',
-      'I leverage my real- world usage experience to influence and shape product features and APIs.By gaining insights from practical usage scenarios, I contribute valuable feedback to optimize and enhance the product\'s functionality, ensuring it aligns with users\' needs and delivers an exceptional user experience.',
-      'Proficient in Git for managing topic branches and Pull Requests, enabling seamless collaboration and efficient code integration.',
-      'Accurately estimate engineering work effort, effectively identifying and prioritizing high - impact tasks for the engineering team.',
-      'Collaborate with teams to drive projects from concept to completion, leveraging agile SDLC methodology for efficient and successful project execution.',
-      'Specialize in building new products and converting legacy systems in PHP to API - driven microservices running on Node.js.By adopting microservices architecture, I deliver scalable and modular solutions for improved performance and flexibility.',
-      'Conduct thorough code reviews and offer constructive feedback on best practices and performance enhancements.By ensuring adherence to coding standards and recommending optimizations, I contribute to the development of high - quality and efficient software solutions.',
-      'Identify, evaluate, and suggest relevant key technologies to support and enhance business processes, aligning with organizational objectives and improving overall efficiency.',
-      'Proficiently troubleshoot and provide production support, promptly resolving issues and ensuring continuous operations for seamless functionality.'
-    ],
-  },
-  {
-    title: 'Developer - Wordpress & Lightspeed E-Commerce',
-    company: {
-      name: 'Philippe Oorts',
-      logo: '/experience/philippeoorts.png',
-      url: 'https://www.marketingpartner.be/',
-    },
-    location: 'Remote',
-    duration: 'June 2019 - Oct 2019 (Contract - 10 hours per week) ',
-    description: [
-      'Modify and adapt existing WordPress themes to match client\'s unique branding and design requirements.',
-      'Tailor Lightspeed Ecommerce themes to create visually appealing and user-friendly online stores for clients.',
-      'Integrate and set up customized themes on client\'s websites or online stores, ensuring a smooth and efficient transition.',
-      'Optimize themes for speed and performance to ensure quick loading times and enhanced user engagement',
-      'Manage multiple projects on a service basis, ensuring timely delivery and meeting project deadlines.',
-    ],
-  },
-  {
-    title: 'Theme Developer - LightSpeed E-Commerce ',
-    company: {
-      name: 'Disrupt Make Work Smile',
-      logo: '/experience/dmws.svg',
-      url: 'https://www.dmws.nl/',
-    },
-    location: 'Remote',
-    duration: 'May 2018 - Dec 2018 (Contract - 10 hours per week) ',
-    description: [
-      'Develop Lightspeed E-Commerce\'s game - changers: "Theme Performance" for lightning - fast load times and "Theme Conversion" to boost customer conversions.',
-      'Crafting custom themes that reflect the unique brand identity and business requirements of clients, ensuring a seamless and visually captivating shopping experience for their customers.',
-      'Performing rigorous testing and self-quality assurance to maintain the highest standards of excellence, delivering error-free and reliable results.',
-      'Maintaining open and effective communication with clients throughout the development process, actively seeking feedback to align implementations with their expectations and vision.',
-    ],
-  },
-  {
-    title: 'Developer - LightSpeed E-Commerce (Themes)',
-    company: {
-      name: 'Advision E-Commerce Solutions',
-      logo: '/experience/advision.jpeg',
-      url: 'https://advision-ecommerce.com/',
-    },
-    location: 'Remote',
-    duration: 'Mar 2017 - Aug 2019 (Contract - 10 hours per week) ',
-    description: [
-      'Offer specialized theme customization and development services tailored for the Lightspeed Ecommerce platform.',
-      'Create custom themes that align with your brand and business needs, providing a seamless and visually appealing shopping experience for your customers.',
-      'Conduct thorough testing and review(Self QA) of my work to ensure its quality and accuracy.This meticulous process allows me to deliver reliable and error- free results, meeting the highest standards of excellence.',
-      'I maintain open communication with clients to ensure that the implementations align with their expectations.By actively engaging with them and seeking feedback throughout the development process, I guarantee that the end product fulfills their requirements and vision, leading to satisfied and contented clients.',
-    ],
-  },
-  {
-    title: 'Front End Lead & ReactJs Developer',
-    company: {
-      name: 'Wisdmlabs',
-      logo: '/experience/wisdmlabs.svg',
-      url: 'https://wisdmlabs.com/',
-    },
-    duration: 'Feb 2016 - March 2017',
-    description: [
-      'Work closely with clients to analyze their requirements and assist in translating these possibilities to the sales team.',
-      'As part of my role, I am responsible for providing project estimations and effort assessments to support the sales team in their client engagements.',
-      'In collaboration with the Project Architect, I engage in detailed discussions and analysis to define various aspects crucial to the project&apos;s success. We delve into functionality requirements, map out user flows, establish UI architecture, design smooth navigation, and plan interactions to create an intuitive and seamless user experience.',
-      'Throughout my experience, I have collaborated closely with various teams, including the Design Team, Front End Developers (my team), Quality Assurance, and Project Managers, to ensure the timely delivery of projects. By fostering effective communication and a collaborative work environment, we successfully meet project deadlines and deliver high-quality results.',
-      'Mentoring and training novice developers, helping them grow their skills and confidence in front-end development. I conduct regular code reviews to provide constructive feedback and ensure adherence to best practices. Additionally, I lead weekly front-end developer meetings, fostering knowledge sharing and team collaboration to enhance our collective expertise and productivity.',
-      'Conduct technical interviews for candidates during the selection process. I assess their skills, problem-solving abilities, and technical knowledge to determine their suitability for the position. Through a comprehensive evaluation, I aim to identify candidates who align with our team&apos;s requirements and possess the potential to excel in the role.',
-      'In my capacity as a front-end developer, I have conducted 4-5 comprehensive training sessions. These sessions were designed to educate fellow developers on specific technologies relevant to front-end development. By sharing my expertise and insights, I aimed to enhance their understanding and proficiency in these technologies, fostering a more skilled and cohesive development team.'
-    ],
-  },
-  {
-    title: 'Front End Developer',
-    company: {
-      name: 'Wisdmlabs',
-      logo: '/experience/wisdmlabs.svg',
-      url: 'https://wisdmlabs.com/',
-    },
-    duration: 'Aug 2015 - Feb 2016',
-    description: [
-      'In my role, I specialize in creating WordPress Themes tailored to the unique needs of clients. I take pride in developing cross-browser compatible and highly responsive user interfaces that ensure a seamless experience for all users across different devices and platforms. My expertise in WordPress customization allows me to deliver visually appealing and functional themes that meet and exceed client expectations.',
-      'I have a proven track record of successfully working both collaboratively with teams and independently on numerous projects in fast-paced environments with tight deadlines. My ability to adapt and remain focused enables me to deliver high-quality results efficiently, ensuring that all project requirements are met on time and with precision.',
-      'Skilled in crafting custom email templates (newsletters) for the Marketing Team, ensuring impactful and engaging communication.',
-      'I provided valuable assistance to back-end developers by handling front-end related tasks in their projects. This collaboration ensured a seamless integration of front-end and back-end components, resulting in cohesive and successful projects.',
-      'I possess the expertise to create visually captivating transitions and effects using JavaScript/jQuery and CSS animations. By leveraging these tools, I enhance the user experience, adding a touch of creativity and interactivity to the user interface, resulting in engaging and visually appealing designs.',
-      'I actively provide valuable assistance to back-end developers in troubleshooting and coding tasks. My collaborative approach and technical expertise allow me to identify and resolve issues efficiently, contributing to the smooth functioning of projects and ensuring the successful implementation of back-end functionalities.',
-    ],
-  },
-
 ];
 
 export const workPortfolio: PortfolioWorkItem[] = [

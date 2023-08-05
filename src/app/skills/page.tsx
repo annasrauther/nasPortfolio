@@ -1,14 +1,15 @@
-import Tech from '@/components/tech/Tech';
+import TechContainer from '@/components/skills/TechContainer';
 import { poppins } from '@/lib/fonts';
-import { technologies } from '@/lib/data'
 import Image from 'next/image';
+import { getSkillArchive } from '@/services/skills';
 import styles from './Skills.module.css';
 
 /**
  * Projects Component displays a list of Portfolio items.
  * @returns {JSX.Element} The rendered Projects component.
  */
-const Projects: React.FC = () => {
+const Projects: React.FC = async () => {
+  const skills = await getSkillArchive()
   return (
     <div className="page-container">
       <h1 className={`page-heading ${poppins.className}`}>Skills</h1>
@@ -25,7 +26,7 @@ const Projects: React.FC = () => {
           <p className={styles.paragraph}>{`Explore the list of technologies I've used below to witness the scope of my skills.`}</p>
         </div>
       </div>
-      <Tech technologies={technologies} />
+      <TechContainer technologies={skills} />
     </div>
   );
 }

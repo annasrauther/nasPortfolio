@@ -7,28 +7,17 @@
   gap: 0.5em;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  @media screen and (min-width: 1024px) {
-    width: auto;
-  }
-}
-
-.logoLink {
-  display: flex;
-}
-
 .logo {
   z-index: 99999;
   width: 75px;
   height: 75px;
 }
 
-.brand-link {
+.logo__wrapper {
+  display: flex;
+}
+
+.brand__name {
   text-shadow: -0.5px 0.5px var(--bg-box-shadow);
   z-index: 50;
   text-transform: uppercase;
