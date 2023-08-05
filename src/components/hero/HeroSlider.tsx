@@ -35,7 +35,7 @@ interface HeroSliderProps {
 const HeroSlider: React.FC<HeroSliderProps> = ({ techList }) => {
   return (
     <section aria-labelledby="hero-subtitle">
-      <h3 id="hero-subtitle" className={styles.hero__subtitle} aria-label="Technologies Used">Experience in building the web and working with technologies like</h3>
+      <h2 id="hero-subtitle" className={styles.hero__subtitle} aria-label="Technologies Used">Experience in building the web and working with technologies like</h2>
       <div className={styles.hero__tech}>
         {
           techList.map((tech, index) => (

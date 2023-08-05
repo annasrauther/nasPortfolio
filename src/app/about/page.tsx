@@ -39,7 +39,7 @@ const About: React.FC = () => {
       <div className={styles.section_column}>
         <div className={styles['belief-wrapper']}>
           <div className={styles['belief-section']}>
-            <h3 className={styles['page-subtitle']}>Health & Fitness</h3>
+            <h2 className={styles['page-subtitle']}>Health & Fitness</h2>
             <ul className={styles['belief-list']}>
               <li>I hold the belief that all individuals, capable of doing so, should have the ability to independently take care of their basic physical maintainance, it is essential for overall well-being and health.</li>
               <li>I firmly believe that meditation can take diverse forms, and it does not always require sitting still. Various practices offer valuable benefits for mindfulness and inner peace.</li>
@@ -58,7 +58,7 @@ const About: React.FC = () => {
             <Image className={styles['belief-image']} src="/about/about_lifestyle.svg" alt={'Lifestyle & Goals'} width={500} height={500} />
           </div>
           <div className={styles['belief-section']}>
-            <h3 className={styles['page-subtitle']}>Lifestyle & Goals</h3>
+            <h2 className={styles['page-subtitle']}>Lifestyle & Goals</h2>
             <ul className={styles['belief-list']}>
               <li>I strongly believe in the significance of setting clear plans and goals to guide the path towards desired achievements.</li>
               <li>In my view, the state of <b>flow</b> is truly remarkable, where one can immerse themselves in focused concentration, losing track of time. This unique experience should be nurtured and cultivated to enhance personal growth and creativity.</li>
@@ -69,7 +69,7 @@ const About: React.FC = () => {
         </div>
         <div className={styles['belief-wrapper']}>
           <div className={styles['belief-section']}>
-            <h3 className={styles['page-subtitle']}>Money & Finances</h3>
+            <h2 className={styles['page-subtitle']}>Money & Finances</h2>
             <ul className={styles['belief-list']}>
               <li>I strongly believe that young individuals should receive extensive financial education before making life-changing decisions, such as taking out loans.</li>
               <li>I believe that investing in lasting quality, even if it costs more upfront, leads to greater value and satisfaction in the long run.</li>
@@ -87,7 +87,7 @@ const About: React.FC = () => {
             <Image className={styles['belief-image']} src="/about/about_education.svg" alt={'Education & Learning'} width={500} height={500} />
           </div>
           <div className={styles['belief-section']}>
-            <h3 className={styles['page-subtitle']}>Education & Learning</h3>
+            <h2 className={styles['page-subtitle']}>Education & Learning</h2>
             <ul className={styles['belief-list']}>
               <li>I firmly believe in maintaining side projects as a means of continuous learning, even if they do not succeed in the end. They provide valuable experiences and opportunities for growth.</li>
               <li>I strongly believe that one of the most effective ways to achieve deep understanding of a subject is by teaching it to others.</li>
@@ -99,7 +99,7 @@ const About: React.FC = () => {
         </div>
         <div className={styles['belief-wrapper']}>
           <div className={styles['belief-section']}>
-            <h3 className={styles['page-subtitle']}>Family & Relationships</h3>
+            <h2 className={styles['page-subtitle']}>Family & Relationships</h2>
             <ul className={styles['belief-list']}>
               <li>I firmly believe that playing board games with friends and colleagues is one of the most enjoyable and fulfilling ways to spend an evening. It fosters camaraderie and creates lasting memories.</li>
               <li>I share the belief in the importance of having alone time to recharge and rejuvenate. It allows for introspection and restores energy after social interactions.</li>

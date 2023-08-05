@@ -22,6 +22,7 @@ const BrandName: React.FC<BrandNameProps> = ({ brandName, brandLink }) => {
   return (
     <Link
       role="heading"
+      aria-level={1}
       aria-label={`${brandName} - Home`}
       href={brandLink}
       className={`${styles['brand__name']} ${poppins.className}`}

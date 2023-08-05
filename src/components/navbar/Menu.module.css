@@ -94,14 +94,14 @@
 
 .menu__item-name::before,
 .menu__item-label::before {
-  background: #2983ea;
+  background: #1257A6;
 }
 
 /* Hover */
 .menu__item:hover,
 .menu__item.active,
 .menu__item:focus {
-  color: #2983ea;
+  color: #1257A6;
 }
 
 .menu__item:hover .menu__item-name::before,
