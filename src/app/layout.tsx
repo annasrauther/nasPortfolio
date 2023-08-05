@@ -17,7 +17,7 @@ export const metadata = {
     siteName: 'Al Annas Rauther - Front End Developer for the Modern Web',
     images: [
       {
-        url: '/logo.png',
+        url: '/logo_center.svg',
         width: 800,
         height: 600,
       },
@@ -39,9 +39,9 @@ export const metadata = {
     },
   },
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/logo_center.svg',
+    shortcut: '/logo_center.svg',
+    apple: '/logo_center.svg',
   },
   viewport: {
     width: 'device-width',

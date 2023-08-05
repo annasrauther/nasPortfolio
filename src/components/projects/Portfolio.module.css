@@ -135,6 +135,10 @@
   }
 }
 
+.portfolio-item__image img {
+  margin: 0 auto;
+}
+
 .portfolio-item__label {
   color: var(--text-btn-info);
   font-size: 3em;

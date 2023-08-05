@@ -1,4 +1,3 @@
-"use client";
 import Image from 'next/image';
 import PortfolioContainer from '@/components/projects/PortfolioContainer';
 import { poppins } from '@/lib/fonts';
