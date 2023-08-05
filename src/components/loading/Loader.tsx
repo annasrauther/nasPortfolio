@@ -7,13 +7,15 @@ import Image from 'next/image';
  */
 const Loader: React.FC = () => {
   return (
-    <div className={styles['loading-wrapper']}>
+    <div className={styles['loading-wrapper']} role="status" aria-live="polite">
       <Image
         src="/loader.svg"
         width={100}
         height={100}
         alt="Loader"
       />
+      {/* Alternative content for users who cannot see images */}
+      <p>Loading...</p>
     </div>
   );
 };

@@ -29,12 +29,12 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   payload,
 }) => {
   return (
-    <div className={styles['portfolio-item']}>
+    <article className={styles['portfolio-item']} aria-labelledby={`project-${title.rendered}`}>
       <div className={styles['portfolio-item__image']}>
         <Image src={payload.screenshot_url} alt={title.rendered} width={500} height={500} />
       </div>
       <div className={styles['portfolio-item__content']}>
-        <h3 className={`${styles['portfolio-item__label']} ${poppins.className}`} dangerouslySetInnerHTML={{ __html: title.rendered }} />
+        <h3 id={`project-${title.rendered}`} className={`${styles['portfolio-item__label']} ${poppins.className}`} dangerouslySetInnerHTML={{ __html: title.rendered }} />
         <div className={styles['portfolio-item__desc']} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
         <div className={styles.portfolio__technology}>
           {payload.skills.map((tech, index) => (
@@ -47,7 +47,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

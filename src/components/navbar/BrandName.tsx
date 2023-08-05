@@ -20,7 +20,12 @@ interface BrandNameProps {
  */
 const BrandName: React.FC<BrandNameProps> = ({ brandName, brandLink }) => {
   return (
-    <Link href={brandLink} className={`${styles['brand__name']} ${poppins.className}`}>
+    <Link
+      role="heading"
+      aria-label={`${brandName} - Home`}
+      href={brandLink}
+      className={`${styles['brand__name']} ${poppins.className}`}
+    >
       {brandName}
     </Link>
   );

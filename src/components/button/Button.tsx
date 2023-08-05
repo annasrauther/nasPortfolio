@@ -35,6 +35,8 @@ const Button: React.FC<ButtonProps> = ({ label, info, href, icon: Icon, target, 
     <Link
       href={href}
       passHref
+      role="button"
+      aria-label={label}
       className={`${styles.button} ${info ? styles.info : styles.primary} ${active ? styles.active : ''}`}
       target={target ? '_blank' : '_self'}
     >

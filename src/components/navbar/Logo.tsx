@@ -20,11 +20,12 @@ interface LogoProps {
  */
 const Logo: React.FC<LogoProps> = ({ logoLink }) => {
   const pathname = usePathname();
+
   return (
-    <Link href={logoLink} className={styles.logo__wrapper}>
-      {pathname !== '/' ? <Image src={'/logo_left.svg'} alt={'Nas Rauther Left Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
-      <Image src={'/logo_center.webp'} alt={'Nas Rauther Main Logo'} width={75} height={75} priority={true} className={styles.logo} />
-      {pathname !== '/' ? <Image src={'/logo_right.svg'} alt={'Nas Rauther Right Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
+    <Link href={logoLink} className={styles.logo__wrapper} aria-label="Logo Container">
+      {pathname !== '/' ? <Image src={'/logo_left.svg'} alt={'Annas Rauther - Left Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
+      <Image src={'/logo_center.webp'} alt={'Annas Rauther - Main Logo'} width={75} height={75} priority={true} className={styles.logo} />
+      {pathname !== '/' ? <Image src={'/logo_right.svg'} alt={'Annas Rauther - Right Logo'} width={75} height={75} priority={true} className={styles.logo} /> : null}
     </Link>
   );
 };

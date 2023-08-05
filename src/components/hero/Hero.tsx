@@ -16,14 +16,14 @@ import HeroImage from './HeroImage';
  */
 const Hero: React.FC = () => {
   return (
-    <div className={styles.hero__container}>
+    <section className={styles.hero__container} role="banner" aria-label="Hero Section">
       <HeroImage />
       <div className={styles.hero__wrapper}>
-        <h1 className={`${styles.hero__heading} ${poppins.className}`}>Front End Developer</h1>
+        <h1 className={`${styles.hero__heading} ${poppins.className}`} aria-label='Front End Developer'>Front End Developer</h1>
         <HeroSlider techList={techStack} />
       </div>
       <SocialIcons />
-    </div>
+    </section>
   );
 };
 
