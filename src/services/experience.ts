@@ -8,7 +8,7 @@ import { ExperienceItem } from '@/interfaces/experience';
  * @returns {Promise<ExperienceItem[]>} A promise that resolves to an array of ExperienceItem objects representing the experience archive data.
  */
 export const getExperienceArchive = async () => {
-  const response = await fetch(EXPERIENCE_ENDPOINT, {
+  const response = await fetch(EXPERIENCE_ENDPOINT + '?per_page=20orderby=scpo_order', {
     next: { revalidate: 60 },
   });
   const data: ExperienceItem[] = await response.json();
