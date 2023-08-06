@@ -1,4 +1,4 @@
-import { PORTFOLIO_ENDPOINT } from './endpoints';
+import { PORTFOLIO_ENDPOINT, ORDER_QUERY } from './endpoints';
 import { PortfolioItem } from '@/interfaces/portfolio';
 
 /**
@@ -8,8 +8,8 @@ import { PortfolioItem } from '@/interfaces/portfolio';
  * @returns {Promise<PortfolioItem[]>} A promise that resolves to an array of PortfolioItem objects representing the portfolio archive data.
  */
 export const getPortfolioArchive = async () => {
-  const response = await fetch(PORTFOLIO_ENDPOINT, {
-    next: { revalidate: 60 },
+  const response = await fetch(PORTFOLIO_ENDPOINT + ORDER_QUERY, {
+    next: { revalidate: 5 },
   });
   const data: PortfolioItem[] = await response.json();
   return data;
