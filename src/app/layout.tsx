@@ -18,7 +18,7 @@ export const metadata = {
     siteName: title + ' - ' + description,
     images: [
       {
-        url: '/logo_center.svg',
+        url: '/logo_center.webp',
         width: 150,
         height: 150,
       },
@@ -40,9 +40,9 @@ export const metadata = {
     },
   },
   icons: {
-    icon: '/logo_center.svg',
-    shortcut: '/logo_center.svg',
-    apple: '/logo_center.svg',
+    icon: '/logo_center.webp',
+    shortcut: '/logo_center.webp',
+    apple: '/logo_center.webp',
   },
   viewport: {
     width: 'device-width',

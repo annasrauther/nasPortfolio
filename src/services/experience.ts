@@ -1,4 +1,4 @@
-import { EXPERIENCE_ENDPOINT } from './endpoints';
+import { EXPERIENCE_ENDPOINT, ORDER_QUERY } from './endpoints';
 import { ExperienceItem } from '@/interfaces/experience';
 
 /**
@@ -8,8 +8,8 @@ import { ExperienceItem } from '@/interfaces/experience';
  * @returns {Promise<ExperienceItem[]>} A promise that resolves to an array of ExperienceItem objects representing the experience archive data.
  */
 export const getExperienceArchive = async () => {
-  const response = await fetch(EXPERIENCE_ENDPOINT + '?per_page=20&orderby=scpo_order', {
-    next: { revalidate: 60 },
+  const response = await fetch(EXPERIENCE_ENDPOINT + ORDER_QUERY, {
+    next: { revalidate: 5 },
   });
   const data: ExperienceItem[] = await response.json();
   return data;

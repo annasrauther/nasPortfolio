@@ -21,3 +21,9 @@ export const PORTFOLIO_ENDPOINT = API_BASE + 'portfolio';
  * @constant {string} SKILL_ENDPOINT - The endpoint for the 'skill' API.
  */
 export const SKILL_ENDPOINT = API_BASE + 'skill';
+
+/**
+ * Query string for ordering the API results.
+ * @constant {string} ORDER_QUERY - The query string for ordering the API results.
+ */
+export const ORDER_QUERY = '?orderby=menu_order&sort=asc';

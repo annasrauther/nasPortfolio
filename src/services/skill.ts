@@ -1,4 +1,4 @@
-import { SKILL_ENDPOINT } from './endpoints';
+import { SKILL_ENDPOINT, ORDER_QUERY } from './endpoints';
 import { Skill } from '@/interfaces/skill';
 
 /**
@@ -8,8 +8,8 @@ import { Skill } from '@/interfaces/skill';
  * @returns {Promise<Skill[]>} A promise that resolves to an array of Skill objects representing the skill archive data.
  */
 export const getSkillArchive = async () => {
-  const response = await fetch(SKILL_ENDPOINT + '?per_page=100&orderby=scpo_order', {
-    next: { revalidate: 60 },
+  const response = await fetch(SKILL_ENDPOINT + ORDER_QUERY, {
+    next: { revalidate: 5 },
   });
   const data: Skill[] = await response.json();
   return data;
