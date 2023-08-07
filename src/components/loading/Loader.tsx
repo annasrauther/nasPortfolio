@@ -14,8 +14,6 @@ const Loader: React.FC = () => {
         height={100}
         alt="Loader"
       />
-      {/* Alternative content for users who cannot see images */}
-      <p>Loading...</p>
     </div>
   );
 };
