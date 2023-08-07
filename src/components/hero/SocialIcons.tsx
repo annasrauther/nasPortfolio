@@ -17,7 +17,7 @@ const SocialIcons: React.FC = () => {
         {/* LinkedIn Icon */}
         <li>
           <a
-            href="https://www.linkedin.com/in/al-annas-rauther-5b8a4a1b4/"
+            href="https://www.linkedin.com/in/annasrauther95/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
@@ -28,7 +28,7 @@ const SocialIcons: React.FC = () => {
         {/* GitHub Icon */}
         <li>
           <a
-            href="https://github.com/YourGitHubUsername"
+            href="https://github.com/annasrauther"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
@@ -39,7 +39,7 @@ const SocialIcons: React.FC = () => {
         {/* WhatsApp Icon */}
         <li>
           <a
-            href="https://api.whatsapp.com/send?phone=1234567890"
+            href="https://api.whatsapp.com/send?phone=8097896998"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
