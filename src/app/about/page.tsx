@@ -23,16 +23,13 @@ const About: React.FC = () => {
         </div>
         <div className={styles.section_column}>
           <p className={styles.paragraph}>
-            {`Step into my digital domain! With an extensive 8-year background in web development, I've honed my skills as a full-stack guru with a primary focus on front-end work. My true passion lies in building seamless websites and web apps for large data projects, and my impressive track record speaks volumes.`}
+            {`Welcome! With 8 years of experience in web development and a focus on front-end work, I'm dedicated to crafting seamless websites and web apps for large data projects.`}
           </p>
           <p className={styles.paragraph}>
-            {`In the exciting year of 2015, I embarked on a daring journey of self-teaching, and remarkably, within a mere two months, I proudly landed a Junior Front-End Developer role at Wisdmlabs. During my leisure hours, I find inspiration in strategic chess battles, enlightening TED-Ed and Fireship videos, and indulging in occasional weightlifting sessions. These activities fuel my creativity and keep me motivated in the world of web development.`}
+            {`In 2015, I embarked on a journey of self-teaching and proudly landed a Junior Front-End Developer role at Wisdmlabs within two months. When I'm not coding, you'll find me drawing inspiration from strategic chess battles, TED-Ed, and Fireship videos, or indulging in dishes with eggs or potatoes. Comfortable dressing keeps me ready to tackle coding challenges with ease.`}
           </p>
           <p className={styles.paragraph}>
-            {`Beyond coding, my taste buds celebrates any dishes containing eggs or potatoes. My dressing style prioritizes comfort, keeping me prepared to effortlessly tackle coding challenges.`}
-          </p>
-          <p className={styles.paragraph}>
-            {`Join this thrilling web development journey where your visions become reality through my technical prowess. Together, we'll forge something truly extraordinary!`}
+            {`Join me on this exciting web development journey, where your visions come to life through my technical prowess. Together, we'll create something extraordinary!`}
           </p>
         </div>
       </div>
@@ -41,11 +38,11 @@ const About: React.FC = () => {
           <div className={styles['belief-section']}>
             <h2 className={styles['page-subtitle']}>Health & Fitness</h2>
             <ul className={styles['belief-list']}>
-              <li>I hold the belief that all individuals, capable of doing so, should have the ability to independently take care of their basic physical maintainance, it is essential for overall well-being and health.</li>
-              <li>I firmly believe that meditation can take diverse forms, and it does not always require sitting still. Various practices offer valuable benefits for mindfulness and inner peace.</li>
-              <li>I believe <a className="highlight" href='https://stronglifts.com/5x5/' target='_blank' rel='noopener noreferrer'>StrongLifts</a> is awesome.</li>
-              <li>In my perspective, getting seven hours of sleep each night is the ideal and optimal duration for restorative rest.</li>
-              <li>In my experience, regular exercise not only boosts my productivity but also enhances my overall happiness in every aspect of life.</li>
+              <li>{`I firmly believe that everyone, when capable, should have the opportunity to care for their physical well-being independently — it's crucial for overall health and wellness.`}</li>
+              <li>{`In my view, meditation takes various forms, extending beyond sitting still — different practices offer valuable benefits, fostering mindfulness and inner peace.`}</li>
+              <li>I must say <a className="highlight" href='https://stronglifts.com/5x5/' target='_blank' rel='noopener noreferrer'>StrongLifts</a> is awesome.</li>
+              <li>{`From my personal experience, I find that getting seven hours of sleep each night is the ideal and optimal duration for restorative rest.`}</li>
+              <li>{`Regular exercise not only boosts productivity but also enhances overall happiness — this is my humble observation.`}</li>
             </ul>
           </div>
           <div>
@@ -60,9 +57,9 @@ const About: React.FC = () => {
           <div className={styles['belief-section']}>
             <h2 className={styles['page-subtitle']}>Lifestyle & Goals</h2>
             <ul className={styles['belief-list']}>
-              <li>I strongly believe in the significance of setting clear plans and goals to guide the path towards desired achievements.</li>
-              <li>In my view, the state of <b>flow</b> is truly remarkable, where one can immerse themselves in focused concentration, losing track of time. This unique experience should be nurtured and cultivated to enhance personal growth and creativity.</li>
-              <li>Tracking progress consistently paves the way for continuous improvement and growth.</li>
+              <li>{`Setting clear plans and goals is of utmost importance in achieving our desired aspirations — I wholeheartedly believe in this principle.`}</li>
+              <li>{`The state of flow, where focused concentration leads to losing track of time, is truly remarkable and offers a unique experience for personal growth and creativity — this is my view.`}</li>
+              <li>{`Consistently tracking our progress is key to paving the way for continuous improvement and growth.`}</li>
               <li>Forget <b>follow your passion</b>. Focus on honing skills; passion will come naturally.</li>
             </ul>
           </div>
@@ -71,11 +68,11 @@ const About: React.FC = () => {
           <div className={styles['belief-section']}>
             <h2 className={styles['page-subtitle']}>Money & Finances</h2>
             <ul className={styles['belief-list']}>
-              <li>I strongly believe that young individuals should receive extensive financial education before making life-changing decisions, such as taking out loans.</li>
-              <li>I believe that investing in lasting quality, even if it costs more upfront, leads to greater value and satisfaction in the long run.</li>
-              <li>I firmly believe that if you have the opportunity to lower your taxes legally, you should seize it without any feelings of guilt.</li>
-              <li>I believe that healthcare should be considered a fundamental human need and provided by the government to ensure equal access and well-being for all.</li>
-              <li>I understand, and I believe that apartments offer many advantages such as convenience, amenities, and a sense of community, making them a great choice for living.</li>
+              <li>{`I strongly believe in empowering young individuals with comprehensive financial education before life-changing decisions, like taking out loans.`}</li>
+              <li>{`Investing in lasting quality, even with higher upfront costs, leads to greater value and long-term satisfaction — I firmly stand by this principle.`}</li>
+              <li>{`Seizing legal tax-saving opportunities without guilt — this is a must.`}</li>
+              <li>{`Healthcare as a fundamental human need, accessible for all through government support — I feel strongly about this.`}</li>
+              <li>{`Apartments offer unmatched advantages—convenience, amenities, and a sense of community, making them an excellent living choice — I understand and believe in this perspective.`}</li>
             </ul>
           </div>
           <div>
@@ -89,11 +86,11 @@ const About: React.FC = () => {
           <div className={styles['belief-section']}>
             <h2 className={styles['page-subtitle']}>Education & Learning</h2>
             <ul className={styles['belief-list']}>
-              <li>I firmly believe in maintaining side projects as a means of continuous learning, even if they do not succeed in the end. They provide valuable experiences and opportunities for growth.</li>
-              <li>I strongly believe that one of the most effective ways to achieve deep understanding of a subject is by teaching it to others.</li>
-              <li>I believe that, in many cases, attending college is not a necessity for pursuing most programming jobs available today, as boot camps and side projects can effectively fulfill the learning and skill-building requirements.</li>
-              <li>I share the belief that programming and creating something is one of the most enjoyable and fulfilling experiences in the world. The process of bringing ideas to life through code is truly rewarding.</li>
-              <li>I share the belief that excessive time spent on social media can hinder personal growth. While I am not advocating complete disengagement, limiting exposure can foster a healthier and more productive lifestyle.</li>
+              <li>{`I firmly believe in the power of side projects for continuous learning, even if they don't always succeed. They offer invaluable experiences and foster personal growth.`}</li>
+              <li>{`Teaching others is a remarkably effective way to achieve deep understanding in any subject — I strongly stand by this approach.`}</li>
+              <li>{`College isn't always a necessity for programming jobs. Boot camps and side projects can effectively fulfill learning and skill-building needs.`}</li>
+              <li>{`Creating with code is one of life's most enjoyable and fulfilling experiences — truly rewarding in every sense.`}</li>
+              <li>{`While not advocating complete disengagement, limiting excessive social media time fosters a healthier, more productive lifestyle. Let's strike that balance together.`}</li>
             </ul>
           </div>
         </div>
@@ -102,10 +99,10 @@ const About: React.FC = () => {
             <h2 className={styles['page-subtitle']}>Family & Relationships</h2>
             <ul className={styles['belief-list']}>
               <li>I firmly believe that playing board games with friends and colleagues is one of the most enjoyable and fulfilling ways to spend an evening. It fosters camaraderie and creates lasting memories.</li>
-              <li>I share the belief in the importance of having alone time to recharge and rejuvenate. It allows for introspection and restores energy after social interactions.</li>
-              <li>I firmly believe that individuals who dont travel or expose themselves to new ideas through various means tend to become close-minded and miss out on valuable perspectives and growth opportunities.</li>
-              <li>I share the belief that one of the most effective ways to connect with people and get to know them deeply is by sharing stories around common themes or prompts. It fosters understanding and strengthens bonds.</li>
-              <li>I firmly believe that in any discussion, negotiation, or argument, caring about others feelings is crucial because without empathy, the facts presented lose their significance. True understanding and meaningful communication require considering emotions alongside facts.</li>
+              <li>{`Personally, I value the importance of alone time for rejuvenation and introspection — it revitalizes after social interactions.`}</li>
+              <li>{`Embracing diverse experiences and new ideas prevents close-mindedness and unlocks valuable perspectives and growth opportunities.`}</li>
+              <li>{`I share the belief in the power of storytelling to forge deep connections — sharing common themes fosters empathy and strengthens bonds.`}</li>
+              <li>{`Empathy is a cornerstone in relationships, elevating discourse and fostering meaningful communication. It promotes genuine understanding, nurtures compassion, and strengthens connections on a profound level.`}</li>
             </ul>
           </div>
           <div>

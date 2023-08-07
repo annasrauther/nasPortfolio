@@ -3,6 +3,8 @@
   display: grid;
   grid-template-rows: auto;
   gap: 1em;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -19,7 +21,7 @@
 .belief-wrapper {
   display: grid;
   grid-template-rows: 1fr;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   border-top: 1px solid var(--hr-color);
   padding-top: 2em;

@@ -43,6 +43,8 @@
     left: -20%;
     bottom: -15%;
     transform-origin: bottom left;
+    z-index: 1;
+    mix-blend-mode: color-dodge;
   }
 }
 
