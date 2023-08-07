@@ -5,11 +5,11 @@ import { roboto_mono } from '@/lib/fonts';
 
 const title = 'Al Annas Rauther';
 const description = 'Front End Developer for the Modern Web';
-const url = "https://annasrauther.com";
+const url = 'https://nas-portfolio.vercel.app/';
 
 export const metadata = {
   title: title,
-  metadataBase: new URL('https://annasrauther.com'),
+  metadataBase: new URL(url),
   description,
   openGraph: {
     title: title,
