@@ -19,7 +19,7 @@ const Cursor: React.FC = () => {
   const cursorY = useMotionValue(-100);
 
   // Configuration for the spring animation
-  const springConfig = { damping: 25, stiffness: 700 };
+  const springConfig = { damping: 25, stiffness: 300 };
 
   // Create spring animations for cursor X and Y positions
   const cursorXSpring = useSpring(cursorX, springConfig);
