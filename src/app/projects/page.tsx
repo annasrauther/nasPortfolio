@@ -35,8 +35,3 @@ const Projects: React.FC = async () => {
 }
 
 export default Projects;
-
-
-
-
-
