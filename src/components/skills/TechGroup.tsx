@@ -1,6 +1,5 @@
 import { Skill } from "@/interfaces/skill";
 import TechList from "./TechList";
-import { poppins } from "@/lib/fonts";
 import styles from "./Tech.module.css";
 
 /**
@@ -26,7 +25,7 @@ interface TechGroupProps {
 const TechGroup: React.FC<TechGroupProps> = ({ type, technologies }) => {
   return (
     <section aria-labelledby={`${type}-heading`} className={styles.tech__wrapper}>
-      <h3 id={`${type}-heading`} className={`${styles.tech__title} ${poppins.className}`}>{type}</h3>
+      <h3 id={`${type}-heading`} className={`${styles.tech__title}`}>{type}</h3>
       <TechList technologies={technologies} />
     </section>
   );
