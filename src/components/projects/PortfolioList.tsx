@@ -31,9 +31,7 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ filteredProjects }) => {
 
   return (
     <section aria-labelledby="portfolio-heading">
-      <h2 id="portfolio-heading" className={'page-subheading'}>
-        Portfolio
-      </h2>
+      <h2 id="portfolio-heading" className={'hidden'}>Portfolio</h2>
       <div className={styles.portfolio__list}>
         {renderPortfolioItems()}
       </div>

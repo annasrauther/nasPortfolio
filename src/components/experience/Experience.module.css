@@ -3,13 +3,9 @@
   position: relative;
   margin-top: 0.5em;
   border: 1px solid var(--hr-color);
-  padding: 4em 0 2em;
+  padding: 3em 2em 2em;
   color: var(--text-btn-info);
   background-color: rgba(255 255 255 / 60%);
-
-  @media screen and (min-width: 600px) {
-    padding: 3em 2em 2em;
-  }
 }
 
 .experience::before {
@@ -63,9 +59,12 @@
 }
 
 .experience__company {
-  margin-bottom: 10px;
   text-transform: uppercase;
   font-size: clamp(1.2em, 2vw, 1.5em);
+}
+
+.experience__location {
+  font-size: 0.9em;
 }
 
 .experience__content {
@@ -83,12 +82,17 @@
   font-size: 0.8em;
 }
 
+.experience__content ul a::before {
+  background-color: var(--text-btn-info);
+  z-index: 1;
+}
+
 .experience__content ul {
   display: grid;
   list-style: disc;
   text-align: left;
   font-size: 0.8em;
-  padding: 0 1em;
+  padding-left: 1em;
   gap: 0.5em;
   grid-template-columns: 1fr;
 
