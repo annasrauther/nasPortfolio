@@ -50,6 +50,7 @@ const Experience: React.FC<ExperienceProps> = ({ experienceItems }) => {
                   aria-label={`Company Name: ${item.payload.company_name}`}
                 >{item.payload.company_name}</a>
               </h3>
+              <h4 className={styles.experience__location} aria-label={`Location: ${item.payload.company_location}`}>{item.payload.company_location}</h4>
             </div>
           </div>
           <div
