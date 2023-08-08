@@ -72,11 +72,13 @@ p {
   color: var(--paragraph-color);
 }
 
+ul a,
 .highlight {
   position: relative;
   font-weight: bold;
 }
 
+ul a::before,
 .highlight::before {
   position: absolute;
   bottom: 0;
@@ -130,4 +132,37 @@ p {
   color: var(--text-btn-info);
   font-size: clamp(1.5em, 3vw, 3em);
   font-weight: var(--font-title-weight);
+}
+
+.section_row {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 2fr;
+    gap: 5em;
+  }
+}
+
+.section_row img {
+  margin: 0 auto;
+}
+
+.paragraph {
+  text-align: justify;
+  color: var(--text-primary);
+  font-size: var(--font-paragraph-size-sm);
+
+  @media screen and (min-width: 768px) {
+    font-size: var(--font-paragraph-size-md);
+  }
+}
+
+.section_column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
