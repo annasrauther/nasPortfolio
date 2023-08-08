@@ -1,6 +1,7 @@
 import TechGroup from "./TechGroup";
 import { Skill } from "@/interfaces/skill";
 import styles from "./Tech.module.css";
+import { poppins } from "@/lib/fonts";
 
 /**
  * Represents the props for the TechContainer component.
@@ -33,7 +34,7 @@ const TechContainer: React.FC<TechContainerProps> = ({ technologies }) => {
 
   return (
     <section aria-labelledby="tech-container-heading" className={styles.tech__container}>
-      <h2 id="tech-container-heading" className={'page-subheading'}>Technologies</h2>
+      <h2 id="tech-container-heading" className={`page-subheading ${poppins.className}`}>{`Technologies I've Used`}</h2>
       {Object.keys(groupedTechnologies).map((type, index) => (
         <TechGroup key={index} type={type} technologies={groupedTechnologies[type]} />
       ))}
