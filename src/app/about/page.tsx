@@ -11,7 +11,7 @@ const About: React.FC = () => {
   return (
     <div className="page-container">
       <h1 className={`page-heading ${poppins.className}`}>About</h1>
-      <div className={styles.section_row}>
+      <div className="section_row">
         <div className={styles.section_column}>
           <Image
             className={styles.bio_image}
@@ -22,13 +22,13 @@ const About: React.FC = () => {
           />
         </div>
         <div className={styles.section_column}>
-          <p className={styles.paragraph}>
+          <p className="paragraph">
             {`Welcome! With 8 years of experience in web development and a focus on front-end work, I'm dedicated to crafting seamless websites and web apps for large data projects.`}
           </p>
-          <p className={styles.paragraph}>
+          <p className="paragraph">
             {`In 2015, I embarked on a journey of self-teaching and proudly landed a Junior Front-End Developer role at Wisdmlabs within two months. When I'm not coding, you'll find me drawing inspiration from strategic chess battles, TED-Ed, and Fireship videos, or indulging in dishes with eggs or potatoes. Comfortable dressing keeps me ready to tackle coding challenges with ease.`}
           </p>
-          <p className={styles.paragraph}>
+          <p className="paragraph">
             {`Join me on this exciting web development journey, where your visions come to life through my technical prowess. Together, we'll create something extraordinary!`}
           </p>
         </div>
@@ -96,7 +96,7 @@ const About: React.FC = () => {
         </div>
         <div className={styles['belief-wrapper']}>
           <div className={styles['belief-section']}>
-            <h2 className={styles['page-subtitle']}>Family & Relationships</h2>
+            <h2 className={styles['page-subtitle']}>Relationships</h2>
             <ul className={styles['belief-list']}>
               <li>I firmly believe that playing board games with friends and colleagues is one of the most enjoyable and fulfilling ways to spend an evening. It fosters camaraderie and creates lasting memories.</li>
               <li>{`Personally, I value the importance of alone time for rejuvenation and introspection — it revitalizes after social interactions.`}</li>
@@ -106,7 +106,7 @@ const About: React.FC = () => {
             </ul>
           </div>
           <div>
-            <Image className={styles['belief-image']} src="/about/about-family.svg" alt={'Family & Relationships'} width={500} height={500} />
+            <Image className={styles['belief-image']} src="/about/about-family.svg" alt={'Relationships'} width={500} height={500} />
           </div>
         </div>
       </div>
