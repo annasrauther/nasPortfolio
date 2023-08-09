@@ -31,8 +31,15 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <article className={styles['portfolio-item']} aria-labelledby={`project-${title.rendered}`}>
       <div className={styles['portfolio-item__image']}>
-        <Image src={payload.screenshot_url} alt={title.rendered} width={500} height={500} />
         {
+          /* If the portfolio item has a screenshot, display it. */
+          payload.screenshot_url ?
+            <Image src={payload.screenshot_url} alt={title.rendered} width={600} height={500} />
+            : null
+        }
+
+        {
+          /* If the portfolio item has a URL, display the Visit button. */
           payload.url ?
             <div className={styles['portfolio-item__button-container']}>
               <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
@@ -45,11 +52,12 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <div className={styles['portfolio-item__desc']} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
 
         {
+          /* If the portfolio item has skills, display them. */
           payload.skills && payload.skills.length ?
             <div className={styles.portfolio__technology}>
               {payload.skills.map((tech, index) => (
                 <span className={styles['portfolio__technology-item']} key={index}>
-                  <Image src={tech.skill_image} alt={tech.title} width={30} height={30} /> {tech.title}
+                  <Image src={tech.skill_image} alt={tech.title} width={25} height={25} /> {tech.title}
                 </span>
               ))}
             </div>
@@ -57,6 +65,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         }
 
         {
+          /* If the portfolio item has a URL, display the Visit button. */
           payload.url ?
             <div className={styles['portfolio-item__button-container']}>
               <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
