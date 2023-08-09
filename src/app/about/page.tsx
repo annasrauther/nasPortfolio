@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import { poppins } from '@/lib/fonts';
 import styles from './About.module.css';
+import { FaLaptopCode, FaChess } from 'react-icons/fa';
+import { CgWebsite } from 'react-icons/cg';
+import { FcReading } from 'react-icons/fc';
+import { IoFastFoodOutline } from 'react-icons/io5';
+import { GrTechnology } from 'react-icons/gr';
 
 /**
  * About component to display information about the developer.
@@ -23,13 +28,22 @@ const About: React.FC = () => {
         </div>
         <div className={styles.section_column}>
           <p className="paragraph">
-            {`Welcome! With 8 years of experience in web development and a focus on front-end work, I'm dedicated to crafting seamless websites and web apps for large data projects.`}
+            <FaLaptopCode /> {`8 years of web development experience, specializing in front-end work.`}
           </p>
           <p className="paragraph">
-            {`In 2015, I embarked on a journey of self-teaching and proudly landed a Junior Front-End Developer role at Wisdmlabs within two months. When I'm not coding, you'll find me drawing inspiration from strategic chess battles, TED-Ed, and Fireship videos, or indulging in dishes with eggs or potatoes. Comfortable dressing keeps me ready to tackle coding challenges with ease.`}
+            <CgWebsite /> {`Committed to crafting seamless websites and web apps for large data projects.`}
           </p>
           <p className="paragraph">
-            {`Join me on this exciting web development journey, where your visions come to life through my technical prowess. Together, we'll create something extraordinary!`}
+            <FcReading />{`Transitioned from self-teaching to Junior Front-End Developer at WisdmLabs in 2015.`}
+          </p>
+          <p className="paragraph">
+            <FaChess />{`Inspired by strategic chess battles, TED-Ed, and Fireship videos.`}
+          </p>
+          <p className="paragraph">
+            <IoFastFoodOutline />{`Enjoys dishes with eggs or potatoes and maintains a comfortable dressing style.`}
+          </p>
+          <p className="paragraph">
+            <GrTechnology />{`Excited to collaborate on bringing your visions to life through technical prowess.`}
           </p>
         </div>
       </div>

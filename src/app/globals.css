@@ -21,7 +21,7 @@
   --font-heading-size-md: 6em;
   --font-title-size-sm: 3em;
   --font-title-size-md: 4em;
-  --font-paragraph-size-sm: 0.9em;
+  --font-paragraph-size-sm: 0.8em;
   --font-paragraph-size-md: 1em;
   /* Font Weight */
   --font-heading-weight: 900;
@@ -109,37 +109,24 @@ ul a::before,
 }
 
 .page-heading {
-  border-top: 1px solid var(--hr-color);
-  border-bottom: 1px solid var(--hr-color);
-  background: rgb(255 255 255 / 60%);
+  margin-top: 0.5em;
+  background: var(--text-btn-info);
+  padding: 5px 1em;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
-  color: var(--text-btn-info);
+  color: #fff;
   font-size: clamp(2em, 5vw, 4em);
   font-weight: var(--font-heading-weight);
-}
-
-.page-subheading {
-  border-top: 1px solid var(--hr-color);
-  border-bottom: 1px solid var(--hr-color);
-  background: rgb(255 255 255 / 60%);
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: -1px 1px var(--bg-box-shadow);
-  color: var(--text-btn-info);
-  font-size: clamp(1.5em, 3vw, 3em);
-  font-weight: var(--font-title-weight);
 }
 
 .section_row {
   display: grid;
   grid-template-rows: auto;
-  gap: 1em;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 1em;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 2fr;
@@ -152,17 +139,28 @@ ul a::before,
 }
 
 .paragraph {
-  text-align: justify;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--hr-color);
+  box-shadow: -4px 4px var(--hr-color);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 1em;
   color: var(--text-primary);
   font-size: var(--font-paragraph-size-sm);
+  gap: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
-  @media screen and (min-width: 768px) {
-    font-size: var(--font-paragraph-size-md);
-  }
+.paragraph svg {
+  width: 30px;
+  height: 30px;
+  color: black;
+  fill: black;
 }
 
 .section_column {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 0.5em;
 }

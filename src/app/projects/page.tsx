@@ -5,6 +5,11 @@ import {
   workTechnologiesList,
 } from '@/lib/data';
 import { getPortfolioArchive } from '@/services/portfolio';
+import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import { BsJournalCode } from 'react-icons/bs';
+import { FaLaptopCode } from 'react-icons/fa';
+import { GiTeamIdea } from 'react-icons/gi';
+import { GrDocumentText } from 'react-icons/gr';
 
 /**
  * Projects Component displays a list of Portfolio items.
@@ -23,9 +28,21 @@ const Projects: React.FC = async () => {
           height={500}
         />
         <div className="section_column">
-          <p className="paragraph">{`In my work portfolio, you'll find a collection of projects that showcase my dedication to teamwork and my commitment to building solutions that simplify people's lives. I take pride in crafting detailed documentation, enabling seamless collaboration without the need for extensive explanations.`}</p>
-          <p className="paragraph">{`Adhering to strict code standards is a priority for me, ensuring the development process remains organized and efficient. Writing performant code is another aspect I prioritize, optimizing the solutions I create for speed and effectiveness.`}</p>
-          <p className="paragraph">{`Browse through my portfolio to witness the diverse range of projects I've contributed to, each reflecting my passion for making a positive impact through thoughtful and innovative solutions.`}</p>
+          <p className="paragraph">
+            <GiTeamIdea />{`Portfolio showcases dedication to teamwork and simplifying lives through solutions.`}
+          </p>
+          <p className="paragraph">
+            <GrDocumentText />{`Detailed documentation for seamless collaboration without extensive explanations.`}
+          </p>
+          <p className="paragraph">
+            <BsJournalCode />{`Strict adherence to code standards for organized and efficient development.`}
+          </p>
+          <p className="paragraph">
+            <FaLaptopCode />{`Prioritize writing performant code, optimizing solutions for speed and effectiveness.`}
+          </p>
+          <p className="paragraph">
+            <AiOutlineFundProjectionScreen />{`Each project is an opportunity to learn, grow, and improve.`}
+          </p>
         </div>
       </div>
       <PortfolioContainer portfolioItems={portfolioItems} technologiesList={workTechnologiesList} />

@@ -2,39 +2,38 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-image: radial-gradient(var(--hr-color) 2px, transparent 2px);
+  background-position: 50% 50%;
+  background-size: 3em 3em;
   gap: 0.5em;
-  padding-top: 2em;
 }
 
 .tech__wrapper {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 2em 1em;
-  background-image: radial-gradient(var(--text-info) 1px, transparent 1px);
-  background-position: 50% 50%;
-  background-size: 1em 1em;
-  border-radius: 5px;
+  padding: 1em 0;
 }
 
 .tech__title {
-  font-size: 2em;
+  border-radius: 3px;
+  background: var(--text-btn-info);
+  padding: 5px 1em;
   text-align: center;
   text-transform: uppercase;
-  color: var(--text-info);
-  background: rgb(255 255 255 / 90%);
-  border-top: 1px solid var(--hr-color);
-  border-bottom: 1px solid var(--hr-color);
-  font-weight: 900;
+  text-shadow: -1px 1px var(--bg-box-shadow);
+  color: #fff;
+  font-size: clamp(1.5em, 3vw, 7em);
+  font-weight: 700;
 }
 
 .tech__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
-  margin-top: 15px;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 15px;
+  gap: 1em;
 
   @media screen and (min-width: 520px) {
     grid-template-columns: repeat(2, 1fr);
@@ -43,10 +42,6 @@
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .tech-item {
@@ -54,27 +49,27 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  background: rgb(255 255 255 / 90%);
   border: 1px solid var(--hr-color);
   border-radius: 4px;
+  background: rgb(255 255 255 / 90%);
+  padding: 10px;
+  gap: 10px;
 }
 
 .tech-item__container {
   display: flex;
-  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
-  padding-bottom: 5px;
   border-bottom: 1px solid var(--hr-color);
+  padding-bottom: 5px;
+  width: 100%;
+  gap: 5px;
 }
 
 .tech-item__description {
-  font-size: 0.8em;
   color: var(--text-info);
+  font-size: 0.8em;
 }
 
 .tech-item__label {

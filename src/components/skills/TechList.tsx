@@ -28,16 +28,26 @@ const TechList: React.FC<TechListProps> = ({ technologies }) => {
           <div className={styles['tech-item__container']}>
             <strong className={styles['tech-item__label']} dangerouslySetInnerHTML={{ __html: tech.title.rendered }} />
             <a href={tech.payload.skill_url} target="_blank">
-              <Image
-                src={tech.payload.skill_image}
-                alt={tech.title.rendered}
-                width={40}
-                height={40}
-                aria-label={tech.title.rendered}
-              />
+              {
+                /* If the technology has an image, display it. */
+                tech.payload.skill_image ?
+                  <Image
+                    src={tech.payload.skill_image}
+                    alt={tech.title.rendered}
+                    width={40}
+                    height={40}
+                    aria-label={tech.title.rendered}
+                  />
+                  : null
+              }
             </a>
           </div>
-          <p className={styles['tech-item__description']}>{tech.payload.description}</p>
+          {
+            /* If the technology has a description, display it. */
+            tech.payload.description ?
+              <p className={styles['tech-item__description']} dangerouslySetInnerHTML={{ __html: tech.payload.description }} />
+              : null
+          }
         </li>
       ))}
     </ul>

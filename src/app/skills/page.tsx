@@ -2,6 +2,10 @@ import TechContainer from '@/components/skills/TechContainer';
 import { poppins } from '@/lib/fonts';
 import Image from 'next/image';
 import { getSkillArchive } from '@/services/skill';
+import { CgWebsite } from 'react-icons/cg';
+import { GrServerCluster } from 'react-icons/gr';
+import { VscServerProcess } from 'react-icons/vsc';
+import { FaPersonDotsFromLine } from 'react-icons/fa6';
 
 /**
  * Projects Component displays a list of Portfolio items.
@@ -20,9 +24,14 @@ const Projects: React.FC = async () => {
           height={500}
         />
         <div className="section_column">
-          <p className="paragraph">{`As an accomplished front-end developer experienced in full-stack applications, I embrace a versatile approach to web development. My focus lies in crafting visually appealing and user-friendly interfaces, ensuring seamless user experiences.`}</p>
-          <p className="paragraph">{`I'm not a backend expert, but I work comfortably with server-side functionalities, contributing to successful full-stack applications. My passion for innovation drives me to deliver cutting-edge solutions, elevating web experiences.`}</p>
-          <p className="paragraph">{`Explore the list of technologies I've used below to witness the scope of my skills.`}</p>
+          <p className="paragraph">
+            <FaPersonDotsFromLine />{`Front-end developer with full-stack application experience.`}</p>
+          <p className="paragraph">
+            <CgWebsite />{`Expertise in crafting visually appealing and user-friendly interfaces for seamless experiences.`}</p>
+          <p className="paragraph">
+            <GrServerCluster />{`Comfortable with server-side functionalities, contributing to successful full-stack applications.`}</p>
+          <p className="paragraph">
+            <VscServerProcess />{`Driven by innovation to deliver cutting-edge solutions for elevated web experiences.`}</p>
         </div>
       </div>
       <TechContainer technologies={skills} />
