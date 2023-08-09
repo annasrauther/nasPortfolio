@@ -45,7 +45,7 @@ const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
           role="button"
           tabIndex={0}
         >
-          Featured
+          All
         </span>
         {technologiesList.map((tech, index) => (
           <span

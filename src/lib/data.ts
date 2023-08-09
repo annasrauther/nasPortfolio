@@ -135,7 +135,6 @@ export const techStack: TechStack[] = [
  * @interface {string[]}
  */
 export const workTechnologiesList: string[] = [
-  'React',
   'NextJS',
   'WordPress',
   'AngularJS',

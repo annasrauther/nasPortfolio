@@ -32,20 +32,37 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     <article className={styles['portfolio-item']} aria-labelledby={`project-${title.rendered}`}>
       <div className={styles['portfolio-item__image']}>
         <Image src={payload.screenshot_url} alt={title.rendered} width={500} height={500} />
+        {
+          payload.url ?
+            <div className={styles['portfolio-item__button-container']}>
+              <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
+            </div>
+            : null
+        }
       </div>
       <div className={styles['portfolio-item__content']}>
         <h3 id={`project-${title.rendered}`} className={`${styles['portfolio-item__label']} ${poppins.className}`} dangerouslySetInnerHTML={{ __html: title.rendered }} />
         <div className={styles['portfolio-item__desc']} dangerouslySetInnerHTML={{ __html: payload.description }}></div>
-        <div className={styles.portfolio__technology}>
-          {payload.skills.map((tech, index) => (
-            <span className={styles['portfolio__technology-item']} key={index}>
-              {tech.title} <Image src={tech.skill_image} alt={tech.title} width={20} height={20} />
-            </span>
-          ))}
-        </div>
-        <div style={{ display: 'inherit' }}>
-          <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
-        </div>
+
+        {
+          payload.skills && payload.skills.length ?
+            <div className={styles.portfolio__technology}>
+              {payload.skills.map((tech, index) => (
+                <span className={styles['portfolio__technology-item']} key={index}>
+                  <Image src={tech.skill_image} alt={tech.title} width={30} height={30} /> {tech.title}
+                </span>
+              ))}
+            </div>
+            : null
+        }
+
+        {
+          payload.url ?
+            <div className={styles['portfolio-item__button-container']}>
+              <Button label="Visit" href={payload.url} target icon={BsFillArrowRightCircleFill} />
+            </div>
+            : null
+        }
       </div>
     </article>
   );

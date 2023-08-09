@@ -2,7 +2,10 @@ import Experience from '@/components/experience/Experience';
 import { poppins } from '@/lib/fonts';
 import Image from 'next/image';
 import { getExperienceArchive } from '@/services/experience';
-
+import { FaPeopleCarry } from 'react-icons/fa';
+import { FaPeopleGroup, FaPeopleRoof } from 'react-icons/fa6';
+import { BsCalendarDay } from 'react-icons/bs';
+import { GiLifeBar } from 'react-icons/gi';
 
 /**
  * ExperiencePage Component displays a list of Portfolio items.
@@ -21,9 +24,21 @@ const ExperiencePage: React.FC = async () => {
           height={500}
         />
         <div className="section_column">
-          <p className="paragraph">{`At work, I find immense joy in what I do and cherish the people I collaborate with. It's not just a job; it's a meaningful part of my life. Throughout my journey, I've had the privilege of learning from exceptional leaders and passing on my knowledge to juniors, fostering growth and nurturing talent.`}</p>
-          <p className="paragraph">{`Every day, I embrace new challenges that fuel my personal and professional growth. With enthusiasm, I tackle each obstacle, driven by my commitment to excellence and passion for creating impactful solutions in the ExperiencePage I take pride in.`}</p>
-          <p className="paragraph">{`Work is more than just a routine; it's an opportunity for continuous improvement, building connections, and making a positive impact. I look forward to each day with excitement, knowing that the journey of growth and learning never truly ends.`}</p>
+          <p className="paragraph">
+            <FaPeopleCarry />{`Immense joy in work and strong collaboration with fellow professionals.`}
+          </p>
+          <p className="paragraph">
+            <GiLifeBar />{`Work is not merely a job, but a meaningful part of life.`}
+          </p>
+          <p className="paragraph">
+            <FaPeopleGroup />{`Learn from exceptional leaders, mentor juniors, and foster growth.`}
+          </p>
+          <p className="paragraph">
+            <BsCalendarDay />{`Embrace daily challenges for personal and professional advancement.`}
+          </p>
+          <p className="paragraph">
+            <FaPeopleRoof />{`Each workday is an opportunity for improvement, connections, and impact.`}
+          </p>
         </div>
       </div>
       <Experience experienceItems={experienceItems} />
