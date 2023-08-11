@@ -109,9 +109,9 @@ ul a::before,
 }
 
 .page-heading {
-  margin-top: 0.5em;
+  margin-top: 10px;
   background: var(--text-btn-info);
-  padding: 5px 1em;
+  padding: 0 1em;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
