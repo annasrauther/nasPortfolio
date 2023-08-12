@@ -26,7 +26,6 @@ export const navigation = [
   { name: 'skills', href: '/skills', label: 'What I do' },
   { name: 'experience', href: '/experience', label: 'Where I work' },
   { name: 'projects', href: '/projects', label: 'See my work' },
-  { name: 'blog', href: '/blog', label: 'Nano Blogs' },
 ];
 
 /**
