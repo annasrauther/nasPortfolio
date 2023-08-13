@@ -23,6 +23,12 @@ export const PORTFOLIO_ENDPOINT = API_BASE + 'portfolio';
 export const SKILL_ENDPOINT = API_BASE + 'skill';
 
 /**
+ * Endpoint for the 'Posts' API.
+ * @constant {string} POSTS_ENDPOINT - The endpoint for the 'Posts' API.
+ */
+export const POSTS_ENDPOINT = API_BASE + 'posts';
+
+/**
  * Query string for ordering the API results.
  * @constant {string} ORDER_QUERY - The query string for ordering the API results.
  */

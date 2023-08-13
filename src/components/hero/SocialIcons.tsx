@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import styles from './Hero.module.css';
 
 /**
@@ -14,6 +15,18 @@ const SocialIcons: React.FC = () => {
   return (
     <div className={styles.social__container}>
       <ul>
+        {/* Email Icon */}
+        <li>
+          <a
+            href="mailto:annasrauther95@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Email"
+          >
+            <AiOutlineMail size={'2em'} color={'#d44638'} />
+          </a>
+        </li>
+
         {/* LinkedIn Icon */}
         <li>
           <a

@@ -65,6 +65,10 @@
   gap: 1em;
 }
 
+.social__container ul a::before {
+  display: none;
+}
+
 .hero__heading {
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
