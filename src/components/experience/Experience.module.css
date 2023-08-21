@@ -10,7 +10,7 @@
 
 .experience::before {
   display: block;
-  width: 100%;
+  width: 80%;
   color: var(--text-btn-info);
   font-size: 0.785rem;
   content: attr(data-duration);
@@ -34,11 +34,16 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 1em;
+  margin: 0.5em 0 1em;
 
   @media screen and (min-width: 600px) {
     gap: 1em;
   }
+}
+
+.experience__header {
+  display: grid;
+  gap: 0.5em;
 }
 
 .experience__title {
