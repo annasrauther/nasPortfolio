@@ -52,6 +52,7 @@ a {
 /* Background Styles */
 body {
   background: transparent;
+  line-height: 1.5;
 }
 
 body::after {
@@ -91,17 +92,25 @@ body::before {
 }
 
 /* Typography Styles */
+
+li,
+p {
+  line-height: 1.5;
+}
+
 p {
   color: var(--paragraph-color);
 }
 
 /* Links and Highlights Styles */
+p a,
 ul a,
 .highlight {
   position: relative;
   font-weight: bold;
 }
 
+p a::before,
 ul a::before,
 .highlight::before {
   position: absolute;
@@ -177,10 +186,15 @@ ul a::before,
 }
 
 .paragraph svg {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   color: black;
   fill: black;
+
+  @media screen and (min-width: 600px) {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .section_column {
