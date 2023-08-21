@@ -69,6 +69,14 @@
   display: none;
 }
 
+.social__container svg {
+  transition: 0.2s ease-in-out;
+}
+
+.social__container ul a:hover svg {
+  transform: scale(1.3);
+}
+
 .hero__heading {
   text-transform: uppercase;
   text-shadow: -1px 1px var(--bg-box-shadow);
