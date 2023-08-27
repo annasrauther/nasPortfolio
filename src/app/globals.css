@@ -35,7 +35,7 @@ a {
   --paragraph-color: #33326e;
   --bg-box-shadow: #000;
   --text-btn-info: #586ba9;
-  --hr-color: rgba(0, 0, 0, 0.1);
+  --hr-color: rgb(59 130 246 / 0.5);
   /* Font Size */
   --font-heading-size-sm: 4em;
   --font-heading-size-md: 6em;
