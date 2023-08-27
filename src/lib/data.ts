@@ -42,17 +42,13 @@ export const personalActions = [
   'Probably at Gym',
   'Most likely Sleeping',
   'Exploring Nature',
-  'Attending Events',
   'An Bad Cook',
   'Solving Puzzles',
-  'Watching Movies',
-  'Walking on the Park',
   'Meditating',
-  'Designing Websites',
+  'Helping Others',
   'Organizing his Desk',
   'Coding a Side Project',
   'Reading Tech Blogs',
-  'Playing with Pets',
 ];
 
 /**
@@ -107,11 +103,6 @@ export const techStack: TechStack[] = [
     color: '#000000',
   },
   {
-    name: 'TailwindCSS',
-    icon: Icons.SiTailwindcss,
-    color: '#38B2AC',
-  },
-  {
     name: 'VueJS',
     icon: Icons.SiVuedotjs,
     color: '#4FC08D',
@@ -135,8 +126,8 @@ export const techStack: TechStack[] = [
  */
 export const workTechnologiesList: string[] = [
   'NextJS',
-  'WordPress',
   'AngularJS',
   'VueJS',
+  'WordPress',
   'Lightspeed'
 ];
