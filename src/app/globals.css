@@ -183,13 +183,14 @@ ul a::before,
   gap: 2em;
   font-weight: 500;
   text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .paragraph svg {
   width: 60px;
   height: 60px;
-  color: black;
-  fill: black;
+  color: #2983ea;
+  fill: #2983ea;
 
   @media screen and (min-width: 600px) {
     width: 35px;
