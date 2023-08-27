@@ -5,7 +5,7 @@ import { roboto_mono } from '@/lib/fonts';
 
 const title = 'Al Annas Rauther';
 const description = 'Front End Developer for the Modern Web';
-const url = 'https://nas-portfolio.vercel.app/';
+const url = 'https://annasrauther.com';
 
 export const metadata = {
   title: title,

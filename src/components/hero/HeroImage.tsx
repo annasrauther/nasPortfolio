@@ -67,6 +67,7 @@ const HeroImage: React.FC = () => {
         width={500}
         height={500}
         className={styles['hero-image']}
+        priority
       />
     </>
   );

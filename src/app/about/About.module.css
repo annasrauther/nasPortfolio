@@ -37,7 +37,7 @@
 
 .belief-list {
   display: grid;
-  list-style: disc;
+  list-style: none;
   color: var(--text-primary);
   font-size: var(--font-paragraph-size-sm);
   gap: 1em;
