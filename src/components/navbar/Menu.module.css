@@ -17,7 +17,7 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     align-items: center;
     justify-content: center;
   }

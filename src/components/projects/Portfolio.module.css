@@ -165,7 +165,8 @@
   border: 1px solid var(--hr-color);
   background-color: #f0f8ff;
   padding: 5px 10px;
-  box-shadow: -3px 3px var(--hr-color);
+  box-shadow: -2px 2px var(--hr-color);
+  border-radius: 3px;
 }
 
 .portfolio-item__desc li a::before {
